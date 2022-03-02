@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Verkauf Medien FK" directorySegmentName="seg_0" id="5AB9B49C-9EDA-196C-685F-D968C5237E71">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 11:02:07 UTC</createdTime>
+<ownerDesignName>Erd2</ownerDesignName>
+<engineerTo>
+<item key="1CE80DE8-EA56-97B8-6265-BEA946E462A7" value="true"/>
+<item key="0BB822A7-3A5E-4F51-6AF9-8A98E4CF8050" value="true"/>
+<item key="B22F19C7-A301-DDD7-9FCB-CDDBE8290678" value="true"/>
+</engineerTo>
+<sourcePk>9F6405BD-D2B6-FCAC-A886-021C01747B89</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>AD9F8289-A047-F826-8F70-930E12A8A1E7</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>988624ED-89C6-C169-9868-E7E362704A1F</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

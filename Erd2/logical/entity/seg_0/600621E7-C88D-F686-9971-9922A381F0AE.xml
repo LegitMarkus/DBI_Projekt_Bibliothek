@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="600621E7-C88D-F686-9971-9922A381F0AE" name="Buch">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 10:47:55 UTC</createdTime>
+<ownerDesignName>Erd2</ownerDesignName>
+<importedID>17B2ABFC-CFAB-EA67-4D75-1DDD99F13348</importedID>
+<engineerTo>
+<item key="1CE80DE8-EA56-97B8-6265-BEA946E462A7" value="true"/>
+<item key="0BB822A7-3A5E-4F51-6AF9-8A98E4CF8050" value="true"/>
+<item key="B22F19C7-A301-DDD7-9FCB-CDDBE8290678" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id" id="EB3E9F3C-2F10-CDB0-205B-4857CE43ECF9">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 10:47:55 UTC</createdTime>
+<generatorID>6C665DFC-D5BA-BADE-0ED5-81A68B486EB0</generatorID>
+<ownerDesignName>Erd2</ownerDesignName>
+<importedID>DC0C5A0B-8484-1EB3-1BD3-703CF4BCE3FC</importedID>
+<engineerTo>
+<item key="1CE80DE8-EA56-97B8-6265-BEA946E462A7" value="true"/>
+<item key="0BB822A7-3A5E-4F51-6AF9-8A98E4CF8050" value="true"/>
+<item key="B22F19C7-A301-DDD7-9FCB-CDDBE8290678" value="true"/>
+</engineerTo>
+<referedAttribute>AC26C6C0-09AC-F849-67D5-40E4A48285CA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id1" id="B414E0E7-A541-6F2E-9CFB-A0ABAEC1D85A">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 11:28:12 UTC</createdTime>
+<generatorID>6C665DFC-D5BA-BADE-0ED5-81A68B486EB0</generatorID>
+<ownerDesignName>Erd2</ownerDesignName>
+<engineerTo>
+<item key="1CE80DE8-EA56-97B8-6265-BEA946E462A7" value="true"/>
+<item key="0BB822A7-3A5E-4F51-6AF9-8A98E4CF8050" value="true"/>
+<item key="B22F19C7-A301-DDD7-9FCB-CDDBE8290678" value="true"/>
+</engineerTo>
+<referedAttribute>AC26C6C0-09AC-F849-67D5-40E4A48285CA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9ED8E11B-7AB9-0ACB-7391-71B15D74DD30" name="Buch_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 10:47:55 UTC</createdTime>
+<ownerDesignName>Erd2</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<importedID>016715A1-23A5-31B3-46DE-3781206E9DA4</importedID>
+<engineerTo>
+<item key="1CE80DE8-EA56-97B8-6265-BEA946E462A7" value="true"/>
+<item key="0BB822A7-3A5E-4F51-6AF9-8A98E4CF8050" value="true"/>
+<item key="B22F19C7-A301-DDD7-9FCB-CDDBE8290678" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>EB3E9F3C-2F10-CDB0-205B-4857CE43ECF9</attributeRef>
+<attributeRef>B414E0E7-A541-6F2E-9CFB-A0ABAEC1D85A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

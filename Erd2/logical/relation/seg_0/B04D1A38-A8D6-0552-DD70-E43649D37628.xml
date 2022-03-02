@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Buch_Topic" directorySegmentName="seg_0" id="B04D1A38-A8D6-0552-DD70-E43649D37628">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 11:08:40 UTC</createdTime>
+<ownerDesignName>Erd2</ownerDesignName>
+<engineerTo>
+<item key="1CE80DE8-EA56-97B8-6265-BEA946E462A7" value="true"/>
+<item key="0BB822A7-3A5E-4F51-6AF9-8A98E4CF8050" value="true"/>
+<item key="B22F19C7-A301-DDD7-9FCB-CDDBE8290678" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>C1C2F041-A36F-829E-C356-C09CF2F00956</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>600621E7-C88D-F686-9971-9922A381F0AE</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="787637D4-77F0-F016-9257-7C9EA2DBFDE6" name="Sprache">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 10:47:55 UTC</createdTime>
+<ownerDesignName>Erd2</ownerDesignName>
+<importedID>EC4F1863-8104-42DB-3ECE-37A9B0498EE9</importedID>
+<engineerTo>
+<item key="1CE80DE8-EA56-97B8-6265-BEA946E462A7" value="true"/>
+<item key="0BB822A7-3A5E-4F51-6AF9-8A98E4CF8050" value="true"/>
+<item key="B22F19C7-A301-DDD7-9FCB-CDDBE8290678" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id" id="4EA303BD-4E01-6113-148B-315B02379DEE">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 10:47:55 UTC</createdTime>
+<ownerDesignName>Erd2</ownerDesignName>
+<importedID>B7C02A37-8A94-0F07-7474-1315C3DE6D8D</importedID>
+<engineerTo>
+<item key="1CE80DE8-EA56-97B8-6265-BEA946E462A7" value="true"/>
+<item key="0BB822A7-3A5E-4F51-6AF9-8A98E4CF8050" value="true"/>
+<item key="B22F19C7-A301-DDD7-9FCB-CDDBE8290678" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name" id="2B0FBE3A-0925-C320-4E42-ED514BF3608E">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 10:47:55 UTC</createdTime>
+<ownerDesignName>Erd2</ownerDesignName>
+<importedID>A6C6A45F-869E-7C35-67B1-B4835F415598</importedID>
+<engineerTo>
+<item key="1CE80DE8-EA56-97B8-6265-BEA946E462A7" value="true"/>
+<item key="0BB822A7-3A5E-4F51-6AF9-8A98E4CF8050" value="true"/>
+<item key="B22F19C7-A301-DDD7-9FCB-CDDBE8290678" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E2F046E5-C16C-8AF5-5514-E121CBB1D2B0" name="Sprachen_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 10:47:55 UTC</createdTime>
+<ownerDesignName>Erd2</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<importedID>3A98929E-4C7E-AA56-E671-AA6BA1DACEA5</importedID>
+<engineerTo>
+<item key="1CE80DE8-EA56-97B8-6265-BEA946E462A7" value="true"/>
+<item key="0BB822A7-3A5E-4F51-6AF9-8A98E4CF8050" value="true"/>
+<item key="B22F19C7-A301-DDD7-9FCB-CDDBE8290678" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4EA303BD-4E01-6113-148B-315B02379DEE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="99231FEC-2B47-3B14-9FEF-1B788EB8B980" name="Buch">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 10:57:02 UTC</createdTime>
+<generatorID>600621E7-C88D-F686-9971-9922A381F0AE</generatorID>
+<ownerDesignName>Erd2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="00CEE945-23E5-AC4E-9494-F5BEA7D4B2EB">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 10:57:02 UTC</createdTime>
+<generatorID>EB3E9F3C-2F10-CDB0-205B-4857CE43ECF9</generatorID>
+<ownerDesignName>Erd2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C975BAAD-57EF-FCA7-B527-FA99962FD252" referredColumn="CFB1FB99-E04D-00E5-BE83-56E5489FC722"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EF078A11-E911-24F4-CF56-EC0571FA7801" name="Buch_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 10:57:02 UTC</createdTime>
+<generatorID>9ED8E11B-7AB9-0ACB-7391-71B15D74DD30</generatorID>
+<ownerDesignName>Erd2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="00CEE945-23E5-AC4E-9494-F5BEA7D4B2EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="14E44D58-56CD-F32A-E0CD-2A646DACC96F" name="Buch_Medien_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 11:28:28 UTC</createdTime>
+<generatorID>6C665DFC-D5BA-BADE-0ED5-81A68B486EB0</generatorID>
+<ownerDesignName>Erd2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="00CEE945-23E5-AC4E-9494-F5BEA7D4B2EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

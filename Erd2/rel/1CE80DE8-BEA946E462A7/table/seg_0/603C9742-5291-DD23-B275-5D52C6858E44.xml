@@ -1,0 +1,54 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="603C9742-5291-DD23-B275-5D52C6858E44" name="Verlag">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 10:47:55 UTC</createdTime>
+<generatorID>7D5AAB14-9B1F-C995-DEED-20978E569C65</generatorID>
+<ownerDesignName>Erd2</ownerDesignName>
+<importedID>2D00D634-ABCB-E46F-58B4-6BBE24BA1656</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="26A20FDF-69BF-58A8-D08E-4BBB62ED6602">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 10:47:56 UTC</createdTime>
+<generatorID>BA3AD048-7915-3F96-A2F0-8790A280DF18</generatorID>
+<ownerDesignName>Erd2</ownerDesignName>
+<importedID>4369A18C-E5D9-3099-CAC4-9F75B80C8512</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="66FDCD80-2032-8A96-A5DC-1FD0014DD756">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 10:47:56 UTC</createdTime>
+<generatorID>DDB8B47D-59A4-379C-97C1-1994B6341D5B</generatorID>
+<ownerDesignName>Erd2</ownerDesignName>
+<importedID>B96A537A-37E5-F794-6E0C-035249C23145</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A0931DEE-8AC7-EFDD-6133-E418CCF531F8" name="Verlag_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 10:47:56 UTC</createdTime>
+<generatorID>697D2648-695C-BD5C-63FE-946F4EC218C8</generatorID>
+<ownerDesignName>Erd2</ownerDesignName>
+<importedID>ECAAC630-0108-7482-914F-03A00D88B3C0</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="26A20FDF-69BF-58A8-D08E-4BBB62ED6602"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

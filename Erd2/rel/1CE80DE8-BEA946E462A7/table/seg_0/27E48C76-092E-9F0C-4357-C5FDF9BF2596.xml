@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="27E48C76-092E-9F0C-4357-C5FDF9BF2596" name="Autor">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 10:47:56 UTC</createdTime>
+<generatorID>B826DFAD-AB23-056C-A6F1-65814A5B1066</generatorID>
+<ownerDesignName>Erd2</ownerDesignName>
+<importedID>E5EA87F9-9CEC-82B6-9DF9-08906A3617AE</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="4377AAF0-1A40-2BCA-F99C-E90856463D57">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 10:47:56 UTC</createdTime>
+<generatorID>67EBAA47-D6E8-821B-DFD7-B31C4F0A1071</generatorID>
+<ownerDesignName>Erd2</ownerDesignName>
+<importedID>49EFC8AA-81D0-75C6-B50B-569E1A55C698</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="6FC148FF-8F72-65F2-9E39-A66FB3AA6CFF">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 10:47:56 UTC</createdTime>
+<generatorID>582E4F0A-D85F-47D7-0C96-2413A680076B</generatorID>
+<ownerDesignName>Erd2</ownerDesignName>
+<importedID>9B8554EF-B5DB-65F4-E59E-678A53CFAD50</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1664EDB6-A97A-55DC-9F14-E40BE9D73608" name="Autor_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 10:47:56 UTC</createdTime>
+<generatorID>87B6D274-FB51-F986-866A-9959E618A7D9</generatorID>
+<ownerDesignName>Erd2</ownerDesignName>
+<importedID>2F6F364C-63FD-2940-5388-404ECF376EBD</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4377AAF0-1A40-2BCA-F99C-E90856463D57"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

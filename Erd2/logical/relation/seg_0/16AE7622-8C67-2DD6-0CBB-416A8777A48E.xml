@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Personal Kunde FK" directorySegmentName="seg_0" id="16AE7622-8C67-2DD6-0CBB-416A8777A48E">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-02 07:11:15 UTC</createdTime>
+<ownerDesignName>Erd2</ownerDesignName>
+<engineerTo>
+<item key="1CE80DE8-EA56-97B8-6265-BEA946E462A7" value="true"/>
+<item key="0BB822A7-3A5E-4F51-6AF9-8A98E4CF8050" value="true"/>
+<item key="B22F19C7-A301-DDD7-9FCB-CDDBE8290678" value="true"/>
+</engineerTo>
+<sourcePk>12382B16-8599-1539-B342-286B2F6FFEA4</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>55CACF82-B1AA-8927-64F7-11C33086EA91</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>2D7C1013-F718-10DF-5886-471D822BAAA4</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

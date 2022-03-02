@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B2432E80-43FA-056B-BB3F-F56EA373F810" name="Kunde">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 10:57:02 UTC</createdTime>
+<generatorID>55CACF82-B1AA-8927-64F7-11C33086EA91</generatorID>
+<ownerDesignName>Erd2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="9A8D731A-048D-8779-F67D-53AC663E520D">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 10:57:02 UTC</createdTime>
+<generatorID>4410341F-1F91-499F-55EC-0B921E9829B5</generatorID>
+<ownerDesignName>Erd2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Kundennummer" id="A897B0EC-BA70-B026-34F1-30BC119DF6B2">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 10:57:02 UTC</createdTime>
+<generatorID>0983D2A7-169B-55E1-E989-85299AB7C1F8</generatorID>
+<ownerDesignName>Erd2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1756B3F7-D1F1-77AD-9B50-3D699BC8FF1D" name="Kunde_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 10:57:02 UTC</createdTime>
+<generatorID>12382B16-8599-1539-B342-286B2F6FFEA4</generatorID>
+<ownerDesignName>Erd2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9A8D731A-048D-8779-F67D-53AC663E520D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="466F0399-2576-6CAE-CADB-DA8B40DA511E" name="Kunde__IDX">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 11:04:23 UTC</createdTime>
+<ownerDesignName>Erd2</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>B55C045D-4832-E5A9-7F32-A7B9902C8E11</relationGeneratorID>
+</ind_PK_UK>
+</indexes>
+</Table>

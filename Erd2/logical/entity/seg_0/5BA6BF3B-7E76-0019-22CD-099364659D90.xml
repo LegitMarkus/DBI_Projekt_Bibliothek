@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5BA6BF3B-7E76-0019-22CD-099364659D90" name="Genre">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 11:04:46 UTC</createdTime>
+<ownerDesignName>Erd2</ownerDesignName>
+<engineerTo>
+<item key="1CE80DE8-EA56-97B8-6265-BEA946E462A7" value="true"/>
+<item key="0BB822A7-3A5E-4F51-6AF9-8A98E4CF8050" value="true"/>
+<item key="B22F19C7-A301-DDD7-9FCB-CDDBE8290678" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id" id="748DE5B6-98BA-9B2E-4E31-AC9CDE4E064D">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 11:05:30 UTC</createdTime>
+<ownerDesignName>Erd2</ownerDesignName>
+<engineerTo>
+<item key="1CE80DE8-EA56-97B8-6265-BEA946E462A7" value="true"/>
+<item key="0BB822A7-3A5E-4F51-6AF9-8A98E4CF8050" value="true"/>
+<item key="B22F19C7-A301-DDD7-9FCB-CDDBE8290678" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Genre" id="D362BD4F-F4AF-654C-B470-4CC5E4A4EBAB">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 11:06:15 UTC</createdTime>
+<ownerDesignName>Erd2</ownerDesignName>
+<engineerTo>
+<item key="1CE80DE8-EA56-97B8-6265-BEA946E462A7" value="true"/>
+<item key="0BB822A7-3A5E-4F51-6AF9-8A98E4CF8050" value="true"/>
+<item key="B22F19C7-A301-DDD7-9FCB-CDDBE8290678" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Buch Id" id="7D7ACCC2-7757-E618-C7CE-0D153B01DCA8">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 11:09:07 UTC</createdTime>
+<generatorID>04518D95-A923-5B43-CE95-8F5AC2BB43F7</generatorID>
+<ownerDesignName>Erd2</ownerDesignName>
+<engineerTo>
+<item key="1CE80DE8-EA56-97B8-6265-BEA946E462A7" value="true"/>
+<item key="0BB822A7-3A5E-4F51-6AF9-8A98E4CF8050" value="true"/>
+<item key="B22F19C7-A301-DDD7-9FCB-CDDBE8290678" value="true"/>
+</engineerTo>
+<referedAttribute>EB3E9F3C-2F10-CDB0-205B-4857CE43ECF9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id2" id="209D418F-A5EA-879E-E41B-DC09125A8F42">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-02 07:00:03 UTC</createdTime>
+<generatorID>04518D95-A923-5B43-CE95-8F5AC2BB43F7</generatorID>
+<ownerDesignName>Erd2</ownerDesignName>
+<engineerTo>
+<item key="1CE80DE8-EA56-97B8-6265-BEA946E462A7" value="true"/>
+<item key="0BB822A7-3A5E-4F51-6AF9-8A98E4CF8050" value="true"/>
+<item key="B22F19C7-A301-DDD7-9FCB-CDDBE8290678" value="true"/>
+</engineerTo>
+<referedAttribute>B414E0E7-A541-6F2E-9CFB-A0ABAEC1D85A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2DC64177-24BE-0DE9-C1DA-AA795B2A0F47" name="Genre PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-01 11:05:31 UTC</createdTime>
+<ownerDesignName>Erd2</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="1CE80DE8-EA56-97B8-6265-BEA946E462A7" value="true"/>
+<item key="0BB822A7-3A5E-4F51-6AF9-8A98E4CF8050" value="true"/>
+<item key="B22F19C7-A301-DDD7-9FCB-CDDBE8290678" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>748DE5B6-98BA-9B2E-4E31-AC9CDE4E064D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
