@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EEBAD917-B96C-4A55-0A30-B271BA94359A" name="Buch_Author">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>A1DF6E46-0CA7-7E8E-E7DB-882E5DFFD81E</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Buch_Id" id="6ECBD883-5218-4FCD-90E6-92F6EE3CEC81">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:38 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>D5D79F86-718D-3B93-7D2C-FE5728B87FAA</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="294D0F65-156D-8BDA-85D3-63281769C31F" referredColumn="266E8638-C39C-B60E-D345-45D53C71F1A1"/>
+</associations>
+</Column>
+<Column name="Autor_Id" id="0647217B-5F90-73FC-84AB-706CAFEF07A2">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:38 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>F43697B9-5187-08B3-65B8-66AEB728A5B5</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="71764B7F-06D2-520F-5938-FAAB459710EF" referredColumn="AC37BAD0-580E-0E8C-F604-4DC0FC8E6A76"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3D97E643-74AC-9B7F-8124-C019192B8E6D" name="Relation_7_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:38 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>12BB3363-F890-FED9-95FE-673D29E63165</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6ECBD883-5218-4FCD-90E6-92F6EE3CEC81"/>
+<colUsage columnID="0647217B-5F90-73FC-84AB-706CAFEF07A2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="11C1DDEF-4FD4-0ACC-6FA8-11E61F6A0E1B" name="Relation_7_Autor_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:38 UTC</createdTime>
+<generatorID>F5327F1F-C975-5474-9F9C-C8778FC4DA02</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0647217B-5F90-73FC-84AB-706CAFEF07A2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CC9C38AF-F1E7-9EE6-ED7E-DF56F7AC94D9" name="Relation_7_Buch_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:38 UTC</createdTime>
+<generatorID>F5327F1F-C975-5474-9F9C-C8778FC4DA02</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6ECBD883-5218-4FCD-90E6-92F6EE3CEC81"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Medien_Verlag_FK" directorySegmentName="seg_0" id="4B050ED6-E741-FB8C-DD15-3DA7A645B600">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:45:47 UTC</createdTime>
+<generatorID>9E0A3F90-0E9F-FB9D-5638-528C5C59D64F</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<engineerTo>
+<item key="B28C6F81-0662-B3FD-16E7-CDC8586C3DAF" value="true"/>
+<item key="FD9FFA47-76C0-8C6F-04FC-B30073B47192" value="true"/>
+<item key="C1783CA0-911F-0084-F35C-BFD71966B60B" value="true"/>
+<item key="2AFCB0C4-F507-BA73-D0C9-6FC59844096D" value="true"/>
+<item key="985764D8-E61B-9ABC-C90F-9406FA23065F" value="true"/>
+</engineerTo>
+<sourcePk>72CDC0B8-49B1-437B-111B-D87A00A67E3C</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F496FFC9-66C6-409B-C80C-850E535774EB</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>E82D0580-5EB6-FE94-EE85-13D3B25163DE</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3A148E96-8DD2-600D-80D4-5D785BA8619A" name="Zeitschrift">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:43:36 UTC</createdTime>
+<generatorID>9E56F163-2121-5DCF-A5C3-14A6CB48FFAC</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="66F3BF83-D409-6475-582A-55C4243A767C">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:43:36 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2912C76C-9F21-08BF-A225-391F5FDC03D7" referredColumn="B5B82ACC-1B97-2F25-89B9-59CCD9E2CE0F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="315F9D81-ADA5-1675-E63B-324B9833DC51" name="Zeitschrift_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:43:36 UTC</createdTime>
+<generatorID>3A46812F-362C-7D38-4376-9AF7DE68480D</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="66F3BF83-D409-6475-582A-55C4243A767C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="12E10EF9-1FE7-5872-460D-1BF7082A1E44" name="Zeitschrift__IDX">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:43:36 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>FF9770A7-A38F-1CEA-2AF6-6B0C0B68F281</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="66F3BF83-D409-6475-582A-55C4243A767C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="19ECEC70-53B7-DF63-8B00-17194A46DCFD" name="Zeitschrift_Physische_Medien_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:43:36 UTC</createdTime>
+<generatorID>FF9770A7-A38F-1CEA-2AF6-6B0C0B68F281</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="66F3BF83-D409-6475-582A-55C4243A767C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

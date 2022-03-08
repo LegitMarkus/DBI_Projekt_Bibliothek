@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4672063D-40A5-3342-D208-F0F119696710" name="Buch">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:43:36 UTC</createdTime>
+<generatorID>684DC1B7-2AA8-69AB-F63E-0C257AFA2F6B</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="D79AA1DD-6EE1-E94D-91F8-E78E46D645B2">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:43:36 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4F51A237-37B5-D438-1753-027AED307070" referredColumn="B5B82ACC-1B97-2F25-89B9-59CCD9E2CE0F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3E943139-3A1F-7078-B30B-BD15BB33A4C3" name="Buch_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:43:36 UTC</createdTime>
+<generatorID>4E6C539C-CEC3-45E9-6B56-6D8E6C5B41D4</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D79AA1DD-6EE1-E94D-91F8-E78E46D645B2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DB05BE79-0239-999D-7903-934DCAB237C1" name="Buch__IDX">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:43:36 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>C8ED69EE-78BE-73FF-CB9D-A34DC1DB7672</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="D79AA1DD-6EE1-E94D-91F8-E78E46D645B2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8E21A700-000C-7230-40A3-80CF5B2FAC16" name="Buch_Physische_Medien_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:43:36 UTC</createdTime>
+<generatorID>C8ED69EE-78BE-73FF-CB9D-A34DC1DB7672</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D79AA1DD-6EE1-E94D-91F8-E78E46D645B2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

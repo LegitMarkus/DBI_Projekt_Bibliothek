@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1EBDC033-95A6-D41E-EA32-39DBDC43B62A" name="Buch">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>684DC1B7-2AA8-69AB-F63E-0C257AFA2F6B</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>79270A7A-A515-D45E-3CDB-C1735E3F4A57</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Physische_Medien_Medien_Id" id="703DA7C4-D14E-837A-4D37-DD49B3197E18">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>2361ECEC-419A-D80F-C423-DED82F554D28</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8CEB30C3-2E6F-C03E-A388-EE92121C042C" referredColumn="FCC21C36-1263-EAA7-0636-27D874B77761"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4B46866E-FB6E-6518-D657-E6E3B6D4F45C" name="Buch_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>4E6C539C-CEC3-45E9-6B56-6D8E6C5B41D4</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>60242E58-6474-A801-A929-CC521E310002</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+<ind_PK_UK id="B73C0307-F5BF-1BA5-C6EF-5FD47258EEEF" name="Buch__IDX">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>3B9733D5-A9FC-FA29-02D8-F2C1DBB4DABD</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="703DA7C4-D14E-837A-4D37-DD49B3197E18"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5D53D629-C91F-1DFC-D3B5-A12D7C5CFE63" name="Buch_Physische_Medien_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>EB684459-2ADA-2E0B-9B9C-8A87F469FFEB</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="703DA7C4-D14E-837A-4D37-DD49B3197E18"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

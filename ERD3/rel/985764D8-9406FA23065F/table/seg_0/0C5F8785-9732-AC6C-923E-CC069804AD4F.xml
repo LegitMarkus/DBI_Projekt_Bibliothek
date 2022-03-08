@@ -1,0 +1,130 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0C5F8785-9732-AC6C-923E-CC069804AD4F" name="Ausleihung">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>011B8228-53AB-A9D2-CF03-DB3268B4E914</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>A04B46C1-80B3-C03D-FBB8-05EF0E2BB9A3</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="62ACF5D1-C5E9-4065-2887-1109D4EA9D65">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:38 UTC</createdTime>
+<generatorID>4B4EBDB3-24D8-C9D7-8D0C-1C59550EF1D1</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>CE579EE6-B088-18A4-F1FB-ADC8832839BB</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Ausleihdatum" id="29A9FEFC-4707-ED08-4162-049DB4EB414C">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:38 UTC</createdTime>
+<generatorID>A6543043-8B36-6044-B82C-7EABDD7D8F6C</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>DE7EA0ED-669B-0F46-5455-06690DD3B7EC</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Vorrausichtliches_Rueckgabedatum" id="63EB7BD3-064D-5215-9903-33456C338282">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:38 UTC</createdTime>
+<generatorID>F54DD809-82A4-86CD-13FE-F3ABDEC1DC47</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>C38B190D-6B33-D6C3-B537-D1C68227CA6B</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Verlaengerungsanzahl" id="8133F559-D748-3F5A-C3B6-032CDD434EA4">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:38 UTC</createdTime>
+<generatorID>758738BE-B9AD-C493-3108-B5604784812B</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>4D1337D4-D602-2A6C-214A-A41152F974C9</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Kunde_Id" id="15BB6699-C9E7-E893-553A-F80AE660DC75">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:38 UTC</createdTime>
+<generatorID>D8238BFA-E398-E030-19A2-2FDFD034A695</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>5594AF97-136A-9561-DC95-0FA882E03D42</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1CA47BCF-237D-5B8A-E165-E32B38D9067F" referredColumn="C4F9914C-B263-DE7D-9D9F-94D7B2C3EC07"/>
+</associations>
+</Column>
+<Column name="Medien_Id" id="E68A03B7-5816-A3BB-6339-66F6E23E57A4">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:38 UTC</createdTime>
+<generatorID>F424C363-05E7-D957-95F8-D84752D8E67B</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>0C7EF62C-0379-475D-7904-D3F892F62D2B</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8BBE6D95-57C2-8D67-AE93-9C33C7392F3F" referredColumn="D1F91798-8BDA-F291-65BC-C1D3DDA43D58"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6CD9109C-F810-5F11-347C-CD319FDF3696" name="Ausleihung_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:38 UTC</createdTime>
+<generatorID>FAE2E4B8-BC2C-6638-6331-83D6987FDEC0</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>1698E4A6-8D64-CD06-13D3-3108DFDAFA7E</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="62ACF5D1-C5E9-4065-2887-1109D4EA9D65"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4BCC40E4-F680-68D9-F6F0-5B19230218A5" name="Ausleihung_Medien_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:38 UTC</createdTime>
+<generatorID>50FAE6A8-B5FF-0544-B183-B5CF5B2BECDD</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E68A03B7-5816-A3BB-6339-66F6E23E57A4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CF05D7E4-2410-5FE7-6220-70F9183D2153" name="Ausleihung_Kunde_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:38 UTC</createdTime>
+<generatorID>46B48C2A-EF33-0629-DD34-E7FCDBE6296A</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="15BB6699-C9E7-E893-553A-F80AE660DC75"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

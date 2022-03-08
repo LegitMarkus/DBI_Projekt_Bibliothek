@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A8204CE9-0130-E0D5-E036-7828CF4FD313" name="Sprache">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:45:47 UTC</createdTime>
+<generatorID>FF4A0B99-AC97-D3FE-CA7F-6424ED4626EE</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<engineerTo>
+<item key="B28C6F81-0662-B3FD-16E7-CDC8586C3DAF" value="true"/>
+<item key="FD9FFA47-76C0-8C6F-04FC-B30073B47192" value="true"/>
+<item key="C1783CA0-911F-0084-F35C-BFD71966B60B" value="true"/>
+<item key="2AFCB0C4-F507-BA73-D0C9-6FC59844096D" value="true"/>
+<item key="985764D8-E61B-9ABC-C90F-9406FA23065F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id" id="37334C0F-4045-6E2A-F63D-C9866C9EE450">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:45:47 UTC</createdTime>
+<generatorID>744FE2BE-8872-12FC-7434-194876C2068E</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<engineerTo>
+<item key="B28C6F81-0662-B3FD-16E7-CDC8586C3DAF" value="true"/>
+<item key="FD9FFA47-76C0-8C6F-04FC-B30073B47192" value="true"/>
+<item key="C1783CA0-911F-0084-F35C-BFD71966B60B" value="true"/>
+<item key="2AFCB0C4-F507-BA73-D0C9-6FC59844096D" value="true"/>
+<item key="985764D8-E61B-9ABC-C90F-9406FA23065F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name" id="6CCC7901-5B54-C3F5-39AF-411F33F3D33E">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:45:47 UTC</createdTime>
+<generatorID>E11F312C-C92E-7598-518C-07B548F33EE7</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<engineerTo>
+<item key="B28C6F81-0662-B3FD-16E7-CDC8586C3DAF" value="true"/>
+<item key="FD9FFA47-76C0-8C6F-04FC-B30073B47192" value="true"/>
+<item key="C1783CA0-911F-0084-F35C-BFD71966B60B" value="true"/>
+<item key="2AFCB0C4-F507-BA73-D0C9-6FC59844096D" value="true"/>
+<item key="985764D8-E61B-9ABC-C90F-9406FA23065F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Iso" id="F8547788-3B44-B585-7B22-41A7BE2D546A">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:51:59 UTC</createdTime>
+<generatorID>E11F312C-C92E-7598-518C-07B548F33EE7</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<engineerTo>
+<item key="B28C6F81-0662-B3FD-16E7-CDC8586C3DAF" value="true"/>
+<item key="FD9FFA47-76C0-8C6F-04FC-B30073B47192" value="true"/>
+<item key="C1783CA0-911F-0084-F35C-BFD71966B60B" value="true"/>
+<item key="2AFCB0C4-F507-BA73-D0C9-6FC59844096D" value="true"/>
+<item key="985764D8-E61B-9ABC-C90F-9406FA23065F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="19B51DD1-F467-0641-D5E2-F3BD34D01D47" name="Sprache PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:45:47 UTC</createdTime>
+<generatorID>55771FC0-395B-9CDA-A545-EEAB2C95EC74</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="B28C6F81-0662-B3FD-16E7-CDC8586C3DAF" value="false"/>
+<item key="FD9FFA47-76C0-8C6F-04FC-B30073B47192" value="true"/>
+<item key="C1783CA0-911F-0084-F35C-BFD71966B60B" value="true"/>
+<item key="2AFCB0C4-F507-BA73-D0C9-6FC59844096D" value="true"/>
+<item key="985764D8-E61B-9ABC-C90F-9406FA23065F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>37334C0F-4045-6E2A-F63D-C9866C9EE450</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

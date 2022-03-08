@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="67A3FCA6-CC3C-A944-41CF-A7C44ECE7C6F" name="Hörbuch Sprecher">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:45:47 UTC</createdTime>
+<generatorID>548D12BC-0866-C198-4218-ADEF9C85297F</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<engineerTo>
+<item key="B28C6F81-0662-B3FD-16E7-CDC8586C3DAF" value="true"/>
+<item key="FD9FFA47-76C0-8C6F-04FC-B30073B47192" value="true"/>
+<item key="C1783CA0-911F-0084-F35C-BFD71966B60B" value="true"/>
+<item key="2AFCB0C4-F507-BA73-D0C9-6FC59844096D" value="true"/>
+<item key="985764D8-E61B-9ABC-C90F-9406FA23065F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Hörbuch id" id="EC6DE499-7923-701D-5377-875E89BBA268">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:45:47 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<engineerTo>
+<item key="B28C6F81-0662-B3FD-16E7-CDC8586C3DAF" value="true"/>
+<item key="FD9FFA47-76C0-8C6F-04FC-B30073B47192" value="true"/>
+<item key="C1783CA0-911F-0084-F35C-BFD71966B60B" value="true"/>
+<item key="2AFCB0C4-F507-BA73-D0C9-6FC59844096D" value="true"/>
+<item key="985764D8-E61B-9ABC-C90F-9406FA23065F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="77DC6779-F07D-A42E-254B-1D280FBD081F" name="Relation 30 PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:45:47 UTC</createdTime>
+<generatorID>85BCF7CE-F4C2-F624-F40E-B23BF7B53EF9</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="B28C6F81-0662-B3FD-16E7-CDC8586C3DAF" value="false"/>
+<item key="FD9FFA47-76C0-8C6F-04FC-B30073B47192" value="true"/>
+<item key="C1783CA0-911F-0084-F35C-BFD71966B60B" value="true"/>
+<item key="2AFCB0C4-F507-BA73-D0C9-6FC59844096D" value="true"/>
+<item key="985764D8-E61B-9ABC-C90F-9406FA23065F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>EC6DE499-7923-701D-5377-875E89BBA268</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

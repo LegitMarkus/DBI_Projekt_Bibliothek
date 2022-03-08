@@ -1,0 +1,54 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F76057FB-7356-9534-FA46-8E4191822FB5" name="Digitale_Medien">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>39698B51-183C-DB90-FA7D-F31DDD3C6B55</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>00BF1805-E2F4-3233-AFF5-85E9EAF7DBB9</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Medien_Id" id="DDD08E69-1D93-FFE9-4A31-3183CAFFB296">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>A3395EEE-CED1-5B28-6E48-1C36B7B23C38</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="342DD5CC-3255-3796-CCB6-3616AD21907C" referredColumn="B30C52AB-7094-F665-0171-A65B6B56C6C3"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B12437EA-BC2C-E0B7-B9A5-ECE68E6A0ACA" name="Digitale_Medien_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>C7150E11-39FA-2DAD-FC4A-7CD9CAA586D4</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DDD08E69-1D93-FFE9-4A31-3183CAFFB296"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="83049B6E-AD53-3F7B-3D9D-38368BC885EE" name="Digitale_Medien_Medien_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>798F1CAE-05CB-9483-1D9A-29DEB620A8FF</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DDD08E69-1D93-FFE9-4A31-3183CAFFB296"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

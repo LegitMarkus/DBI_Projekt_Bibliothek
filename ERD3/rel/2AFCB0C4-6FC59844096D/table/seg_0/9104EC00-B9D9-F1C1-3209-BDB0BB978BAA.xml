@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9104EC00-B9D9-F1C1-3209-BDB0BB978BAA" name="Buch">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>684DC1B7-2AA8-69AB-F63E-0C257AFA2F6B</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>AF31D735-59AA-CBB8-9C8E-CC313DA0F76A</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="935D4A92-21A6-98ED-B5C9-DB89E3AA7E6E">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>AF93FA28-D8D3-CAF1-6D7B-E72520037EF7</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Titel" id="F6C6F8F0-0D49-3854-2DCA-D83FBBEF17F9">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>4557D0C4-43B5-A66F-9964-EFAF27BB4F91</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Attribute_2" id="9C1CF006-7B31-A316-63FB-E4B473F0A257">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>2C65F4CE-DED4-35AD-7E32-9C3475F21AEC</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4C42AC8A-D580-BFE3-3FF0-FF6A590A5E9D" name="Buch_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>4E6C539C-CEC3-45E9-6B56-6D8E6C5B41D4</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>329895E3-7C92-DD29-FA0B-1784C15B296A</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="935D4A92-21A6-98ED-B5C9-DB89E3AA7E6E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

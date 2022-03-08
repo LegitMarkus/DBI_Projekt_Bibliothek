@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E0C749D9-7135-A83E-B1A9-96CEC6A6C2CC" name="Topic">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>87B98448-7A58-39B6-E811-237C4D3DDEE5</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>03949C1C-1C39-8AE1-2D62-38D4FC3979A3</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="6499AAF3-DCC9-4387-7756-81343D6CC11E">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>E65B2E55-2205-11D9-044E-A766FDBE8EBB</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>DD20E2F6-6E5F-8E46-9EB6-7F1F9110AB85</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Topic" id="766C454B-2C7C-1F4D-BA2C-EC4E26FA4BC5">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>39F88D86-78DF-EA70-2D0F-F64FBBDED3AE</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>4050F6D7-D392-C4B1-9AC0-05FCAE9E37A4</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="65F326E7-4451-A7A6-E173-48268CE8FB30" name="Topic_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>1AE97972-2DEC-02E3-36F8-A92E5C5DB9A2</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>1B54BC14-A398-FB60-B30C-247E797115EA</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6499AAF3-DCC9-4387-7756-81343D6CC11E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

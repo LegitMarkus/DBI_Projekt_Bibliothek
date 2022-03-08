@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="378773B9-BDA2-E60A-6741-228EB9CA97CD" name="Relation_1">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>B5D72E07-FB61-8F9E-4A27-AD21FCA6D89F</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Sprachen_Id" id="D75766FC-7EC9-580D-A407-3AAE01F2ACD3">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>9EDF3FF3-7E6C-539D-623D-E54CCE52FA04</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3EB9C3F9-8892-C0A6-CE73-E18C3321AFF1" referredColumn="32FE85BF-CD55-CCAA-AD08-E6FF66C86C65"/>
+</associations>
+</Column>
+<Column name="Bestand_Id" id="985BC43D-8AD6-48B7-BDA4-89A17DD674D7">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>7B2E4B72-F761-EDAB-2DA6-4A5636ED0F6E</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="84912830-DC3F-9F5C-8B93-95FA611B637B" referredColumn="D93F30AA-85C3-F511-0493-D5D5B38D778B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BFD9FD77-7029-FD95-F82C-8FD81FDB0318" name="Relation_1_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>9E476D45-78CD-B07D-F78F-3637A59EF1E2</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D75766FC-7EC9-580D-A407-3AAE01F2ACD3"/>
+<colUsage columnID="985BC43D-8AD6-48B7-BDA4-89A17DD674D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7921011A-F292-46ED-C65A-143475032119" name="Relation_1_Bestand_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>3370B940-7796-54E3-E46B-73D749952B25</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="985BC43D-8AD6-48B7-BDA4-89A17DD674D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E42B4DCB-C6CF-E7E7-EE6E-ABF85824F711" name="Relation_1_Sprachen_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>3370B940-7796-54E3-E46B-73D749952B25</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D75766FC-7EC9-580D-A407-3AAE01F2ACD3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

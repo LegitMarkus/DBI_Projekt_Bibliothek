@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5D43BAE8-A655-60FB-C5B0-6BD97518C110" name="DigitaleMedien Author">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:45:47 UTC</createdTime>
+<generatorID>02BF2506-C7C1-E5E6-9B75-A17503EE0CF4</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<engineerTo>
+<item key="B28C6F81-0662-B3FD-16E7-CDC8586C3DAF" value="true"/>
+<item key="FD9FFA47-76C0-8C6F-04FC-B30073B47192" value="true"/>
+<item key="C1783CA0-911F-0084-F35C-BFD71966B60B" value="true"/>
+<item key="2AFCB0C4-F507-BA73-D0C9-6FC59844096D" value="true"/>
+<item key="985764D8-E61B-9ABC-C90F-9406FA23065F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Autor Id" id="DA6FFAB5-D03B-3987-363D-F40D6207B130">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:45:47 UTC</createdTime>
+<generatorID>E5B7613B-9893-D5AC-97C3-419A71A692EC</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<engineerTo>
+<item key="B28C6F81-0662-B3FD-16E7-CDC8586C3DAF" value="true"/>
+<item key="FD9FFA47-76C0-8C6F-04FC-B30073B47192" value="true"/>
+<item key="C1783CA0-911F-0084-F35C-BFD71966B60B" value="true"/>
+<item key="2AFCB0C4-F507-BA73-D0C9-6FC59844096D" value="true"/>
+<item key="985764D8-E61B-9ABC-C90F-9406FA23065F" value="true"/>
+</engineerTo>
+<referedAttribute>17146DC2-64ED-47EF-9D7A-E100778FC840</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DigitaleMedien Id" id="D8AD36C9-C4E4-DAA7-8AAA-60A280951EB0">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:45:47 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<engineerTo>
+<item key="B28C6F81-0662-B3FD-16E7-CDC8586C3DAF" value="true"/>
+<item key="FD9FFA47-76C0-8C6F-04FC-B30073B47192" value="true"/>
+<item key="C1783CA0-911F-0084-F35C-BFD71966B60B" value="true"/>
+<item key="2AFCB0C4-F507-BA73-D0C9-6FC59844096D" value="true"/>
+<item key="985764D8-E61B-9ABC-C90F-9406FA23065F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="463DF76A-D338-5682-DB6E-16AEF250BA04" name="Relation 31 PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:45:47 UTC</createdTime>
+<generatorID>929DC7DD-28D6-4607-1147-FBB49C2CE4D9</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="B28C6F81-0662-B3FD-16E7-CDC8586C3DAF" value="false"/>
+<item key="FD9FFA47-76C0-8C6F-04FC-B30073B47192" value="true"/>
+<item key="C1783CA0-911F-0084-F35C-BFD71966B60B" value="true"/>
+<item key="2AFCB0C4-F507-BA73-D0C9-6FC59844096D" value="true"/>
+<item key="985764D8-E61B-9ABC-C90F-9406FA23065F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>DA6FFAB5-D03B-3987-363D-F40D6207B130</attributeRef>
+<attributeRef>D8AD36C9-C4E4-DAA7-8AAA-60A280951EB0</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

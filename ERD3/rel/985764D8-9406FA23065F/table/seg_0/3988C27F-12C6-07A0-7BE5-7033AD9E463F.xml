@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3988C27F-12C6-07A0-7BE5-7033AD9E463F" name="Sprache">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>1CB04104-CE51-0334-CE91-D15614BB8FDB</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>09C99947-99B7-2352-320E-9B7280365ED3</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="9BDB7FFB-2DC1-6515-EC68-DE464F085903">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>58B28CF7-572B-E1FE-8943-D0A31BA5C2A8</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>A197E274-DE18-DCD7-6A2F-1DC34B7CA47B</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="B4239912-FC18-9ADE-7D09-5193CCDBFC36">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>1879555B-6826-4381-95BD-1E60553282B8</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>C9263ABD-DB0B-C973-524F-49F24F625751</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6686D235-6CBF-D344-EA1D-1AA3374B9151" name="Sprachen_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>F1032B55-1E77-F391-507E-7C28E71B65AA</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>7A9B17B5-25D7-5B8A-01BD-D6E96B616CF5</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9BDB7FFB-2DC1-6515-EC68-DE464F085903"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

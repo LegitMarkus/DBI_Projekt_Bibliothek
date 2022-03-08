@@ -1,0 +1,116 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1E3C4051-F3EB-18EC-FDE9-71C1D8F5E5C8" name="Kunde">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:45:47 UTC</createdTime>
+<generatorID>3958D4D2-0AA3-E502-DC87-B4AD3BECFA47</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<engineerTo>
+<item key="B28C6F81-0662-B3FD-16E7-CDC8586C3DAF" value="true"/>
+<item key="FD9FFA47-76C0-8C6F-04FC-B30073B47192" value="true"/>
+<item key="C1783CA0-911F-0084-F35C-BFD71966B60B" value="true"/>
+<item key="2AFCB0C4-F507-BA73-D0C9-6FC59844096D" value="true"/>
+<item key="985764D8-E61B-9ABC-C90F-9406FA23065F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id" id="3E24F49E-FC84-BBFA-6D06-3251C0E9724B">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:45:47 UTC</createdTime>
+<generatorID>303CE8AF-4627-A16C-65BE-069C75A9702C</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<engineerTo>
+<item key="B28C6F81-0662-B3FD-16E7-CDC8586C3DAF" value="true"/>
+<item key="FD9FFA47-76C0-8C6F-04FC-B30073B47192" value="true"/>
+<item key="C1783CA0-911F-0084-F35C-BFD71966B60B" value="true"/>
+<item key="2AFCB0C4-F507-BA73-D0C9-6FC59844096D" value="true"/>
+<item key="985764D8-E61B-9ABC-C90F-9406FA23065F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Kundennummer" id="5A9EAAF4-CAF9-9733-187A-0126AB2DE500">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:45:47 UTC</createdTime>
+<generatorID>93EE9A42-0989-1823-F4A6-5AAD31E69035</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<engineerTo>
+<item key="B28C6F81-0662-B3FD-16E7-CDC8586C3DAF" value="true"/>
+<item key="FD9FFA47-76C0-8C6F-04FC-B30073B47192" value="true"/>
+<item key="C1783CA0-911F-0084-F35C-BFD71966B60B" value="true"/>
+<item key="2AFCB0C4-F507-BA73-D0C9-6FC59844096D" value="true"/>
+<item key="985764D8-E61B-9ABC-C90F-9406FA23065F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Vorname" id="EB651155-41C4-FF48-4F8D-83AE704E5063">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:45:47 UTC</createdTime>
+<generatorID>EA433631-0E19-3879-0D35-C11454B5D8D4</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<engineerTo>
+<item key="B28C6F81-0662-B3FD-16E7-CDC8586C3DAF" value="true"/>
+<item key="FD9FFA47-76C0-8C6F-04FC-B30073B47192" value="true"/>
+<item key="C1783CA0-911F-0084-F35C-BFD71966B60B" value="true"/>
+<item key="2AFCB0C4-F507-BA73-D0C9-6FC59844096D" value="true"/>
+<item key="985764D8-E61B-9ABC-C90F-9406FA23065F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nachname" id="B391C462-DC69-A458-656D-B57C776FAE16">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:45:47 UTC</createdTime>
+<generatorID>79016C03-144E-55D6-5750-161B7BF86CBD</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<engineerTo>
+<item key="B28C6F81-0662-B3FD-16E7-CDC8586C3DAF" value="true"/>
+<item key="FD9FFA47-76C0-8C6F-04FC-B30073B47192" value="true"/>
+<item key="C1783CA0-911F-0084-F35C-BFD71966B60B" value="true"/>
+<item key="2AFCB0C4-F507-BA73-D0C9-6FC59844096D" value="true"/>
+<item key="985764D8-E61B-9ABC-C90F-9406FA23065F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="87F5EFB8-F38D-908F-5784-CF088FE80F15" name="Kunde PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:45:47 UTC</createdTime>
+<generatorID>D8A3E907-86CC-8182-2196-3C265316D7BE</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="B28C6F81-0662-B3FD-16E7-CDC8586C3DAF" value="false"/>
+<item key="FD9FFA47-76C0-8C6F-04FC-B30073B47192" value="true"/>
+<item key="C1783CA0-911F-0084-F35C-BFD71966B60B" value="true"/>
+<item key="2AFCB0C4-F507-BA73-D0C9-6FC59844096D" value="true"/>
+<item key="985764D8-E61B-9ABC-C90F-9406FA23065F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3E24F49E-FC84-BBFA-6D06-3251C0E9724B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

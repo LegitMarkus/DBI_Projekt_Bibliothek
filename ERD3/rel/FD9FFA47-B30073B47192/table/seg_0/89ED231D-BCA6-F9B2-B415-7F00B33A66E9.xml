@@ -1,0 +1,144 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="89ED231D-BCA6-F9B2-B415-7F00B33A66E9" name="Personal">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>6A6FB138-3663-7B4C-6DBA-0AF8B4326563</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>C3305DF1-2C3B-1631-95D4-11A92D4D65E0</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="5C6C92C0-BAD8-DB66-FFD2-92DC796E1BAB">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>DEFCA566-126B-BD0B-46C5-2287E1138102</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>EC5CB4D3-7DE0-4E9F-DA1F-734960A654EC</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Vorname" id="B3301D9E-7550-5493-161B-60F03050E96B">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>2EF75CDC-0ADD-EF44-143C-18FC9F82E7C2</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>C9ABEABA-2C12-3DEF-D7AB-B0ABEE109351</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nachname" id="04137D01-24F7-286E-E11B-93017853F43E">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>98AA8F5D-EEF0-04E4-370A-33ABDBC9BC9D</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>9505EF25-AC97-00BC-C393-428B0194E9B4</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Alter" id="567BDAD0-0743-D619-CEC2-59CABA834F24">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>F990BCAD-2081-5601-72CD-2588A5601F32</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>8F921D46-8DD2-1033-8099-E9D07D7A60E9</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Kunde_Id" id="0266EEC4-4391-C19D-D6B4-45C46A41F8B5">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>EE35D161-6EF8-8AAA-C7E6-BABC0B1EE283</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>05925733-98B2-8171-F813-4E706CE1669D</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4A6EEF3D-008E-017A-F8B3-74151395F1FF" referredColumn="D4642CB7-785A-7D13-A609-4B1D83A70A59"/>
+</associations>
+</Column>
+<Column name="Ort_Id" id="4C1A585E-27F6-FDD8-7A39-66A918BB733F">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>97CFBEC4-DF3B-EDF6-0F43-C84BFF11D019</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>DAF9AAED-4880-AA85-BDFD-EEE7AE2BEE51</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1DA17ACD-6612-9583-70F7-249A73C1D1A8" referredColumn="A190CCE3-14AC-30E8-C0F3-A64CEF4E14A4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C9AD248C-6C23-19AF-0631-C38BDB1CDBC1" name="Personal_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>9920F7AF-4332-8F13-F03F-1D3EB1AA5656</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>2F85B84B-1C51-78BB-7C56-ED4D2DDDA9DE</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5C6C92C0-BAD8-DB66-FFD2-92DC796E1BAB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7B0F7D0C-82BF-D9AC-47DD-5E845E6E8ABE" name="Personal__IDX">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>4C1F189B-8B9E-E916-4B83-1CD8EE0B249A</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0266EEC4-4391-C19D-D6B4-45C46A41F8B5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3858E28B-E257-CE4A-C67C-86C3F2748AB4" name="Personal_Kunde_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>B556D7FF-4C88-3C75-9A9D-19D4E8E9ACAF</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0266EEC4-4391-C19D-D6B4-45C46A41F8B5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3AD440DC-C801-236C-0C7D-7382ECBFA669" name="Personal_Ort_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>B36EE2F7-93E0-65A7-8186-D10D510E4E6C</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4C1A585E-27F6-FDD8-7A39-66A918BB733F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

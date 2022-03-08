@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5075F076-3AEC-DE0E-B3C8-0554F01CA535" name="Buch">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>684DC1B7-2AA8-69AB-F63E-0C257AFA2F6B</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>9FF0D35B-6127-462E-5C1B-36A5EEDF16D1</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="266E8638-C39C-B60E-D345-45D53C71F1A1">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:38 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>D70B51CA-8A3A-9F45-A6E1-29BEEDA67002</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="70D2C103-9657-9FC7-86DA-65300168C993" referredColumn="D1F91798-8BDA-F291-65BC-C1D3DDA43D58"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="38A3DB41-FCFF-8471-F3CC-F65763B4C1B7" name="Buch_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:38 UTC</createdTime>
+<generatorID>4E6C539C-CEC3-45E9-6B56-6D8E6C5B41D4</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>C0BE24E8-E7DF-DF6C-218E-C7A39BC912D6</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="266E8638-C39C-B60E-D345-45D53C71F1A1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5B510892-B5B5-3C4A-A7DD-D929F1613DD0" name="Buch_Medien_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:38 UTC</createdTime>
+<generatorID>EF57E559-37E8-426B-FE39-9F0518992E48</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="266E8638-C39C-B60E-D345-45D53C71F1A1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

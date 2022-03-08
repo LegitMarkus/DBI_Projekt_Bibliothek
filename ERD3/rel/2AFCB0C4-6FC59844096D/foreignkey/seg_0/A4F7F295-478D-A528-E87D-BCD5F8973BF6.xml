@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A4F7F295-478D-A528-E87D-BCD5F8973BF6" containerWithKeyObject="050AD62C-8C70-298D-B1B4-DCA9A0CE7F92" localFKIndex="7455091B-EC9F-54AB-D1C8-F4789E85CD6D" name="Bestand_Verlag_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>C60FF3AA-DB5A-8EFA-A1FE-245EA02509E6</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>EDB6A1DD-5020-D929-1E1D-981226609619</importedID>
+<referredTableLongName>Verlag</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>57D671A8-DB52-11A1-426D-8A569E989FAE</referredTableID>
+<keyObject>86236726-D051-1B05-B363-65E9152494B1</keyObject>
+<referredKeyID>86236726-D051-1B05-B363-65E9152494B1</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

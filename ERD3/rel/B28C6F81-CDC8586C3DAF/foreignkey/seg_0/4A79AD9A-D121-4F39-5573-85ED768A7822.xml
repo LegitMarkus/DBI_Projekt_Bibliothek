@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="4A79AD9A-D121-4F39-5573-85ED768A7822" containerWithKeyObject="548D12BC-0866-C198-4218-ADEF9C85297F" localFKIndex="D341463C-9E4A-C5B7-84EE-2597ADC4E103" name="Hörbuch_Sprecher_Sprecher_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:43:36 UTC</createdTime>
+<generatorID>0C0510F7-29E6-2C11-B1C6-EE8F4FF4AB72</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<referredTableLongName>Sprecher</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>79866DAF-F28A-337D-7455-5ECF5BF4B4BC</referredTableID>
+<keyObject>5DB50230-27E1-DDD2-F22D-7A318FBB5513</keyObject>
+<referredKeyID>5DB50230-27E1-DDD2-F22D-7A318FBB5513</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Vorleser_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

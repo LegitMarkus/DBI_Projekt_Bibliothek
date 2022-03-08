@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CA594392-EF4D-6EE9-1724-0AE9F2A560C4" name="Hörbuch">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:43:36 UTC</createdTime>
+<generatorID>D31695B1-3EBB-22B5-479E-1D4556CF6431</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<ordsAlias>hoerbuch</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="D4AB1DBD-0A23-A052-3CB3-18407C9246CD">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:04:37 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FC9E6723-FD00-1401-DA01-4D02A30BC809" referredColumn="8B036B20-D577-2B1C-2D69-8528E218C8B0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="33FD30EB-5ECB-DF8F-98EF-775FA16DE3E4" name="Hörbuch_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:43:36 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="D4AB1DBD-0A23-A052-3CB3-18407C9246CD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6EE55CC9-0C6F-1F6C-9B1C-C15C08C4B9E5" name="Hörbuch__IDX">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:48:16 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>9B631E9A-FCC6-5ADA-1ADF-1EE903230809</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="D4AB1DBD-0A23-A052-3CB3-18407C9246CD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0469C341-50B2-1FFF-052C-F059A1907CE4" name="Hörbuch__IDXv1">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 09:41:51 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>9B631E9A-FCC6-5ADA-1ADF-1EE903230809</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="D4AB1DBD-0A23-A052-3CB3-18407C9246CD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0231A97C-A095-E706-82E4-BC6B45C1E35F" name="Hörbuch_Digitale_Medien_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:43:36 UTC</createdTime>
+<generatorID>AE7E7090-E240-6144-72A8-F680EA0048AC</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D4AB1DBD-0A23-A052-3CB3-18407C9246CD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="119CE02F-EBA5-76D5-BD29-403C8DBF1138" name="Reservierung">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:50:13 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Kunde_Id" id="998A0DE3-D0F2-2C86-0FF2-B0E290C56538">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:50:13 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="96DB0CFD-6CB4-4A60-3379-625FEB7DFE7F" referredColumn="303CE8AF-4627-A16C-65BE-069C75A9702C"/>
+</associations>
+</Column>
+<Column name="Medien_Id" id="F3AF9211-B163-2F45-64EF-1580E0F9C318">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:50:13 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="75E8E39A-1D80-922A-B6ED-09501646D05B" referredColumn="C1032EAE-22BB-CA2C-792B-34D9F002B562"/>
+</associations>
+</Column>
+<Column name="Reservierungsdatum" id="36F6C6C2-8852-BDAF-7EC5-00B0196A804C">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:51:06 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7BE5BFF2-D9C1-DF5E-4E00-790E325A48F7" name="Reservierung_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:50:13 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="998A0DE3-D0F2-2C86-0FF2-B0E290C56538"/>
+<colUsage columnID="F3AF9211-B163-2F45-64EF-1580E0F9C318"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9B4BE935-29CE-7D4A-84B8-21B4CDF0D60B" name="Reservierung_Kunde_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:50:13 UTC</createdTime>
+<generatorID>952D3D53-B306-C538-6A42-A166A03DBC4F</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="998A0DE3-D0F2-2C86-0FF2-B0E290C56538"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EAF48204-014F-EA91-E290-532D75E5B231" name="Reservierung_Medien_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:50:13 UTC</createdTime>
+<generatorID>952D3D53-B306-C538-6A42-A166A03DBC4F</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F3AF9211-B163-2F45-64EF-1580E0F9C318"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

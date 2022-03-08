@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FCDACE61-5C99-A476-B664-2C370CE94DB3" name="Kunde">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>87815B13-AA3E-9045-DBE4-9EFE1AC4116B</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>D128347B-4584-C0F8-114C-E6268E3C80DC</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="C4F9914C-B263-DE7D-9D9F-94D7B2C3EC07">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:38 UTC</createdTime>
+<generatorID>6E263896-5CDD-E8D3-E423-8A5A5DFE344D</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>2A09CAB9-789C-EE69-DC0A-D2BF895237B8</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Kundennummer" id="5DDA4DDE-191D-40CD-E8B0-3E20446AA862">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:38 UTC</createdTime>
+<generatorID>2414675F-2910-CE85-2DA4-9725B0AF0DBD</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>5F77C7C6-9D79-4625-344E-7C0EF93507A0</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="137212DA-41D5-5754-63BB-5ACE4202847D" name="Kunde_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:38 UTC</createdTime>
+<generatorID>F1ADA997-455E-616E-ECB0-2BB0F3263F27</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>DDB1E56D-EA8C-D662-91D3-2B3642053DA7</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C4F9914C-B263-DE7D-9D9F-94D7B2C3EC07"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A18A5662-A53C-05AC-DC8B-75C0C0A75C59" name="Kunde__IDX">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:38 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>141DF732-32EF-A69E-F228-6581ACE5EEA5</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+</indexes>
+</Table>

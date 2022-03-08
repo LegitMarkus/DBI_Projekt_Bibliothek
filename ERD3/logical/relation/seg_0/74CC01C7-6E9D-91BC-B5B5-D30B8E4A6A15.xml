@@ -1,0 +1,25 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Digitale_Medien_Medien_FK" directorySegmentName="seg_0" id="74CC01C7-6E9D-91BC-B5B5-D30B8E4A6A15">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:45:47 UTC</createdTime>
+<generatorID>A2D3DE34-D9EE-09E3-1A14-DBC27231A414</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<engineerTo>
+<item key="B28C6F81-0662-B3FD-16E7-CDC8586C3DAF" value="true"/>
+<item key="FD9FFA47-76C0-8C6F-04FC-B30073B47192" value="true"/>
+<item key="C1783CA0-911F-0084-F35C-BFD71966B60B" value="true"/>
+<item key="2AFCB0C4-F507-BA73-D0C9-6FC59844096D" value="true"/>
+<item key="985764D8-E61B-9ABC-C90F-9406FA23065F" value="true"/>
+</engineerTo>
+<sourcePk>14243EE9-C20F-B767-7A1D-3F68E961F849</sourcePk>
+<dominantRole>E82D0580-5EB6-FE94-EE85-13D3B25163DE</dominantRole>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>E82D0580-5EB6-FE94-EE85-13D3B25163DE</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>D0360E00-3F03-B055-2E84-EC3B605BAFAE</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="684FBDFB-C93C-C5EF-1F46-79943631D00D" name="Autor">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>C9252848-6A2E-E08F-E646-83FBC5AD4ECB</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>732F6C70-6048-D5AD-4C38-2988F45DFC59</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="0C2C367E-18CB-CCDA-7028-3E1DD586DA5E">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>07BC083A-BBF4-CC5B-DEF7-E62AA420ABBB</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>B8680A41-718C-BEDA-5921-E2B5EE5DE1C8</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Vorname" id="249DEF5C-DBE5-27B2-DBC8-1041A68C1B22">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>190AB5A1-87F2-78F2-1843-11D3FF131F68</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>703E9EB2-1D5A-9F53-0BBC-784532583247</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nachname" id="0DF0AE82-D238-9199-373E-F91E423A1BB3">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>DF83C7A2-443A-5985-3A65-C31B2AE6D21E</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>FDF32089-D2D9-0485-2E57-FC0383E7A125</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0999472C-3E07-9A6D-6EE5-C9E385577127" name="Autor_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>DD312DE3-65F9-FA89-1CF7-46B2806E937D</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>2CD87F07-ABA7-CDCB-F155-1D29587F1633</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0C2C367E-18CB-CCDA-7028-3E1DD586DA5E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

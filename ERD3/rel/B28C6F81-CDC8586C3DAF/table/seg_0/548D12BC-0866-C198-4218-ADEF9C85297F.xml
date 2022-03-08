@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="548D12BC-0866-C198-4218-ADEF9C85297F" name="Hörbuch_Sprecher">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:43:36 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<ordsAlias>relation_30</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Vorleser_Vorleser_ID" id="7548507F-B561-1B26-F1AC-291B8F83001F">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:43:36 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4A79AD9A-D121-4F39-5573-85ED768A7822" referredColumn="C21D4430-D6F6-8ABD-1EC8-3646382D098F"/>
+</associations>
+</Column>
+<Column name="Hörbuch_id" id="5E6E5E8B-77C7-671C-7377-3194D9445D58">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 08:06:20 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E211AEB9-46DA-0491-A728-BDE49B878606" referredColumn="D4AB1DBD-0A23-A052-3CB3-18407C9246CD"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="85BCF7CE-F4C2-F624-F40E-B23BF7B53EF9" name="Hörbuch_Sprecher_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:43:36 UTC</createdTime>
+<ownerDesignName>ERD3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7548507F-B561-1B26-F1AC-291B8F83001F"/>
+<colUsage columnID="5E6E5E8B-77C7-671C-7377-3194D9445D58"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D341463C-9E4A-C5B7-84EE-2597ADC4E103" name="Hörbuch_Sprecher_Sprecher_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:43:36 UTC</createdTime>
+<generatorID>0C0510F7-29E6-2C11-B1C6-EE8F4FF4AB72</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7548507F-B561-1B26-F1AC-291B8F83001F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="19B987A9-E7FA-18B4-1A54-FA9255919C39" name="Hörbuch_Sprecher_Hörbuch_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:43:36 UTC</createdTime>
+<generatorID>0C0510F7-29E6-2C11-B1C6-EE8F4FF4AB72</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5E6E5E8B-77C7-671C-7377-3194D9445D58"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

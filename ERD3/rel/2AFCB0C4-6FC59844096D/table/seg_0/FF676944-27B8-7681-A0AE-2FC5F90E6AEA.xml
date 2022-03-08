@@ -1,0 +1,40 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FF676944-27B8-7681-A0AE-2FC5F90E6AEA" name="Kunden">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>87815B13-AA3E-9045-DBE4-9EFE1AC4116B</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>F4009FA7-79D0-BF60-72FB-1109E1F1F416</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="06A4C52E-27CC-C541-D332-CAD74013503F">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>6E263896-5CDD-E8D3-E423-8A5A5DFE344D</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>F7B4DA1F-3A6B-7346-BD76-3704024E5081</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CE236C8F-FF35-D857-E6D7-0B25E8373CC1" name="Kunden_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 07:25:37 UTC</createdTime>
+<generatorID>F1ADA997-455E-616E-ECB0-2BB0F3263F27</generatorID>
+<ownerDesignName>ERD3</ownerDesignName>
+<importedID>DD92AD1D-4677-4B8D-CD16-80379EE304A0</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="06A4C52E-27CC-C541-D332-CAD74013503F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
