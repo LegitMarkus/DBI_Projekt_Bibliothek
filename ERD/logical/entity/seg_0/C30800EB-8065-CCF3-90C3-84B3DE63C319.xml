@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C30800EB-8065-CCF3-90C3-84B3DE63C319" name="Digitale Medien">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>D0360E00-3F03-B055-2E84-EC3B605BAFAE</importedID>
+<engineerTo>
+<item key="ADF81742-75E6-F252-76E6-B96DB2E80060" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id" id="6E272CA0-F9C0-8524-7902-50B880F57F5A">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<generatorID>EA73E413-024D-B00B-8C23-35104123159B</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>8EF93676-6669-8E18-3CBB-C85269CBF12C</importedID>
+<engineerTo>
+<item key="ADF81742-75E6-F252-76E6-B96DB2E80060" value="true"/>
+</engineerTo>
+<referedAttribute>870914AD-D6CB-3002-9350-73C4E99E7C09</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B6EDCCC7-18C3-503A-4136-8508544A427B" name="Digitale Medien PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>0FFAE1BD-9A3A-1D65-F2F7-6DB9B5039ECD</importedID>
+<engineerTo>
+<item key="ADF81742-75E6-F252-76E6-B96DB2E80060" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6E272CA0-F9C0-8524-7902-50B880F57F5A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

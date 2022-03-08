@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Buch_Author_Autor_FK" directorySegmentName="seg_0" id="8763BE50-9345-3565-500A-A36A92D2F93D">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>2C244584-5894-B751-1C45-22A7340089E8</importedID>
+<engineerTo>
+<item key="ADF81742-75E6-F252-76E6-B96DB2E80060" value="true"/>
+</engineerTo>
+<sourcePk>DC89C4E9-7D11-C88A-27C0-C361F220FCFE</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>2B68AEF6-3E68-A25B-A64D-C3065FB8D6FB</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>9516A48E-4078-A0C1-4658-5D09E6BC4172</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

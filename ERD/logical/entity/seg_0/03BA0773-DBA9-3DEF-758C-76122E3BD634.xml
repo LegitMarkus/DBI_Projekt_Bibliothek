@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="03BA0773-DBA9-3DEF-758C-76122E3BD634" name="Medien Topic">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>A0384C4E-24A4-9593-0D86-C9A14CD72C66</importedID>
+<engineerTo>
+<item key="ADF81742-75E6-F252-76E6-B96DB2E80060" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Topic Id" id="6C245679-C72F-B3BF-176F-6C7F476D8964">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<generatorID>9A0C997B-DAE5-C2F0-615F-F272B7A280D2</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>F70A1944-AA9F-6B39-CD43-BD84C9D25775</importedID>
+<engineerTo>
+<item key="ADF81742-75E6-F252-76E6-B96DB2E80060" value="true"/>
+</engineerTo>
+<referedAttribute>BB7D6701-9AB0-22AF-BFD7-955C64B98BCF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Medien Id" id="E0C69CB3-E415-4374-FFD9-E10AEECF40F4">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<generatorID>E701140C-E128-D27B-3401-07DF7C74C5A0</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>1D54B0EB-C9D9-CF6C-7EFA-5E212BD96D62</importedID>
+<engineerTo>
+<item key="ADF81742-75E6-F252-76E6-B96DB2E80060" value="true"/>
+</engineerTo>
+<referedAttribute>870914AD-D6CB-3002-9350-73C4E99E7C09</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7ED93053-4E31-0C5D-0C04-39321671B4CA" name="Relation 34 PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>614DF2B5-A2C0-0897-3DBD-C2FF6F9A7877</importedID>
+<engineerTo>
+<item key="ADF81742-75E6-F252-76E6-B96DB2E80060" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6C245679-C72F-B3BF-176F-6C7F476D8964</attributeRef>
+<attributeRef>E0C69CB3-E415-4374-FFD9-E10AEECF40F4</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

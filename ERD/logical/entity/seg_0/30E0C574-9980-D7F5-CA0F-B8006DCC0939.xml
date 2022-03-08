@@ -1,0 +1,30 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="30E0C574-9980-D7F5-CA0F-B8006DCC0939" name="Zeitschrift">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>2B54E497-4057-020C-BC96-C30E31E32019</importedID>
+<engineerTo>
+<item key="ADF81742-75E6-F252-76E6-B96DB2E80060" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FFA699E3-662D-0D35-001F-36BB754813EC" name="Zeitschrift PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>8E88466E-4E4C-5F82-09AE-FAEEF8CF9237</importedID>
+<engineerTo>
+<item key="ADF81742-75E6-F252-76E6-B96DB2E80060" value="true"/>
+</engineerTo>
+<pk>true</pk>
+</identifier>
+</identifiers>
+</Entity>

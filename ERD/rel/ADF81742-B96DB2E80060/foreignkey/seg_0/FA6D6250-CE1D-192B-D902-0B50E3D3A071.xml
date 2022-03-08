@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="FA6D6250-CE1D-192B-D902-0B50E3D3A071" containerWithKeyObject="AB913F61-B97F-4694-C008-2A3010595ACF" localFKIndex="55B2632B-D49A-2B7A-837E-8C9BD327BC75" name="Zeitschrift_Physische_Medien_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<generatorID>FF9770A7-A38F-1CEA-2AF6-6B0C0B68F281</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>2912C76C-9F21-08BF-A225-391F5FDC03D7</importedID>
+<referredTableLongName>Physische_Medien</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>60206477-9EE7-7670-00FA-EE826890F1B2</referredTableID>
+<keyObject>559550C0-5251-912F-DF03-70199BD89B2E</keyObject>
+<referredKeyID>559550C0-5251-912F-DF03-70199BD89B2E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="317205AD-751C-2D19-6F47-AE1507C50F25" name="Hörbuch">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>CA594392-EF4D-6EE9-1724-0AE9F2A560C4</importedID>
+<ordsAlias>hoerbuch</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="FFC4C61B-F138-9816-41B8-119E56FBAFC4">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>D4AB1DBD-0A23-A052-3CB3-18407C9246CD</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5B6B9AD8-A940-9F98-47F6-5DC481D80A93" referredColumn="01F4DEF9-3398-6DD6-F9E2-CDD867A3965E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FC02CD0B-24CD-EE62-A9D9-33B08DF6BFFD" name="Hörbuch_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>33FD30EB-5ECB-DF8F-98EF-775FA16DE3E4</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FFC4C61B-F138-9816-41B8-119E56FBAFC4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CA1C5A15-F353-3655-0A87-4335650F66FF" name="Hörbuch__IDX">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>6EE55CC9-0C6F-1F6C-9B1C-C15C08C4B9E5</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FFC4C61B-F138-9816-41B8-119E56FBAFC4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5F0B1E58-C8CB-41A5-D06A-19D7D97C4C05" name="Hörbuch__IDXv1">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>0469C341-50B2-1FFF-052C-F059A1907CE4</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FFC4C61B-F138-9816-41B8-119E56FBAFC4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="718D7C93-F65C-B528-12D5-F4821A6958F0" name="Hörbuch_Digitale_Medien_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<generatorID>AE7E7090-E240-6144-72A8-F680EA0048AC</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FFC4C61B-F138-9816-41B8-119E56FBAFC4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

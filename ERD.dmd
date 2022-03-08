@@ -1,0 +1,25 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="ERD" id="AE2F84B2-ABCF-37EA-ECC8-9A3918667BFF" version="3.5">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:05:53 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>AE2F84B2-ABCF-37EA-ECC8-9A3918667BFF</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="3AC5E178-4AE4-C1BB-AA32-938E6017FB88">
+<designStoragePath>C:\Schule\4CHIF\DBI\Projekt\ERD</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="BE65BC6B-B4D1-8C24-EE29-459BECF146F0">
+<designStoragePath>C:\Schule\4CHIF\DBI\Projekt\Erd2</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="A1306E01-9375-CEF9-D0DF-8DEF703EC8C5">
+<designStoragePath>C:\Schule\4CHIF\DBI\Projekt\Erd2</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="874B3BD5-4ACD-8FAA-8D36-FAB44B219FD9">
+<designStoragePath>C:\Schule\4CHIF\DBI\Projekt\ERD</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="ADE9D72C-F406-FA81-E98D-B425DEC12874">
+<designStoragePath>C:\Schule\4CHIF\DBI\DBI_Projekt_Bibliothek\ERD3</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="E-Book_Digitale_Medien_FK" directorySegmentName="seg_0" id="EDDC60B6-6E25-A2C9-BD54-6377AFBA0A1E">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>98F73CF7-A4E6-8C3A-076D-1E8FEEE143EC</importedID>
+<engineerTo>
+<item key="ADF81742-75E6-F252-76E6-B96DB2E80060" value="true"/>
+</engineerTo>
+<useSurrogateKey>true</useSurrogateKey>
+<dominantRole>C30800EB-8065-CCF3-90C3-84B3DE63C319</dominantRole>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>C30800EB-8065-CCF3-90C3-84B3DE63C319</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>6C42DB9F-70FF-3BEC-3054-CE65A136ABEE</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

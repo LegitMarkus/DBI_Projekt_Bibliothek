@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="5B6B9AD8-A940-9F98-47F6-5DC481D80A93" containerWithKeyObject="317205AD-751C-2D19-6F47-AE1507C50F25" localFKIndex="718D7C93-F65C-B528-12D5-F4821A6958F0" name="Hörbuch_Digitale_Medien_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<generatorID>AE7E7090-E240-6144-72A8-F680EA0048AC</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>FC9E6723-FD00-1401-DA01-4D02A30BC809</importedID>
+<referredTableLongName>Digitale_Medien</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D433B33B-8069-1769-882D-3C276B539649</referredTableID>
+<keyObject>DB2283DD-8AB8-9ECF-8B6E-CCFD2F605D65</keyObject>
+<referredKeyID>DB2283DD-8AB8-9ECF-8B6E-CCFD2F605D65</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

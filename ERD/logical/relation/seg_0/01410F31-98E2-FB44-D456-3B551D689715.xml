@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Zeitschrift_Physische_Medien_FK" directorySegmentName="seg_0" id="01410F31-98E2-FB44-D456-3B551D689715">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>CDC1681D-3A51-2E6D-BF1E-89FC3A414F7F</importedID>
+<engineerTo>
+<item key="ADF81742-75E6-F252-76E6-B96DB2E80060" value="true"/>
+</engineerTo>
+<useSurrogateKey>true</useSurrogateKey>
+<dominantRole>6FB11BB3-D2AB-008E-9874-A03CE6986BC3</dominantRole>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>6FB11BB3-D2AB-008E-9874-A03CE6986BC3</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>30E0C574-9980-D7F5-CA0F-B8006DCC0939</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

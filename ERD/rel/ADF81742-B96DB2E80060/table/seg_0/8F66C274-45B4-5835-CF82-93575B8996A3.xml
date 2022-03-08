@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8F66C274-45B4-5835-CF82-93575B8996A3" name="DigitaleMedien_Author">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>02BF2506-C7C1-E5E6-9B75-A17503EE0CF4</importedID>
+<ordsAlias>relation_31</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Autor_Id" id="C2CC1150-1D0D-D7C5-FEBC-754599E2C484">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>51AE981B-C212-0A8D-53AC-9577D44DEFE8</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2594643B-FCBF-5BB2-4002-374EA32209A4" referredColumn="79566F45-4169-3844-7EA3-CDF46CEEBFC6"/>
+</associations>
+</Column>
+<Column name="DigitaleMedien_Id" id="7EE390D5-8F06-4FEE-01DF-E3470D36288B">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>ACBFB409-B955-DE69-67E7-CA2C5BCD866B</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C11BBF73-8EEB-3777-F955-CA7107748AE7" referredColumn="01F4DEF9-3398-6DD6-F9E2-CDD867A3965E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CFD5E6E8-98FB-6600-DB42-85C383A6E83F" name="DigitaleMedien_Author_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>929DC7DD-28D6-4607-1147-FBB49C2CE4D9</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C2CC1150-1D0D-D7C5-FEBC-754599E2C484"/>
+<colUsage columnID="7EE390D5-8F06-4FEE-01DF-E3470D36288B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="19F93495-D509-16B7-7ACB-ABFB23827FB0" name="DigitaleMedien_Author_Digitale_Medien_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<generatorID>504FF2DF-BCE0-8F34-DBC5-B1DA2653A25F</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7EE390D5-8F06-4FEE-01DF-E3470D36288B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9AA588F6-1217-2F5D-D22D-2E4EE139141D" name="DigitaleMedien_Author_Autor_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<generatorID>504FF2DF-BCE0-8F34-DBC5-B1DA2653A25F</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C2CC1150-1D0D-D7C5-FEBC-754599E2C484"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

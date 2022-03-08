@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_30_Hörbuch_FK" directorySegmentName="seg_0" id="A349D261-C493-E982-DFF9-E8AB70366B64">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>8A7A4BB7-12E8-1A6A-9329-FBAAC84E2D1B</importedID>
+<engineerTo>
+<item key="ADF81742-75E6-F252-76E6-B96DB2E80060" value="true"/>
+</engineerTo>
+<useSurrogateKey>true</useSurrogateKey>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>DA1E32CB-6BAF-0D69-1099-B18E9375D50D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>D002F602-EA30-EEBC-2B6B-6E356C4FDE96</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

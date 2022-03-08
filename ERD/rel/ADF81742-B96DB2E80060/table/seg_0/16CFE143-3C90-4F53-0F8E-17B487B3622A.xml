@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="16CFE143-3C90-4F53-0F8E-17B487B3622A" name="Genre">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>4DF4BA9B-84D2-6946-4A39-97FE1AA59F58</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="278F5D16-7561-82A3-5E1C-7807778C360F">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>F4D4FD81-8314-D61B-61CC-75C7C7A147C9</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Genre" id="ED838421-30B0-C3D5-910E-9C851AD63D58">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>E37DC8FB-7604-3B98-E68D-3C617951633A</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Digitale_Medien_Medien_Id" id="92D4B64A-BACE-4E59-1D8C-E73968F9DE3F">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<generatorID>D1E07DBF-5989-7E06-7540-2624EEA4A0DA</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>82D104A7-4ABC-D1F4-85E6-0AA61F68AB87</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="462EEE9C-9C5A-6532-22BF-60D543C3220E" referredColumn="01F4DEF9-3398-6DD6-F9E2-CDD867A3965E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="534999D1-F1E1-5338-9937-BCE74C62F8BA" name="Genre_PK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>8599C89B-FE3C-2FAE-9754-3F78349D45B3</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="278F5D16-7561-82A3-5E1C-7807778C360F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9B02C79D-C7F6-A87C-289D-C11682570D92" name="Genre_Buch_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<generatorID>D88ED28A-DEDD-5760-B359-B22C4E408A15</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+<ind_PK_UK id="1036701A-0F92-820C-0B1A-9919CC375AD6" name="Genre_Digitale_Medien_FK">
+<createdBy>Markus</createdBy>
+<createdTime>2022-03-08 11:06:28 UTC</createdTime>
+<generatorID>E7CBDC97-10AB-BDEC-B803-E22D40DE42E0</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="92D4B64A-BACE-4E59-1D8C-E73968F9DE3F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
