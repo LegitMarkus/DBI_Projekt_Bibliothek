@@ -8,6 +8,6 @@ services:
             MYSQL_ROOT_PASSWORD: passme
             MYSQL_DATABASE: dbi
         ports:
-          - 3308:3308
+          - 3306:3306
         volumes:
             - './drive:/var/opt/dbi'

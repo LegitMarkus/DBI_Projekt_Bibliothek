@@ -1,6 +1,5 @@
-package at.htlleonding.persistence;
+package at.htlleonding.persistence.old;
 import java.util.HashSet;
-import java.util.Objects;
 import java.util.Set;
 import javax.persistence.*;
 import java.time.LocalDate;

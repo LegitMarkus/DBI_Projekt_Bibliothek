@@ -1,4 +1,4 @@
-package at.htlleonding.persistence;
+package at.htlleonding.persistence.old;
 ///home/peter/src/dbi4/quarkus-hibernate-cmdline
 
 import java.util.List;

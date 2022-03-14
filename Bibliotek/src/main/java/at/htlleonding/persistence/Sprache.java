@@ -13,7 +13,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Topic {
+public class Sprache {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -21,6 +21,9 @@ public class Topic {
     @Column(nullable = false, unique = true, length = 50)
     private String name;
 
-    @ManyToMany
+    @Column(nullable = false, unique = true, length = 50)
+    private String iso;
+
+    @OneToMany
     private Set<Medien> medien;
 }

@@ -1,4 +1,4 @@
-package at.htlleonding.persistence;
+package at.htlleonding.persistence.old;
 
 import javax.persistence.*;
 

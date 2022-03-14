@@ -1,6 +1,6 @@
 package at.htlleonding.logic;
 
-import at.htlleonding.persistence.*;
+import at.htlleonding.persistence.old.*;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
