@@ -1,5 +1,6 @@
 package at.htlleonding.persistence;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,17 +14,19 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Genre {
+public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    
-    @Column(nullable = false, unique = true, length = 50)
-    private String genre;
 
-    @OneToMany
-    private Set<Digitale_Medien> digitale_mediens;
+    @Column(nullable = false, length = 50)
+    private String vorname;
+    @Column(nullable = false, length = 50)
+    private String nachname;
 
-    @OneToMany
-    private Set<Physische_Medien> physische_mediens;
+    @ManyToMany
+    private Set<Digitale_Medien> digitaleMedien;
+
+    @ManyToMany
+    private Set<Buch> bucher;
 }
