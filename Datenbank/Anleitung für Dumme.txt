@@ -1,3 +1,0 @@
-cmd hier ausführen
-in cmd ausführen: 
-docker-compose up --build
