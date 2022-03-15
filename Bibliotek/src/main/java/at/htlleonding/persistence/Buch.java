@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 
 @Getter
 @Setter
@@ -13,5 +14,6 @@ import javax.persistence.Entity;
 @NoArgsConstructor
 @Entity
 public class Buch extends Physische_Medien{
-
+    @ManyToOne
+    private Genre genre;
 }
