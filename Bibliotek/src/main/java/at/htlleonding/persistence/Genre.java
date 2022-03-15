@@ -23,4 +23,7 @@ public class Genre {
 
     @OneToMany
     private Set<Digitale_Medien> digitale_mediens;
+
+    @OneToMany
+    private Set<Physische_Medien> physische_mediens;
 }

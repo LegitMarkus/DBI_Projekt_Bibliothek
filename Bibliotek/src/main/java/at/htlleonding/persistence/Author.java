@@ -26,4 +26,7 @@ public class Author {
 
     @ManyToMany
     private Set<Digitale_Medien> digitaleMedien;
+
+    @ManyToMany
+    private Set<Buch> bucher;
 }
