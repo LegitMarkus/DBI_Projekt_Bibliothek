@@ -12,6 +12,6 @@ import javax.persistence.Entity;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Buch extends Physische_Medien{
+public class Buch extends PhysischeMedien {
 
 }

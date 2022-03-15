@@ -22,8 +22,8 @@ public class Genre {
     private String genre;
 
     @OneToMany
-    private Set<Digitale_Medien> digitale_mediens;
+    private Set<DigitaleMedien> digitale_mediens;
 
     @OneToMany
-    private Set<Physische_Medien> physische_mediens;
+    private Set<PhysischeMedien> physische_mediens;
 }

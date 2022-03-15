@@ -25,7 +25,7 @@ public class Author {
     private String nachname;
 
     @ManyToMany
-    private Set<Digitale_Medien> digitaleMedien;
+    private Set<DigitaleMedien> digitaleMedien;
 
     @ManyToMany
     private Set<Buch> bucher;

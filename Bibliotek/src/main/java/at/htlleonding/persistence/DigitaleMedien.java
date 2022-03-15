@@ -14,19 +14,10 @@ import java.util.Set;
 @NoArgsConstructor
 @Inheritance(strategy = InheritanceType.JOINED)
 @Entity
-public class Physische_Medien extends Medien{
-    @Column(nullable = false)
-    private Integer gesammtanzahl;
-    @Column(nullable = false)
-    private Integer verleih;
-    @Column(nullable = false)
-    private Integer freihandbereich;
-    @Column(nullable = false)
-    private boolean mitarbeiterverkauffreigabe;
+public class DigitaleMedien extends Medien{
+    @ManyToOne
+    private Genre genre;
 
     @ManyToMany
     private Set<Author> authors;
-
-    @ManyToOne
-    private Genre genre;
 }

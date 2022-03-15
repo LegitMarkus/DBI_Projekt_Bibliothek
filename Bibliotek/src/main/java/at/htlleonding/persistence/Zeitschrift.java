@@ -12,5 +12,5 @@ import javax.persistence.Entity;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Zeitschrift extends Physische_Medien{
+public class Zeitschrift extends PhysischeMedien {
 }
