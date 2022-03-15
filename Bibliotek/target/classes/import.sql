@@ -44,7 +44,7 @@ CREATE TABLE ausleihung (
                             id                                NUMBER NOT NULL,
                             ausleihdatum                      DATE,
 --  ERROR: Column name length exceeds maximum allowed length(30)
-                            vorrausichtliches_rueckgabedatum  DATE,
+                            rueckgabedatum  DATE,
                             verlaengerungsanzahl              NUMBER NOT NULL,
                             kunde_id                          NUMBER NOT NULL,
                             medien_id                         NUMBER NOT NULL

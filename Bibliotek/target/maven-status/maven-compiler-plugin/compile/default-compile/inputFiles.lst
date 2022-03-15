@@ -1,8 +1,8 @@
-/home/peter/src/dbi4/jpa-SimpleLibrary/src/main/java/at/htlleonding/persistence/Author.java
-/home/peter/src/dbi4/jpa-SimpleLibrary/src/main/java/at/htlleonding/persistence/BookAuthorKey.java
-/home/peter/src/dbi4/jpa-SimpleLibrary/src/main/java/at/htlleonding/persistence/BookAuthor.java
-/home/peter/src/dbi4/jpa-SimpleLibrary/src/main/java/at/htlleonding/persistence/Topic.java
-/home/peter/src/dbi4/jpa-SimpleLibrary/src/main/java/at/htlleonding/persistence/Book.java
-/home/peter/src/dbi4/jpa-SimpleLibrary/src/main/java/at/htlleonding/QuarkusCmdlineApp.java
-/home/peter/src/dbi4/jpa-SimpleLibrary/src/main/java/at/htlleonding/persistence/LibraryRepository.java
-/home/peter/src/dbi4/jpa-SimpleLibrary/src/main/java/at/htlleonding/logic/LibraryLogic.java
+D:\4CHIF\DBI\ZS\Projekt\DBI_Projekt_Bibliothek\Bibliotek\src\main\java\at\htlleonding\persistence\Digitale_Medien.java
+D:\4CHIF\DBI\ZS\Projekt\DBI_Projekt_Bibliothek\Bibliotek\src\main\java\at\htlleonding\persistence\Medien.java
+D:\4CHIF\DBI\ZS\Projekt\DBI_Projekt_Bibliothek\Bibliotek\src\main\java\at\htlleonding\persistence\Autor.java
+D:\4CHIF\DBI\ZS\Projekt\DBI_Projekt_Bibliothek\Bibliotek\src\main\java\at\htlleonding\persistence\Genre.java
+D:\4CHIF\DBI\ZS\Projekt\DBI_Projekt_Bibliothek\Bibliotek\src\main\java\at\htlleonding\persistence\Verlag.java
+D:\4CHIF\DBI\ZS\Projekt\DBI_Projekt_Bibliothek\Bibliotek\src\main\java\at\htlleonding\persistence\Topic.java
+D:\4CHIF\DBI\ZS\Projekt\DBI_Projekt_Bibliothek\Bibliotek\src\main\java\at\htlleonding\persistence\Sprache.java
+D:\4CHIF\DBI\ZS\Projekt\DBI_Projekt_Bibliothek\Bibliotek\src\main\java\at\htlleonding\QuarkusCmdlineApp.java

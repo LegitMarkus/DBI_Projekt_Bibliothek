@@ -1,8 +1,8 @@
-at/htlleonding/persistence/BookAuthorKey.class
-at/htlleonding/persistence/Book.class
-at/htlleonding/QuarkusCmdlineApp.class
-at/htlleonding/persistence/Topic.class
-at/htlleonding/persistence/Author.class
-at/htlleonding/logic/LibraryLogic.class
-at/htlleonding/persistence/BookAuthor.class
-at/htlleonding/persistence/LibraryRepository.class
+at\htlleonding\persistence\Autor.class
+at\htlleonding\persistence\Sprache.class
+at\htlleonding\persistence\Medien.class
+at\htlleonding\persistence\Topic.class
+at\htlleonding\QuarkusCmdlineApp.class
+at\htlleonding\persistence\Digitale_Medien.class
+at\htlleonding\persistence\Genre.class
+at\htlleonding\persistence\Verlag.class

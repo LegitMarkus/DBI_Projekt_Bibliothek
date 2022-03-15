@@ -8,11 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="jpa-SimpleLibrary-Queries" />
+        <module name="Bibliotek" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Bibliotek" options="-parameters" />
       <module name="jpa-SimpleLibrary-Queries" options="-parameters" />
     </option>
   </component>

@@ -10,6 +10,10 @@ import org.junit.jupiter.api.Test;
 @QuarkusMainTest
 public class QuarkusCmdlineAppTest {
 
+    @Test
+    public void testCreateBook() {
+
+    }
 //    @Test
 //    @Launch("World")
 //    public void testLaunchCommand(LaunchResult result) {
