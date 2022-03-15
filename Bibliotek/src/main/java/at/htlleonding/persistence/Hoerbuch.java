@@ -5,19 +5,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import java.util.Set;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Inheritance(strategy = InheritanceType.JOINED)
 @Entity
-public class Digitale_Medien extends Medien{
-    @ManyToOne
-    private Genre genre;
-
+public class Hoerbuch extends Digitale_Medien{
     @ManyToMany
-    private Set<Author> authors;
+    private Set<Sprecher> sprechers;
 }

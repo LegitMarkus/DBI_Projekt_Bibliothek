@@ -13,14 +13,14 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Genre {
+public class Sprecher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    
-    @Column(nullable = false, unique = true, length = 50)
-    private String genre;
 
-    @OneToMany
-    private Set<Digitale_Medien> digitale_mediens;
+    @Column(nullable = false, unique = true, length = 50)
+    private String name;
+
+    @ManyToMany
+    private Set<Hoerbuch> hoerbucher;
 }
