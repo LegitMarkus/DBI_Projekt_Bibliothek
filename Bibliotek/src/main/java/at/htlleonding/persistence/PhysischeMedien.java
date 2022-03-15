@@ -26,7 +26,4 @@ public class PhysischeMedien extends Medien{
 
     @ManyToMany
     private Set<Author> authors;
-
-    @ManyToOne
-    private Genre genre;
 }

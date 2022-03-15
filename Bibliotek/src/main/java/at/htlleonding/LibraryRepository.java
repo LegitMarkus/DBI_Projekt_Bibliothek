@@ -24,7 +24,7 @@ public class LibraryRepository {
         em.persist(hoerbuch);}
     public void add(Medien medien){
         em.persist(medien);}
-    public void add(PhysischeMedien physischeMedien){
+    public void add(Physische_Medien physischeMedien){
         em.persist(physischeMedien);}
     public void add(Sprache sprache){
         em.persist(sprache);}
