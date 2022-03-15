@@ -10,7 +10,6 @@ import javax.persistence.Entity;
 @Getter
 @Setter
 @AllArgsConstructor
-@NoArgsConstructor
 @Entity
 public class Zeitschrift extends PhysischeMedien {
 }

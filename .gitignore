@@ -26,3 +26,4 @@ hs_err_pid*
 **/*.local
 **/*.git
 **/*.DS_Store
+Bibliotek/.idea/sonarlint
