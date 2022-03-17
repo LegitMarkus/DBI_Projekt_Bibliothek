@@ -25,5 +25,5 @@ public class Genre {
     private Set<DigitaleMedien> digitale_mediens;
 
     @OneToMany
-    private Set<PhysischeMedien> physische_mediens;
+    private Set<Buch> buecher;
 }
