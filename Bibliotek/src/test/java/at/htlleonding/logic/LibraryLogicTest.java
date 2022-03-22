@@ -100,6 +100,5 @@ class LibraryLogicTest {
         assertNotNull(result);
         assertEquals(4, result.length);
     }
-
  */
 }

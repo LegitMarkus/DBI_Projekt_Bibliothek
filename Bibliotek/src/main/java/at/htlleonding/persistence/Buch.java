@@ -11,6 +11,7 @@ import javax.persistence.ManyToOne;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class Buch extends PhysischeMedien {
     @ManyToOne

@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Getter
@@ -22,5 +23,5 @@ public class Verlag {
     private String name;
 
     @OneToMany
-    private Set<Medien> medien;
+    private Set<Medien> medien = new HashSet<>();
 }

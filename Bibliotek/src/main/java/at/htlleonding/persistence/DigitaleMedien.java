@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Getter
@@ -19,5 +20,6 @@ public class DigitaleMedien extends Medien{
     private Genre genre;
 
     @ManyToMany
-    private Set<Author> authors;
+    @JoinColumn
+    private Set<Author> authors = new HashSet<Author>();
 }

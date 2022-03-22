@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
 @Getter
@@ -36,5 +37,5 @@ public class Medien {
     private Sprache sprache;
 
     @ManyToMany
-    private Set<Topic> topics;
+    private Set<Topic> topics = new HashSet<>();;
 }

@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Getter
@@ -25,8 +26,8 @@ public class Author {
     private String nachname;
 
     @ManyToMany
-    private Set<DigitaleMedien> digitaleMedien;
+    private Set<DigitaleMedien> digitaleMedien = new HashSet<DigitaleMedien>();
 
     @ManyToMany
-    private Set<Buch> bucher;
+    private Set<Buch> bucher = new HashSet<Buch>();
 }

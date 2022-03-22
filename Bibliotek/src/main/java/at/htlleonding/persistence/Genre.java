@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Getter
@@ -22,8 +23,8 @@ public class Genre {
     private String genre;
 
     @OneToMany
-    private Set<DigitaleMedien> digitale_mediens;
+    private Set<DigitaleMedien> digitale_mediens = new HashSet<>();
 
     @OneToMany
-    private Set<Buch> buecher;
+    private Set<Buch> buecher = new HashSet<>();;
 }

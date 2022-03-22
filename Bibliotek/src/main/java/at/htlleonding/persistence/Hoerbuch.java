@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
+import java.util.HashSet;
 import java.util.Set;
 
 @Getter
@@ -16,5 +17,5 @@ import java.util.Set;
 @Entity
 public class Hoerbuch extends DigitaleMedien {
     @ManyToMany
-    private Set<Sprecher> sprechers;
+    private Set<Sprecher> sprechers = new HashSet<>();;
 }

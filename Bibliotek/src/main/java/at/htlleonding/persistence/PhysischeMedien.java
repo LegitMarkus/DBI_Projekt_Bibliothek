@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Getter
@@ -25,5 +26,5 @@ public class PhysischeMedien extends Medien{
     private boolean mitarbeiterverkauffreigabe;
 
     @ManyToMany
-    private Set<Author> authors;
+    private Set<Author> authors = new HashSet<>();
 }

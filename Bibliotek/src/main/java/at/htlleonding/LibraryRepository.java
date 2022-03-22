@@ -2,57 +2,67 @@ package at.htlleonding;
 
 import at.htlleonding.persistence.*;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 import java.awt.print.Book;
-
+@ApplicationScoped
 public class LibraryRepository {
     @Inject
     EntityManager em;
 
     @Transactional
-    public void add(Author author){
-        em.persist(author);}
+    public<T> void add(T entity){
+        em.persist(entity);
+    }
+
     @Transactional
-    public void add(Book book){
-        em.persist(book);}
-    @Transactional
-    public void add(DigitaleMedien digitaleMedien){
-        em.persist(digitaleMedien);}
-    @Transactional
-    public void add(EBook eBook){
-        em.persist(eBook);}
-    @Transactional
-    public void add(Genre genre){
-        em.persist(genre);}
-    @Transactional
-    public void add(Hoerbuch hoerbuch){
-        em.persist(hoerbuch);}
-    @Transactional
-    public void add(Medien medien){
-        em.persist(medien);}
-    @Transactional
-    public void add(PhysischeMedien physischeMedien){
-        em.persist(physischeMedien);}
-    @Transactional
-    public void add(Sprache sprache){
-        em.persist(sprache);}
-    @Transactional
-    public void add(Sprecher sprecher){
-        em.persist(sprecher);}
-    @Transactional
-    public void add(Topic topic){
-        em.persist(topic);}
-    @Transactional
-    public void add(Verlag verlag){
-        em.persist(verlag);}
-    @Transactional
-    public void add(Zeitschrift zeitschrift){
-        em.persist(zeitschrift);}
-    @Transactional
-    public void add(Zeitung zeitung){
-        em.persist(zeitung);}
+    public<T> void delete(T entity){
+        em.remove(entity);
+    }
+    //@Transactional
+    //public void add(Author author){
+    //    em.persist(author);}
+    //@Transactional
+    //public void add(Book book){
+    //    em.persist(book);}
+    //@Transactional
+    //public void add(DigitaleMedien digitaleMedien){
+    //    em.persist(digitaleMedien);}
+    //@Transactional
+    //public void add(EBook eBook){
+    //    em.persist(eBook);}
+    //@Transactional
+    //public void add(Genre genre){
+    //    em.persist(genre);}
+    //@Transactional
+    //public void add(Hoerbuch hoerbuch){
+    //    em.persist(hoerbuch);}
+    //@Transactional
+    //public void add(Medien medien){
+    //    em.persist(medien);}
+    //@Transactional
+    //public void add(PhysischeMedien physischeMedien){
+    //    em.persist(physischeMedien);}
+    //@Transactional
+    //public void add(Sprache sprache){
+    //    em.persist(sprache);}
+    //@Transactional
+    //public void add(Sprecher sprecher){
+    //    em.persist(sprecher);}
+    //@Transactional
+    //public void add(Topic topic){
+    //    em.persist(topic);}
+    //@Transactional
+    //public void add(Verlag verlag){
+    //    em.persist(verlag);}
+    //@Transactional
+    //public void add(Zeitschrift zeitschrift){
+    //    em.persist(zeitschrift);}
+    //@Transactional
+    //public void add(Zeitung zeitung){
+    //    em.persist(zeitung);}
 
     @Transactional
     public void add(Author a, DigitaleMedien dm){
