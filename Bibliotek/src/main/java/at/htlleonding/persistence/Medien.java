@@ -25,9 +25,6 @@ public class Medien {
     private String titel;
 
     @Column
-    private Date kaufdatum;
-
-    @Column
     private Date veroeffentlichungsdatum;
 
     @ManyToOne
@@ -42,10 +39,11 @@ public class Medien {
     @ManyToMany
     private Set<Topic> topics = new HashSet<>();;
 
-    @OneToMany
-    private Set<Reservierung> reservierungen = new HashSet<>();
+    @ManyToOne
+    private Genre genre;
 
-    @OneToMany
-    private Set<Ausleihung> ausleihungen = new HashSet<>();
+    @ManyToMany
+    @JoinColumn
+    private Set<Author> authors = new HashSet<Author>();
 
 }

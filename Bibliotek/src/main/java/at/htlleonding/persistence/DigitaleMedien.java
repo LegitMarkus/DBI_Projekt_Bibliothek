@@ -16,10 +16,6 @@ import java.util.Set;
 @Inheritance(strategy = InheritanceType.JOINED)
 @Entity
 public class DigitaleMedien extends Medien{
-    @ManyToOne
-    private Genre genre;
-
-    @ManyToMany
-    @JoinColumn
-    private Set<Author> authors = new HashSet<Author>();
+    @Column
+    private String url;
 }

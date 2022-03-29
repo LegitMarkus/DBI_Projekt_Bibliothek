@@ -1,6 +1,6 @@
 package at.htlleonding.persistence.ausleih_Verkauf_Entitäten;
 
-import at.htlleonding.persistence.Medien;
+import at.htlleonding.persistence.SinglePhysicalMedium;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,7 +20,7 @@ public class Ausleihung {
 
     @ManyToOne
     @MapsId("medienId")
-    private Medien medien;
+    private SinglePhysicalMedium medien;
     @MapsId("kundenId")
     @ManyToOne
     private Kunde kunde;
@@ -34,7 +34,7 @@ public class Ausleihung {
     @Column
     private Integer verlängerung = 0;
 
-    public Ausleihung(Medien medien, Kunde kunde, Date ausleihdatum, Date rückgabedatum) {
+    public Ausleihung(SinglePhysicalMedium medien, Kunde kunde, Date ausleihdatum, Date rückgabedatum) {
         this.medien = medien;
         this.kunde = kunde;
         this.ausleihdatum = ausleihdatum;

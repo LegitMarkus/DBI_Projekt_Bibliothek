@@ -68,75 +68,39 @@ public class LibraryRepository {
     //    em.persist(zeitung);}
 
     @Transactional
-    public void add(Author a, DigitaleMedien dm){
+    public void add(Author a, Medien m){
         if (a.getId() == null)
             add(a);
-        if (dm.getId() == null)
-            add(dm);
+        if (m.getId() == null)
+            add(m);
 
-        dm.getAuthors().add(a);
-        a.getDigitaleMedien().add(dm);
+        m.getAuthors().add(a);
+        a.getMedien().add(m);
 
-        em.persist(dm);
+        em.persist(m);
         em.persist(a);
     }
     @Transactional
-    public void add(DigitaleMedien dm, Author a){
-        add(dm, a);
+    public void add(Medien m, Author a){
+        add(a, m);
     }
 
     @Transactional
-    public void add(Author a, Buch b){
-        if (a.getId() == null)
-            add(a);
-        if (b.getId() == null)
-            add(b);
-
-        b.getAuthors().add(a);
-        a.getBucher().add(b);
-
-        em.persist(b);
-        em.persist(a);
-    }
-    @Transactional
-    public void add(Buch b, Author a){
-        add(a, b);
-    }
-
-    @Transactional
-    public void add(Buch b, Genre g){
-        if (b.getId() == null)
-            add(b);
+    public void add(Medien m, Genre g){
+        if (m.getId() == null)
+            add(m);
         if (g.getId() == null)
             add(g);
 
-        g.getBuecher().add(b);
-        b.setGenre(g);
+        g.getMedien().add(m);
+        m.setGenre(g);
 
         em.persist(g);
-        em.persist(b);
+        em.persist(m);
     }
     @Transactional
-    public void add(Genre g, Buch b){
-        add(b, g);
-    }
-
-    @Transactional
-    public void add(DigitaleMedien dm, Genre g){
-        if (dm.getId() == null)
-            add(dm);
-        if (g.getId() == null)
-            add(g);
-
-        g.getDigitale_mediens().add(dm);
-        dm.setGenre(g);
-
-        em.persist(g);
-        em.persist(dm);
-    }
-    @Transactional
-    public void add(Genre g, DigitaleMedien dm){
-        add(dm, g);
+    public void add(Genre g, Medien m){
+        add(m, g);
     }
 
     @Transactional
@@ -212,7 +176,7 @@ public class LibraryRepository {
     }
 
     @Transactional
-    public void add(Medien m, Kunde k, Date ausleihdatum, Date rückgabedatum) {
+    public void add(SinglePhysicalMedium m, Kunde k, Date ausleihdatum, Date rückgabedatum) {
         if(m.getId() == null) {
             add(m);
         }
@@ -228,7 +192,7 @@ public class LibraryRepository {
         em.persist(k);
     }
     @Transactional
-    public void add(Medien m, Kunde k, Date reservierungsdatum) {
+    public void add(SinglePhysicalMedium m, Kunde k, Date reservierungsdatum) {
         if(m.getId() == null) {
             add(m);
         }
@@ -244,7 +208,7 @@ public class LibraryRepository {
         em.persist(k);
     }
     @Transactional
-    public void add(PhysischeMedien pm, Kunde k, Integer preis) {
+    public void add(SinglePhysicalMedium pm, Kunde k, Integer preis) {
         if(pm.getId() == null) {
             add(pm);
         }
@@ -258,5 +222,19 @@ public class LibraryRepository {
         em.persist(assoc);
         em.persist(pm);
         em.persist(k);
+    }
+
+    @Transactional
+    public void add(SinglePhysicalMedium spm, PhysischeMedien pm){
+        if (spm.getId() == null)
+            add(spm);
+        if (pm.getId() == null)
+            add(pm);
+
+        pm.getEinzelneMedien().add(spm);
+        spm.setPhysischeMedien(pm);
+
+        em.persist(pm);
+        em.persist(spm);
     }
 }

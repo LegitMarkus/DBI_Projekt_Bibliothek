@@ -14,6 +14,4 @@ import javax.persistence.ManyToOne;
 @NoArgsConstructor
 @Entity
 public class Buch extends PhysischeMedien {
-    @ManyToOne
-    private Genre genre;
 }

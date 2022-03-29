@@ -1,14 +1,12 @@
 package at.htlleonding.persistence.ausleih_Verkauf_Entitäten;
 
-import at.htlleonding.persistence.Medien;
-import at.htlleonding.persistence.PhysischeMedien;
+import at.htlleonding.persistence.SinglePhysicalMedium;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Getter
 @Setter
@@ -21,7 +19,7 @@ public class Rechnung {
 
     @ManyToOne
     @MapsId("medienId")
-    private PhysischeMedien medien;
+    private SinglePhysicalMedium medien;
     @MapsId("kundenId")
     @ManyToOne
     private Kunde kunde;
@@ -29,7 +27,7 @@ public class Rechnung {
     @Column(nullable = false)
     private Integer preis;
 
-    public Rechnung(PhysischeMedien medien, Kunde kunde, Integer preis) {
+    public Rechnung(SinglePhysicalMedium medien, Kunde kunde, Integer preis) {
         this.medien = medien;
         this.kunde = kunde;
         this.preis = preis;

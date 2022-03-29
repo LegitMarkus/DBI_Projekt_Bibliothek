@@ -23,8 +23,5 @@ public class Genre {
     private String genre;
 
     @OneToMany
-    private Set<DigitaleMedien> digitale_mediens = new HashSet<>();
-
-    @OneToMany
-    private Set<Buch> buecher = new HashSet<>();;
+    private Set<Medien> medien = new HashSet<>();
 }

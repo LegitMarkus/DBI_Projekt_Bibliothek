@@ -26,8 +26,6 @@ public class Author {
     private String nachname;
 
     @ManyToMany
-    private Set<DigitaleMedien> digitaleMedien = new HashSet<DigitaleMedien>();
+    private Set<Medien> medien = new HashSet<>();
 
-    @ManyToMany
-    private Set<Buch> bucher = new HashSet<Buch>();
 }

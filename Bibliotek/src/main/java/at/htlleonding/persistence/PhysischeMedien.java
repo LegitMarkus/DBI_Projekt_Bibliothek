@@ -1,6 +1,5 @@
 package at.htlleonding.persistence;
 
-import at.htlleonding.persistence.ausleih_Verkauf_Entitäten.Rechnung;
 import lombok.*;
 
 import javax.persistence.*;
@@ -21,11 +20,15 @@ public class PhysischeMedien extends Medien{
     @Column(nullable = false)
     private Integer freihandbereich;
     @Column(nullable = false)
-    private boolean mitarbeiterverkauffreigabe;
+    private boolean ausleihen;
+    //@Column(nullable = false)
+    //private boolean mitarbeiterverkauffreigabe;
+    @Column
+    private String Signature;
 
     @ManyToMany
     private Set<Author> authors = new HashSet<>();
 
     @OneToMany
-    private Set<Rechnung> rechnungen = new HashSet<>();
+    private Set<SinglePhysicalMedium> einzelneMedien;
 }
