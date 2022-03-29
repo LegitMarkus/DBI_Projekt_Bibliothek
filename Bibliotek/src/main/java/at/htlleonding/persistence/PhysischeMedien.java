@@ -1,9 +1,7 @@
 package at.htlleonding.persistence;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import at.htlleonding.persistence.ausleih_Verkauf_Entitäten.Rechnung;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -27,4 +25,7 @@ public class PhysischeMedien extends Medien{
 
     @ManyToMany
     private Set<Author> authors = new HashSet<>();
+
+    @OneToMany
+    private Set<Rechnung> rechnungen = new HashSet<>();
 }

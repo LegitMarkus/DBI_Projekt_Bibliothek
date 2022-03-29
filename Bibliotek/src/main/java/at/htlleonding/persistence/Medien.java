@@ -1,5 +1,8 @@
 package at.htlleonding.persistence;
 
+import at.htlleonding.persistence.ausleih_Verkauf_Entitäten.Ausleihung;
+import at.htlleonding.persistence.ausleih_Verkauf_Entitäten.Rechnung;
+import at.htlleonding.persistence.ausleih_Verkauf_Entitäten.Reservierung;
 import lombok.*;
 
 import javax.persistence.*;
@@ -38,4 +41,11 @@ public class Medien {
 
     @ManyToMany
     private Set<Topic> topics = new HashSet<>();;
+
+    @OneToMany
+    private Set<Reservierung> reservierungen = new HashSet<>();
+
+    @OneToMany
+    private Set<Ausleihung> ausleihungen = new HashSet<>();
+
 }
