@@ -15,7 +15,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Hoerbuch extends DigitaleMedien {
+public class AudioBook extends DigitalMedia {
     @ManyToMany
-    private Set<Sprecher> sprechers = new HashSet<>();;
+    private Set<Speaker> speakers = new HashSet<>();;
 }

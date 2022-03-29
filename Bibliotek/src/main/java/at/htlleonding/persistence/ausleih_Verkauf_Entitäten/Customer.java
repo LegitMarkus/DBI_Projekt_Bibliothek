@@ -14,27 +14,27 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Kunde {
+public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(nullable = false, unique = true)
-    private String kundennummer;
+    private String customerNumber;
 
     @Column(nullable = false, length = 50)
-    private String vorname;
+    private String firstName;
 
     @Column(nullable = false, length = 50)
-    private  String nachname;
+    private  String lastName;
 
     @OneToMany
-    private Set<Reservierung> reservierungen = new HashSet<>();
+    private Set<Reservation> reservations = new HashSet<>();
 
     @OneToMany
-    private Set<Ausleihung> ausleihungen = new HashSet<>();
+    private Set<Borrowing> borrowings = new HashSet<>();
 
     @OneToMany
-    private Set<Rechnung> rechnungen = new HashSet<>();
+    private Set<Bill> bills = new HashSet<>();
 
 }

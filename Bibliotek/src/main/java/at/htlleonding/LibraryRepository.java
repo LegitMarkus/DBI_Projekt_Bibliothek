@@ -7,7 +7,6 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
-import java.awt.print.Book;
 import java.util.Date;
 
 @ApplicationScoped
@@ -68,7 +67,7 @@ public class LibraryRepository {
     //    em.persist(zeitung);}
 
     @Transactional
-    public void add(Author a, Medien m){
+    public void add(Author a, Media m){
         if (a.getId() == null)
             add(a);
         if (m.getId() == null)
@@ -81,12 +80,12 @@ public class LibraryRepository {
         em.persist(a);
     }
     @Transactional
-    public void add(Medien m, Author a){
+    public void add(Media m, Author a){
         add(a, m);
     }
 
     @Transactional
-    public void add(Medien m, Genre g){
+    public void add(Media m, Genre g){
         if (m.getId() == null)
             add(m);
         if (g.getId() == null)
@@ -99,12 +98,12 @@ public class LibraryRepository {
         em.persist(m);
     }
     @Transactional
-    public void add(Genre g, Medien m){
+    public void add(Genre g, Media m){
         add(m, g);
     }
 
     @Transactional
-    public void add(Hoerbuch h, Sprecher s){
+    public void add(AudioBook h, Speaker s){
         if (h.getId() == null)
             add(h);
         if (s.getId() == null)
@@ -117,12 +116,12 @@ public class LibraryRepository {
         em.persist(h);
     }
     @Transactional
-    public void add(Sprecher s, Hoerbuch h){
+    public void add(Speaker s, AudioBook h){
         add(h, s);
     }
 
     @Transactional
-    public void add(Medien m, Verlag v){
+    public void add(Media m, Publisher v){
         if (m.getId() == null)
             add(m);
         if (v.getId() == null)
@@ -135,12 +134,12 @@ public class LibraryRepository {
         em.persist(m);
     }
     @Transactional
-    public void add(Verlag v, Medien m){
+    public void add(Publisher v, Media m){
         add(m ,v);
     }
 
     @Transactional
-    public void add(Medien m, Sprache s){
+    public void add(Media m, Language s){
         if (m.getId() == null)
             add(m);
         if (s.getId() == null)
@@ -153,12 +152,12 @@ public class LibraryRepository {
         em.persist(m);
     }
     @Transactional
-    public void add(Sprache s, Medien m){
+    public void add(Language s, Media m){
         add(m, s);
     }
 
     @Transactional
-    public void add(Medien m, Topic t){
+    public void add(Media m, Topic t){
         if (m.getId() == null)
             add(m);
         if (t.getId() == null)
@@ -171,53 +170,53 @@ public class LibraryRepository {
         em.persist(m);
     }
     @Transactional
-    public void add(Topic t, Medien m){
+    public void add(Topic t, Media m){
         add(m, t);
     }
 
     @Transactional
-    public void add(SinglePhysicalMedium m, Kunde k, Date ausleihdatum, Date rückgabedatum) {
+    public void add(SinglePhysicalMedia m, Customer k, Date ausleihdatum, Date rückgabedatum) {
         if(m.getId() == null) {
             add(m);
         }
         if(k.getId() == null) {
             add(k);
         }
-        var assoc = new Ausleihung(m, k, ausleihdatum, rückgabedatum);
+        var assoc = new Borrowing(m, k, ausleihdatum, rückgabedatum);
         m.getAusleihungen().add(assoc);
-        k.getAusleihungen().add(assoc);
+        k.getBorrowings().add(assoc);
 
         em.persist(assoc);
         em.persist(m);
         em.persist(k);
     }
     @Transactional
-    public void add(SinglePhysicalMedium m, Kunde k, Date reservierungsdatum) {
+    public void add(SinglePhysicalMedia m, Customer k, Date reservierungsdatum) {
         if(m.getId() == null) {
             add(m);
         }
         if(k.getId() == null) {
             add(k);
         }
-        var assoc = new Reservierung(m, k, reservierungsdatum);
+        var assoc = new Reservation(m, k, reservierungsdatum);
         m.getReservierungen().add(assoc);
-        k.getReservierungen().add(assoc);
+        k.getReservations().add(assoc);
 
         em.persist(assoc);
         em.persist(m);
         em.persist(k);
     }
     @Transactional
-    public void add(SinglePhysicalMedium pm, Kunde k, Integer preis) {
+    public void add(SinglePhysicalMedia pm, Customer k, Integer preis) {
         if(pm.getId() == null) {
             add(pm);
         }
         if(k.getId() == null) {
             add(k);
         }
-        var assoc = new Rechnung(pm, k, preis);
+        var assoc = new Bill(pm, k, preis);
         pm.getRechnungen().add(assoc);
-        k.getRechnungen().add(assoc);
+        k.getBorrowings().add(assoc);
 
         em.persist(assoc);
         em.persist(pm);
@@ -225,7 +224,7 @@ public class LibraryRepository {
     }
 
     @Transactional
-    public void add(SinglePhysicalMedium spm, PhysischeMedien pm){
+    public void add(SinglePhysicalMedia spm, PhysicalMedia pm){
         if (spm.getId() == null)
             add(spm);
         if (pm.getId() == null)

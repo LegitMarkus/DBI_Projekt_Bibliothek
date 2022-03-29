@@ -12,17 +12,13 @@ import java.util.Set;
 @NoArgsConstructor
 @Inheritance(strategy = InheritanceType.JOINED)
 @Entity
-public class PhysischeMedien extends Medien{
+public class PhysicalMedia extends Media {
     @Column(nullable = false)
-    private Integer gesammtanzahl;
+    private Integer totalNumber;
     @Column(nullable = false)
-    private Integer verleih;
+    private Integer borrowing;
     @Column(nullable = false)
-    private Integer freihandbereich;
-    @Column(nullable = false)
-    private boolean ausleihen;
-    //@Column(nullable = false)
-    //private boolean mitarbeiterverkauffreigabe;
+    private Integer freehandArea;
     @Column
     private String Signature;
 
@@ -30,5 +26,5 @@ public class PhysischeMedien extends Medien{
     private Set<Author> authors = new HashSet<>();
 
     @OneToMany
-    private Set<SinglePhysicalMedium> einzelneMedien;
+    private Set<SinglePhysicalMedia> einzelneMedien;
 }

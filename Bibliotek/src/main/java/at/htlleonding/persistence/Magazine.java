@@ -10,5 +10,5 @@ import javax.persistence.Entity;
 @Setter
 @AllArgsConstructor
 @Entity
-public class EBook extends DigitalMedia {
+public class Magazine extends PhysicalMedia {
 }

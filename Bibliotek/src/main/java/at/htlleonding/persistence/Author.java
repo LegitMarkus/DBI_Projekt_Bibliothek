@@ -21,11 +21,11 @@ public class Author {
     private Integer id;
 
     @Column(nullable = false, length = 50)
-    private String vorname;
+    private String firstname;
     @Column(nullable = false, length = 50)
-    private String nachname;
+    private String lastname;
 
     @ManyToMany
-    private Set<Medien> medien = new HashSet<>();
+    private Set<Media> medias = new HashSet<>();
 
 }

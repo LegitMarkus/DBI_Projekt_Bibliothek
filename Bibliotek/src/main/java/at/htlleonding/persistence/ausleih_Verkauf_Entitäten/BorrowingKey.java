@@ -11,22 +11,23 @@ import java.util.Objects;
 @Embeddable
 @AllArgsConstructor
 @NoArgsConstructor
-public class ReservierungId implements Serializable {
+public class BorrowingKey implements Serializable {
     @Column
-    Integer medienId;
+    Integer mediaId;
     @Column
-    Integer kundenId;
+    Integer custommerId;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ReservierungId that = (ReservierungId) o;
-        return Objects.equals(medienId, that.medienId) && Objects.equals(kundenId, that.kundenId);
+        ReservationKey that = (ReservationKey) o;
+        return Objects.equals(mediaId, that.mediaId) && Objects.equals(custommerId, that.customerId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(medienId, kundenId);
+        return Objects.hash(mediaId, custommerId);
     }
+
 }

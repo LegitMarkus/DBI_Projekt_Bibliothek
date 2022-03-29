@@ -5,13 +5,10 @@ import io.quarkus.test.TestTransaction;
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import at.htlleonding.LibraryRepository.*;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
-import javax.swing.text.html.parser.Entity;
 
-import static org.junit.jupiter.api.Assertions.*;
 @QuarkusTest
 class LibraryRepositoryTest {
     @Inject
@@ -25,11 +22,11 @@ class LibraryRepositoryTest {
         a1.setNachname("Orwell");
         target.add(a1);
 
-        var digitalesMedium = new DigitaleMedien();
+        var digitalesMedium = new DigitalMedia();
         digitalesMedium.setTitel("1984");
         target.add(digitalesMedium);
 
-        var digitalesMedium2 = new DigitaleMedien();
+        var digitalesMedium2 = new DigitalMedia();
         digitalesMedium2.setTitel("10034");
         target.add(a1, digitalesMedium2);
     }

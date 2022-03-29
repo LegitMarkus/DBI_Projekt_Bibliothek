@@ -14,7 +14,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Verlag {
+public class Publisher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -23,5 +23,5 @@ public class Verlag {
     private String name;
 
     @OneToMany
-    private Set<Medien> medien = new HashSet<>();
+    private Set<Media> median = new HashSet<>();
 }

@@ -1,6 +1,6 @@
 package at.htlleonding.persistence.ausleih_Verkauf_Entitäten;
 
-import at.htlleonding.persistence.Medien;
+import at.htlleonding.persistence.Media;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,11 +17,11 @@ import javax.persistence.InheritanceType;
 @NoArgsConstructor
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-public class Personal extends Medien {
+public class Staff extends Media {
     @Column
-    private Integer alter;
+    private Integer age;
     @Column(nullable = false)
     private String email;
     @Column(nullable = false)
-    private Integer gehalt;
+    private Integer salary;
 }

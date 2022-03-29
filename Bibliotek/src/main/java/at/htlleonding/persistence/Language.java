@@ -14,7 +14,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Sprache {
+public class Language {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -26,5 +26,5 @@ public class Sprache {
     private String iso;
 
     @OneToMany
-    private Set<Medien> medien = new HashSet<>();
+    private Set<Media> media = new HashSet<>();
 }

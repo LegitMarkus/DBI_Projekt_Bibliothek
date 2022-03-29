@@ -13,9 +13,15 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Inheritance(strategy = InheritanceType.JOINED)
 @Entity
-public class DigitaleMedien extends Medien{
-    @Column
-    private String url;
+public class Speaker {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @Column(nullable = false, unique = true, length = 50)
+    private String name;
+
+    @ManyToMany
+    private Set<AudioBook> audioBooks = new HashSet<>();
 }

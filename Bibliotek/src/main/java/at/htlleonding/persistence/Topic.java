@@ -23,5 +23,5 @@ public class Topic {
     private String name;
 
     @ManyToMany
-    private Set<Medien> medien = new HashSet<>();
+    private Set<Media> medias = new HashSet<>();
 }

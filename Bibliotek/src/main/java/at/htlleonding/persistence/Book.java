@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
-public class Zeitung extends PhysischeMedien {
+public class Book extends PhysicalMedia {
 }

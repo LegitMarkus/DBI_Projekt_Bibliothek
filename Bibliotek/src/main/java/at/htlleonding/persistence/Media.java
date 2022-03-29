@@ -1,8 +1,5 @@
 package at.htlleonding.persistence;
 
-import at.htlleonding.persistence.ausleih_Verkauf_Entitäten.Ausleihung;
-import at.htlleonding.persistence.ausleih_Verkauf_Entitäten.Rechnung;
-import at.htlleonding.persistence.ausleih_Verkauf_Entitäten.Reservierung;
 import lombok.*;
 
 import javax.persistence.*;
@@ -16,25 +13,25 @@ import java.util.Set;
 @NoArgsConstructor
 @Inheritance(strategy = InheritanceType.JOINED)
 @Entity
-public class Medien {
+public class Media {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(length = 50, nullable = false)
-    private String titel;
+    private String title;
 
     @Column
-    private Date veroeffentlichungsdatum;
+    private Date publisherDate;
 
     @ManyToOne
-    private Verlag verlag;
+    private Publisher publisher;
 
     @Column
-    private boolean uebersetzung;
+    private boolean translation;
 
     @ManyToOne
-    private Sprache sprache;
+    private Language language;
 
     @ManyToMany
     private Set<Topic> topics = new HashSet<>();;

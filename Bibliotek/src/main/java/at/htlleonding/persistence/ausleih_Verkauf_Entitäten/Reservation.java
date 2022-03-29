@@ -1,6 +1,6 @@
 package at.htlleonding.persistence.ausleih_Verkauf_Entitäten;
 
-import at.htlleonding.persistence.SinglePhysicalMedium;
+import at.htlleonding.persistence.SinglePhysicalMedia;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,22 +17,22 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Reservierung {
+public class Reservation {
     @ManyToOne
-    @MapsId("medienId")
-    private SinglePhysicalMedium medien;
-    @MapsId("kundenId")
+    @MapsId("mediaId")
+    private SinglePhysicalMedia media;
+    @MapsId("customerId")
     @ManyToOne
-    private Kunde kunde;
+    private Customer customer;
 
-    private Date reserierungsDatum;
+    private Date reservationDate;
 
     @EmbeddedId
-    ReservierungId id;
+    ReservationKey id;
 
-    public Reservierung(SinglePhysicalMedium medien, Kunde kunde, Date reserierungsDatum) {
-        this.medien = medien;
-        this.kunde = kunde;
-        this.reserierungsDatum = reserierungsDatum;
+    public Reservation(SinglePhysicalMedia spm, Customer customer, Date reservationDate) {
+        this.media = spm;
+        this.customer = customer;
+        this.reservationDate = reservationDate;
     }
 }
