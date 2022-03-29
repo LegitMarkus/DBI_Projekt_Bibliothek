@@ -34,4 +34,10 @@ public class Ausleihung {
     @Column
     private Integer verlängerung = 0;
 
+    public Ausleihung(Medien medien, Kunde kunde, Date ausleihdatum, Date rückgabedatum) {
+        this.medien = medien;
+        this.kunde = kunde;
+        this.ausleihdatum = ausleihdatum;
+        this.rückgabedatum = rückgabedatum;
+    }
 }

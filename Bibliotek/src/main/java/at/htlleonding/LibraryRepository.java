@@ -1,12 +1,15 @@
 package at.htlleonding;
 
 import at.htlleonding.persistence.*;
+import at.htlleonding.persistence.ausleih_Verkauf_Entitäten.*;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 import java.awt.print.Book;
+import java.util.Date;
+
 @ApplicationScoped
 public class LibraryRepository {
     @Inject
@@ -77,6 +80,10 @@ public class LibraryRepository {
         em.persist(dm);
         em.persist(a);
     }
+    @Transactional
+    public void add(DigitaleMedien dm, Author a){
+        add(dm, a);
+    }
 
     @Transactional
     public void add(Author a, Buch b){
@@ -90,6 +97,10 @@ public class LibraryRepository {
 
         em.persist(b);
         em.persist(a);
+    }
+    @Transactional
+    public void add(Buch b, Author a){
+        add(a, b);
     }
 
     @Transactional
@@ -105,6 +116,10 @@ public class LibraryRepository {
         em.persist(g);
         em.persist(b);
     }
+    @Transactional
+    public void add(Genre g, Buch b){
+        add(b, g);
+    }
 
     @Transactional
     public void add(DigitaleMedien dm, Genre g){
@@ -118,6 +133,10 @@ public class LibraryRepository {
 
         em.persist(g);
         em.persist(dm);
+    }
+    @Transactional
+    public void add(Genre g, DigitaleMedien dm){
+        add(dm, g);
     }
 
     @Transactional
@@ -133,6 +152,10 @@ public class LibraryRepository {
         em.persist(s);
         em.persist(h);
     }
+    @Transactional
+    public void add(Sprecher s, Hoerbuch h){
+        add(h, s);
+    }
 
     @Transactional
     public void add(Medien m, Verlag v){
@@ -146,6 +169,10 @@ public class LibraryRepository {
 
         em.persist(v);
         em.persist(m);
+    }
+    @Transactional
+    public void add(Verlag v, Medien m){
+        add(m ,v);
     }
 
     @Transactional
@@ -161,6 +188,10 @@ public class LibraryRepository {
         em.persist(s);
         em.persist(m);
     }
+    @Transactional
+    public void add(Sprache s, Medien m){
+        add(m, s);
+    }
 
     @Transactional
     public void add(Medien m, Topic t){
@@ -174,5 +205,58 @@ public class LibraryRepository {
 
         em.persist(t);
         em.persist(m);
+    }
+    @Transactional
+    public void add(Topic t, Medien m){
+        add(m, t);
+    }
+
+    @Transactional
+    public void add(Medien m, Kunde k, Date ausleihdatum, Date rückgabedatum) {
+        if(m.getId() == null) {
+            add(m);
+        }
+        if(k.getId() == null) {
+            add(k);
+        }
+        var assoc = new Ausleihung(m, k, ausleihdatum, rückgabedatum);
+        m.getAusleihungen().add(assoc);
+        k.getAusleihungen().add(assoc);
+
+        em.persist(assoc);
+        em.persist(m);
+        em.persist(k);
+    }
+    @Transactional
+    public void add(Medien m, Kunde k, Date reservierungsdatum) {
+        if(m.getId() == null) {
+            add(m);
+        }
+        if(k.getId() == null) {
+            add(k);
+        }
+        var assoc = new Reservierung(m, k, reservierungsdatum);
+        m.getReservierungen().add(assoc);
+        k.getReservierungen().add(assoc);
+
+        em.persist(assoc);
+        em.persist(m);
+        em.persist(k);
+    }
+    @Transactional
+    public void add(PhysischeMedien pm, Kunde k, Integer preis) {
+        if(pm.getId() == null) {
+            add(pm);
+        }
+        if(k.getId() == null) {
+            add(k);
+        }
+        var assoc = new Rechnung(pm, k, preis);
+        pm.getRechnungen().add(assoc);
+        k.getRechnungen().add(assoc);
+
+        em.persist(assoc);
+        em.persist(pm);
+        em.persist(k);
     }
 }

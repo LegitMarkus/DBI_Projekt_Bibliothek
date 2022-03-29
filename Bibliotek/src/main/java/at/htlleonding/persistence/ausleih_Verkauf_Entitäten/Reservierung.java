@@ -29,4 +29,10 @@ public class Reservierung {
 
     @EmbeddedId
     ReservierungId id;
+
+    public Reservierung(Medien medien, Kunde kunde, Date reserierungsDatum) {
+        this.medien = medien;
+        this.kunde = kunde;
+        this.reserierungsDatum = reserierungsDatum;
+    }
 }

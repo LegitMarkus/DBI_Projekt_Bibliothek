@@ -28,4 +28,10 @@ public class Rechnung {
 
     @Column(nullable = false)
     private Integer preis;
+
+    public Rechnung(PhysischeMedien medien, Kunde kunde, Integer preis) {
+        this.medien = medien;
+        this.kunde = kunde;
+        this.preis = preis;
+    }
 }
