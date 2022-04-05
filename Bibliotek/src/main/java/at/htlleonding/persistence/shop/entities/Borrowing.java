@@ -1,4 +1,4 @@
-package at.htlleonding.persistence.ausleih_Verkauf_Entitäten;
+package at.htlleonding.persistence.shop.entities;
 
 import at.htlleonding.persistence.SinglePhysicalMedia;
 import lombok.AllArgsConstructor;
@@ -7,15 +7,16 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Bill {
+public class Borrowing {
     @EmbeddedId
-    BillKey id;
+    BorrowingKey id;
 
     @ManyToOne
     @MapsId("mediaId")
@@ -25,11 +26,18 @@ public class Bill {
     private Customer custommer;
 
     @Column(nullable = false)
-    private Integer price;
+    private Date borrowingDate;
 
-    public Bill(SinglePhysicalMedia media, Customer customer, Integer price) {
+    @Column(nullable = false)
+    private Date returnDate;
+
+    @Column
+    private Integer extension = 0;
+
+    public Borrowing(SinglePhysicalMedia media, Customer customer, Date borrowingDate, Date returnDate) {
         this.media = media;
         this.custommer = customer;
-        this.price = price;
+        this.borrowingDate = borrowingDate;
+        this.returnDate = returnDate;
     }
 }

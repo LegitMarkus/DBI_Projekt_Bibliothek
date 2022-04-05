@@ -1,8 +1,8 @@
 package at.htlleonding.persistence;
 
-import at.htlleonding.persistence.ausleih_Verkauf_Entitäten.Borrowing;
-import at.htlleonding.persistence.ausleih_Verkauf_Entitäten.Bill;
-import at.htlleonding.persistence.ausleih_Verkauf_Entitäten.Reservation;
+import at.htlleonding.persistence.shop.entities.Borrowing;
+import at.htlleonding.persistence.shop.entities.Bill;
+import at.htlleonding.persistence.shop.entities.Reservation;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

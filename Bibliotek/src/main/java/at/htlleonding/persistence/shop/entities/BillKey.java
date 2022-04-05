@@ -1,4 +1,4 @@
-package at.htlleonding.persistence.ausleih_Verkauf_Entitäten;
+package at.htlleonding.persistence.shop.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;

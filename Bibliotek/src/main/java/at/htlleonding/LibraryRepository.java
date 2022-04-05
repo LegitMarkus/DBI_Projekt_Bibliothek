@@ -2,6 +2,10 @@ package at.htlleonding;
 
 import at.htlleonding.persistence.*;
 import at.htlleonding.persistence.ausleih_Verkauf_Entitäten.*;
+import at.htlleonding.persistence.shop.entities.Bill;
+import at.htlleonding.persistence.shop.entities.Borrowing;
+import at.htlleonding.persistence.shop.entities.Customer;
+import at.htlleonding.persistence.shop.entities.Reservation;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -236,4 +240,6 @@ public class LibraryRepository {
         em.persist(pm);
         em.persist(spm);
     }
+
+
 }
