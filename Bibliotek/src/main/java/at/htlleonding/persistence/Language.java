@@ -26,5 +26,5 @@ public class Language {
     private String iso;
 
     @OneToMany
-    private Set<Media> media = new HashSet<>();
+    private Set<Media> medias = new HashSet<>();
 }

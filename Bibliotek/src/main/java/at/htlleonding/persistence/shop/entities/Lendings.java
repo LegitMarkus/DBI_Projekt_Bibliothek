@@ -14,9 +14,9 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Borrowing {
+public class Lendings {
     @EmbeddedId
-    BorrowingKey id;
+    LendingKey id;
 
     @ManyToOne
     @MapsId("mediaId")
@@ -26,7 +26,7 @@ public class Borrowing {
     private Customer custommer;
 
     @Column(nullable = false)
-    private Date borrowingDate;
+    private Date lendingDate;
 
     @Column(nullable = false)
     private Date returnDate;
@@ -34,10 +34,10 @@ public class Borrowing {
     @Column
     private Integer extension = 0;
 
-    public Borrowing(SinglePhysicalMedia media, Customer customer, Date borrowingDate, Date returnDate) {
+    public Lendings(SinglePhysicalMedia media, Customer customer, Date lendingDate, Date returnDate) {
         this.media = media;
         this.custommer = customer;
-        this.borrowingDate = borrowingDate;
+        this.lendingDate = lendingDate;
         this.returnDate = returnDate;
     }
 }

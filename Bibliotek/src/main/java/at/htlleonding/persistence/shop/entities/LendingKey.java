@@ -11,7 +11,7 @@ import java.util.Objects;
 @Embeddable
 @AllArgsConstructor
 @NoArgsConstructor
-public class BorrowingKey implements Serializable {
+public class LendingKey implements Serializable {
     @Column
     Integer mediaId;
     @Column

@@ -23,5 +23,5 @@ public class Genre {
     private String genre;
 
     @OneToMany
-    private Set<Media> media = new HashSet<>();
+    private Set<Media> medias = new HashSet<>();
 }

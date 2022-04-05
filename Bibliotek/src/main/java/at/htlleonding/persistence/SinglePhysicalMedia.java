@@ -1,6 +1,6 @@
 package at.htlleonding.persistence;
 
-import at.htlleonding.persistence.shop.entities.Borrowing;
+import at.htlleonding.persistence.shop.entities.Lendings;
 import at.htlleonding.persistence.shop.entities.Bill;
 import at.htlleonding.persistence.shop.entities.Reservation;
 import lombok.Getter;
@@ -38,5 +38,5 @@ public class SinglePhysicalMedia
     private Set<Reservation> reservations = new HashSet<>();
 
     @OneToMany
-    private Set<Borrowing> borrowings = new HashSet<>();
+    private Set<Lendings> lendings = new HashSet<>();
 }

@@ -23,5 +23,5 @@ public class Publisher {
     private String name;
 
     @OneToMany
-    private Set<Media> median = new HashSet<>();
+    private Set<Media> medias = new HashSet<>();
 }

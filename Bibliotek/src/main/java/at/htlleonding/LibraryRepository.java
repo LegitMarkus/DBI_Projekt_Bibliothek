@@ -1,11 +1,7 @@
 package at.htlleonding;
 
 import at.htlleonding.persistence.*;
-import at.htlleonding.persistence.ausleih_Verkauf_Entitäten.*;
-import at.htlleonding.persistence.shop.entities.Bill;
-import at.htlleonding.persistence.shop.entities.Borrowing;
-import at.htlleonding.persistence.shop.entities.Customer;
-import at.htlleonding.persistence.shop.entities.Reservation;
+import at.htlleonding.persistence.shop.entities.*;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -22,53 +18,53 @@ public class LibraryRepository {
     public<T> void add(T entity){
         em.persist(entity);
     }
-
     @Transactional
     public<T> void delete(T entity){
         em.remove(entity);
     }
-    //@Transactional
-    //public void add(Author author){
-    //    em.persist(author);}
-    //@Transactional
-    //public void add(Book book){
-    //    em.persist(book);}
-    //@Transactional
-    //public void add(DigitaleMedien digitaleMedien){
-    //    em.persist(digitaleMedien);}
-    //@Transactional
-    //public void add(EBook eBook){
-    //    em.persist(eBook);}
-    //@Transactional
-    //public void add(Genre genre){
-    //    em.persist(genre);}
-    //@Transactional
-    //public void add(Hoerbuch hoerbuch){
-    //    em.persist(hoerbuch);}
-    //@Transactional
-    //public void add(Medien medien){
-    //    em.persist(medien);}
-    //@Transactional
-    //public void add(PhysischeMedien physischeMedien){
-    //    em.persist(physischeMedien);}
-    //@Transactional
-    //public void add(Sprache sprache){
-    //    em.persist(sprache);}
-    //@Transactional
-    //public void add(Sprecher sprecher){
-    //    em.persist(sprecher);}
-    //@Transactional
-    //public void add(Topic topic){
-    //    em.persist(topic);}
-    //@Transactional
-    //public void add(Verlag verlag){
-    //    em.persist(verlag);}
-    //@Transactional
-    //public void add(Zeitschrift zeitschrift){
-    //    em.persist(zeitschrift);}
-    //@Transactional
-    //public void add(Zeitung zeitung){
-    //    em.persist(zeitung);}
+
+    @Transactional
+    public void add(Author author){
+        em.persist(author);}
+    @Transactional
+    public void add(Book book){
+        em.persist(book);}
+    @Transactional
+    public void add(DigitalMedia digitalMedia){
+        em.persist(digitalMedia);}
+    @Transactional
+    public void add(EBook eBook){
+        em.persist(eBook);}
+    @Transactional
+    public void add(Genre genre){
+        em.persist(genre);}
+    @Transactional
+    public void add(AudioBook audioBook){
+        em.persist(audioBook);}
+    @Transactional
+    public void add(Media media){
+        em.persist(media);}
+    @Transactional
+    public void add(PhysicalMedia physicalMedia){
+        em.persist(physicalMedia);}
+    @Transactional
+    public void add(Language language){
+        em.persist(language);}
+    @Transactional
+    public void add(Speaker speaker){
+        em.persist(speaker);}
+    @Transactional
+    public void add(Topic topic){
+        em.persist(topic);}
+    @Transactional
+    public void add(Publisher publisher){
+        em.persist(publisher);}
+    @Transactional
+    public void add(Magazine magazine){
+        em.persist(magazine);}
+    @Transactional
+    public void add(Newspaper newspaper){
+        em.persist(newspaper);}
 
     @Transactional
     public void add(Author a, Media m){
@@ -78,7 +74,7 @@ public class LibraryRepository {
             add(m);
 
         m.getAuthors().add(a);
-        a.getMedien().add(m);
+        a.getMedias().add(m);
 
         em.persist(m);
         em.persist(a);
@@ -95,7 +91,7 @@ public class LibraryRepository {
         if (g.getId() == null)
             add(g);
 
-        g.getMedien().add(m);
+        g.getMedias().add(m);
         m.setGenre(g);
 
         em.persist(g);
@@ -113,8 +109,8 @@ public class LibraryRepository {
         if (s.getId() == null)
             add(s);
 
-        s.getHoerbucher().add(h);
-        h.getSprechers().add(s);
+        s.getAudioBooks().add(h);
+        h.getSpeakers().add(s);
 
         em.persist(s);
         em.persist(h);
@@ -131,8 +127,8 @@ public class LibraryRepository {
         if (v.getId() == null)
             add(v);
 
-        v.getMedien().add(m);
-        m.setVerlag(v);
+        v.getMedias().add(m);
+        m.setPublisher(v);
 
         em.persist(v);
         em.persist(m);
@@ -149,8 +145,8 @@ public class LibraryRepository {
         if (s.getId() == null)
             add(s);
 
-        s.getMedien().add(m);
-        m.setSprache(s);
+        s.getMedias().add(m);
+        m.setLanguage(s);
 
         em.persist(s);
         em.persist(m);
@@ -167,7 +163,7 @@ public class LibraryRepository {
         if (t.getId() == null)
             add(t);
 
-        t.getMedien().add(m);
+        t.getMedias().add(m);
         m.getTopics().add(t);
 
         em.persist(t);
@@ -179,66 +175,66 @@ public class LibraryRepository {
     }
 
     @Transactional
-    public void add(SinglePhysicalMedia m, Customer k, Date ausleihdatum, Date rückgabedatum) {
-        if(m.getId() == null) {
-            add(m);
+    public void add(SinglePhysicalMedia singlePhysicalMedia, Customer customer, Date lendingDate, Date returnDate) {
+        if(singlePhysicalMedia.getId() == null) {
+            add(singlePhysicalMedia);
         }
-        if(k.getId() == null) {
-            add(k);
+        if(customer.getId() == null) {
+            add(customer);
         }
-        var assoc = new Borrowing(m, k, ausleihdatum, rückgabedatum);
-        m.getAusleihungen().add(assoc);
-        k.getBorrowings().add(assoc);
+        var assoc = new Lendings(singlePhysicalMedia, customer, lendingDate, returnDate);
+        singlePhysicalMedia.getLendings().add(assoc);
+        customer.getLendings().add(assoc);
 
         em.persist(assoc);
-        em.persist(m);
-        em.persist(k);
+        em.persist(singlePhysicalMedia);
+        em.persist(customer);
     }
     @Transactional
-    public void add(SinglePhysicalMedia m, Customer k, Date reservierungsdatum) {
-        if(m.getId() == null) {
-            add(m);
+    public void add(SinglePhysicalMedia singlePhysicalMedia, Customer customer, Date reservationDate) {
+        if(singlePhysicalMedia.getId() == null) {
+            add(singlePhysicalMedia);
         }
-        if(k.getId() == null) {
-            add(k);
+        if(customer.getId() == null) {
+            add(customer);
         }
-        var assoc = new Reservation(m, k, reservierungsdatum);
-        m.getReservierungen().add(assoc);
-        k.getReservations().add(assoc);
+        var assoc = new Reservation(singlePhysicalMedia, customer, reservationDate);
+        singlePhysicalMedia.getReservations().add(assoc);
+        customer.getReservations().add(assoc);
 
         em.persist(assoc);
-        em.persist(m);
-        em.persist(k);
+        em.persist(singlePhysicalMedia);
+        em.persist(customer);
     }
     @Transactional
-    public void add(SinglePhysicalMedia pm, Customer k, Integer preis) {
-        if(pm.getId() == null) {
-            add(pm);
+    public void add(SinglePhysicalMedia singlePhysicalMedia, Customer customer, Integer price) {
+        if(singlePhysicalMedia.getId() == null) {
+            add(singlePhysicalMedia);
         }
-        if(k.getId() == null) {
-            add(k);
+        if(customer.getId() == null) {
+            add(customer);
         }
-        var assoc = new Bill(pm, k, preis);
-        pm.getRechnungen().add(assoc);
-        k.getBorrowings().add(assoc);
+        var assoc = new Bill(singlePhysicalMedia, customer, price);
+        singlePhysicalMedia.getBills().add(assoc);
+        customer.getBills().add(assoc);
 
         em.persist(assoc);
-        em.persist(pm);
-        em.persist(k);
+        em.persist(singlePhysicalMedia);
+        em.persist(customer);
     }
 
     @Transactional
-    public void add(SinglePhysicalMedia spm, PhysicalMedia pm){
-        if (spm.getId() == null)
-            add(spm);
-        if (pm.getId() == null)
-            add(pm);
+    public void add(SinglePhysicalMedia singlePhysicalMedia, PhysicalMedia physicalMedia){
+        if (singlePhysicalMedia.getId() == null)
+            add(singlePhysicalMedia);
+        if (physicalMedia.getId() == null)
+            add(physicalMedia);
 
-        pm.getEinzelneMedien().add(spm);
-        spm.setPhysischeMedien(pm);
+        physicalMedia.getSinglePhysicalMediaSet().add(singlePhysicalMedia);
+        singlePhysicalMedia.setPhysicalMedia(physicalMedia);
 
-        em.persist(pm);
-        em.persist(spm);
+        em.persist(physicalMedia);
+        em.persist(singlePhysicalMedia);
     }
 
 
