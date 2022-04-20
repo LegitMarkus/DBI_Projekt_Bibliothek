@@ -1,4 +1,4 @@
-package at.htlleonding;
+package at.htlleonding.repository;
 
 import at.htlleonding.persistence.*;
 import at.htlleonding.persistence.shop.entities.*;
