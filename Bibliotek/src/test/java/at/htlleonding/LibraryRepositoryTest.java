@@ -1,6 +1,7 @@
 package at.htlleonding;
 
 import at.htlleonding.persistence.*;
+import at.htlleonding.repository.LibraryRepository;
 import io.quarkus.test.TestTransaction;
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Assertions;
@@ -12,7 +13,7 @@ import javax.persistence.EntityManager;
 @QuarkusTest
 class LibraryRepositoryTest {
     @Inject
-     LibraryRepository target;
+    LibraryRepository target;
     @Inject
     EntityManager em;
 
