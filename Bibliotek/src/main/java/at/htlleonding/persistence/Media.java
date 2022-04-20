@@ -34,7 +34,7 @@ public class Media {
     private Language language;
 
     @ManyToMany
-    private Set<Topic> topics = new HashSet<>();;
+    private Set<Topic> topics = new HashSet<>();
 
     @ManyToOne
     private Genre genre;

@@ -182,7 +182,7 @@ public class LibraryRepository {
         if(customer.getId() == null) {
             add(customer);
         }
-        var assoc = new Lendings(singlePhysicalMedia, customer, lendingDate, returnDate);
+        var assoc = new Lending(singlePhysicalMedia, customer, lendingDate, returnDate);
         singlePhysicalMedia.getLendings().add(assoc);
         customer.getLendings().add(assoc);
 

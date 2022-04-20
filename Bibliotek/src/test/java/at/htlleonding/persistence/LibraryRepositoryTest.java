@@ -16,7 +16,7 @@ public class LibraryRepositoryTest {
     LibraryRepository target;
 
     private void createBookAndAuthor() {
-        var a1 = new Author();
+        var a1 = new AuthorDto();
         a1.setDateDeath(LocalDate.of(1980, 01, 01));
         a1.setDateBirth(LocalDate.of(1940, 01, 01));
         a1.setFirstName("George");
@@ -24,11 +24,11 @@ public class LibraryRepositoryTest {
 
         target.add(a1);
 
-        var b1 = new Book();
+        var b1 = new BookDto();
         b1.setTitle("1984");
         target.add(b1, a1);
 
-        var b2 = new Book();
+        var b2 = new BookDto();
         b2.setTitle("Animal Farm");
         target.add(b2, a1);
     }
