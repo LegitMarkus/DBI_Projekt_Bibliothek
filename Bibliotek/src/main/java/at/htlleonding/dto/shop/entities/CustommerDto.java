@@ -1,8 +1,6 @@
 package at.htlleonding.dto.shop.entities;
 
-import at.htlleonding.persistence.shop.entities.Bill;
-import at.htlleonding.persistence.shop.entities.Lending;
-import at.htlleonding.persistence.shop.entities.Reservation;
+import at.htlleonding.persistence.shop.entities.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -27,9 +25,9 @@ public class CustommerDto {
 
     private  String lastName;
 
-    private List<Integer> reservationIds;
+    private List<ReservationKey> reservationIds;
 
-    private List<Integer> lendingIds;
+    private List<LendingKey> lendingIds;
 
-    private List<Integer> billIds;
+    private List<BillKey> billIds;
 }

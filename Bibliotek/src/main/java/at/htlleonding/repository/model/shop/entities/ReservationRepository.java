@@ -2,6 +2,7 @@ package at.htlleonding.repository.model.shop.entities;
 
 import at.htlleonding.persistence.shop.entities.Lending;
 import at.htlleonding.persistence.shop.entities.Reservation;
+import at.htlleonding.persistence.shop.entities.ReservationKey;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -19,7 +20,7 @@ public class ReservationRepository {
         return em.createQuery("select x from Reservation x", Reservation.class).getResultList();
     }
     @Transactional
-    public Reservation findById(Integer id){
+    public Reservation findById(ReservationKey id){
         return em.createQuery("select x from Reservation x where x.id = :id", Reservation.class).setParameter("id", id).getSingleResult();
     }
 }

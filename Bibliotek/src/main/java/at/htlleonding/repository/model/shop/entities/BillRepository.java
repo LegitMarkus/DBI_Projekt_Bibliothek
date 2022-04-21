@@ -1,6 +1,7 @@
 package at.htlleonding.repository.model.shop.entities;
 
 import at.htlleonding.persistence.shop.entities.Bill;
+import at.htlleonding.persistence.shop.entities.BillKey;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -18,7 +19,7 @@ public class BillRepository {
         return em.createQuery("select x from Bill x", Bill.class).getResultList();
     }
     @Transactional
-    public Bill findById(Integer id){
+    public Bill findById(BillKey id){
         return em.createQuery("select x from Bill x where x.id = :id", Bill.class).setParameter("id", id).getSingleResult();
     }
 }

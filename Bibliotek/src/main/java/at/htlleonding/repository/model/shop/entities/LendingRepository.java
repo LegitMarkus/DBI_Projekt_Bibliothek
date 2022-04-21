@@ -2,6 +2,7 @@ package at.htlleonding.repository.model.shop.entities;
 
 import at.htlleonding.persistence.AudioBook;
 import at.htlleonding.persistence.shop.entities.Lending;
+import at.htlleonding.persistence.shop.entities.LendingKey;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -19,7 +20,7 @@ public class LendingRepository {
         return em.createQuery("select x from Lending x", Lending.class).getResultList();
     }
     @Transactional
-    public Lending findById(Integer id){
+    public Lending findById(LendingKey id){
         return em.createQuery("select x from Lending x where x.id = :id", Lending.class).setParameter("id", id).getSingleResult();
     }
 }
