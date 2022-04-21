@@ -1,4 +1,4 @@
-package at.htlleonding;
+package at.htlleonding.repository;
 
 import at.htlleonding.persistence.*;
 import at.htlleonding.persistence.shop.entities.*;
@@ -10,9 +10,9 @@ import javax.transaction.Transactional;
 import java.util.Date;
 
 @ApplicationScoped
-public class LibraryRepository {
+public class CRUDOperations {
     @Inject
-    EntityManager em;
+    protected EntityManager em;
 
     @Transactional
     public<T> void add(T entity){
@@ -230,7 +230,7 @@ public class LibraryRepository {
         if (physicalMedia.getId() == null)
             add(physicalMedia);
 
-        physicalMedia.getSinglePhysicalMediaSet().add(singlePhysicalMedia);
+        physicalMedia.getSinglePhysicalMedia().add(singlePhysicalMedia);
         singlePhysicalMedia.setPhysicalMedia(physicalMedia);
 
         em.persist(physicalMedia);

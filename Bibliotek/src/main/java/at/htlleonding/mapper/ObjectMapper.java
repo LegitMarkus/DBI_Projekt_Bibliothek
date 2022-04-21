@@ -11,7 +11,7 @@ import org.mapstruct.Mapping;
 @Mapper(componentModel = "cdi")
 public interface ObjectMapper {
     //SHOP ENTITIES
-    //Bill
+    //BillRepository
     @Mapping(target = "id")
     BillDto toDTO(Bill entity);
 
@@ -49,7 +49,7 @@ public interface ObjectMapper {
 
 
     //NORMAL ENTITIES
-    //AudioBook
+    //AudioBookRepository
     @Mapping(target = "id")
     AudioBookDto toDTO(AudioBook entity);
 

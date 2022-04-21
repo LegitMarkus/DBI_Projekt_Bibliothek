@@ -13,7 +13,7 @@ import java.time.LocalDate;
 public class LibraryRepositoryTest {
     /*
     @Inject
-    LibraryRepository target;
+    CRUDOperations target;
 
     private void createBookAndAuthor() {
         var a1 = new AuthorDto();

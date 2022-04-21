@@ -5,6 +5,7 @@ import io.quarkus.test.TestTransaction;
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import at.htlleonding.repository.CRUDOperations;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
@@ -12,7 +13,7 @@ import javax.persistence.EntityManager;
 @QuarkusTest
 class LibraryRepositoryTest {
     @Inject
-     LibraryRepository target;
+    CRUDOperations target;
     @Inject
     EntityManager em;
 
