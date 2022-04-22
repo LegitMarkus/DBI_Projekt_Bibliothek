@@ -24,5 +24,5 @@ public class ReservationDto {
 
     private Date reservationDate;
 
-    private String id;
+    private ReservationKey id;
 }

@@ -1,6 +1,7 @@
 package at.htlleonding.dto.shop.entities;
 
 import at.htlleonding.persistence.SinglePhysicalMedia;
+import at.htlleonding.persistence.shop.entities.BillKey;
 import at.htlleonding.persistence.shop.entities.Customer;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,7 +16,7 @@ import javax.persistence.MapsId;
 @AllArgsConstructor
 @NoArgsConstructor
 public class BillDto {
-    private String id;
+    private BillKey id;
 
     private Integer mediaId;
 

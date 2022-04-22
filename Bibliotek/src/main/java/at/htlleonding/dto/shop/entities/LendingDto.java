@@ -20,7 +20,7 @@ import java.util.Date;
 @NoArgsConstructor
 public class LendingDto {
 
-    private String id;
+    private LendingKey id;
 
     private Integer mediaId;
 

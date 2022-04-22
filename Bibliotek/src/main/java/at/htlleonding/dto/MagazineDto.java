@@ -7,7 +7,5 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 public class MagazineDto extends PhysicalMediaDto{
 }

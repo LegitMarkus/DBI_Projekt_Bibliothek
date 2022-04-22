@@ -4,7 +4,6 @@ import at.htlleonding.dto.*;
 import at.htlleonding.dto.shop.entities.*;
 import at.htlleonding.persistence.*;
 import at.htlleonding.persistence.shop.entities.*;
-import com.github.dockerjava.zerodep.shaded.org.apache.commons.codec.language.bm.Lang;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

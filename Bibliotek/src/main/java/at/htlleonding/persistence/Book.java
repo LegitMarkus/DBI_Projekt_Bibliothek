@@ -9,8 +9,6 @@ import javax.persistence.Entity;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
 public class Book extends PhysicalMedia {
 }
