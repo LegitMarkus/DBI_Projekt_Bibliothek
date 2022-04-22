@@ -16,7 +16,7 @@ public class LibraryRepositoryTest {
     CRUDOperations target;
 
     private void createBookAndAuthor() {
-        var a1 = new AuthorDto();
+        var a1 = new AuthorMappingHelper();
         a1.setDateDeath(LocalDate.of(1980, 01, 01));
         a1.setDateBirth(LocalDate.of(1940, 01, 01));
         a1.setFirstName("George");

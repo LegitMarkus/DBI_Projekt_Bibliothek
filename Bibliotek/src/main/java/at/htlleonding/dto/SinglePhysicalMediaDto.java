@@ -1,5 +1,8 @@
 package at.htlleonding.dto;
 
+import at.htlleonding.persistence.shop.entities.BillKey;
+import at.htlleonding.persistence.shop.entities.LendingKey;
+import at.htlleonding.persistence.shop.entities.ReservationKey;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,9 +24,9 @@ public class SinglePhysicalMediaDto {
 
     private Boolean forSale = false;
 
-    private List<Integer> billIds;
+    private List<BillKey> billIds;
 
-    private List<Integer> reservationIds;
+    private List<ReservationKey> reservationIds;
 
-    private List<Integer> lendingIds;
+    private List<LendingKey> lendingIds;
 }

@@ -119,9 +119,9 @@ public interface ObjectMapper {
     @Mapping(target = "id")
     Newspaper fromDto(NewspaperDto entity);
 
-    //PhysicalMedia
+    //PhysicalMediaMappingHelper
     @Mapping(target = "id")
-    PhysicalMedia toDTO(PhysicalMedia entity);
+    PhysicalMediaDto toDTO(PhysicalMedia entity);
 
     @Mapping(target = "id")
     PhysicalMedia fromDto(PhysicalMediaDto entity);

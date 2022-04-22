@@ -28,7 +28,5 @@ public class PhysicalMediaDto extends MediaDto{
 
     private String Signature;
 
-    private List<Integer> authorIds;
-
     private List<Integer> singlePhysicalMediaIds;
 }
