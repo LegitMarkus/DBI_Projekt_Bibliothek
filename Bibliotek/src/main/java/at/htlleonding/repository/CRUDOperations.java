@@ -24,49 +24,6 @@ public class CRUDOperations {
     }
 
     @Transactional
-    public void add(Author author){
-        em.persist(author);}
-    @Transactional
-    public void add(Book book){
-        em.persist(book);}
-    @Transactional
-    public void add(DigitalMedia digitalMedia){
-        em.persist(digitalMedia);}
-    @Transactional
-    public void add(EBook eBook){
-        em.persist(eBook);}
-    @Transactional
-    public void add(Genre genre){
-        em.persist(genre);}
-    @Transactional
-    public void add(AudioBook audioBook){
-        em.persist(audioBook);}
-    @Transactional
-    public void add(Media media){
-        em.persist(media);}
-    @Transactional
-    public void add(PhysicalMedia physicalMedia){
-        em.persist(physicalMedia);}
-    @Transactional
-    public void add(Language language){
-        em.persist(language);}
-    @Transactional
-    public void add(Speaker speaker){
-        em.persist(speaker);}
-    @Transactional
-    public void add(Topic topic){
-        em.persist(topic);}
-    @Transactional
-    public void add(Publisher publisher){
-        em.persist(publisher);}
-    @Transactional
-    public void add(Magazine magazine){
-        em.persist(magazine);}
-    @Transactional
-    public void add(Newspaper newspaper){
-        em.persist(newspaper);}
-
-    @Transactional
     public void add(Author a, Media m){
         if (a.getId() == null)
             add(a);

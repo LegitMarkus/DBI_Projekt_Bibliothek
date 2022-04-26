@@ -1,6 +1,7 @@
-package at.htlleonding.logic;
+package at.htlleonding.persistence.logic;
 
 import at.htlleonding.dto.AuthorDto;
+import at.htlleonding.logic.LibraryMgmtLogic;
 import at.htlleonding.repository.CRUDOperations;
 import io.quarkus.test.TestTransaction;
 import io.quarkus.test.junit.QuarkusTest;
@@ -51,8 +52,8 @@ class LibraryLogicTest {
     @Test
     public void authorDTO_addUsingLogic_entityPersisted() {
         var authorDTO = new AuthorDto();
-        //authorDTO.setDateBirth(LocalDate.of(1980, 1, 1));
-        //authorDTO.setDateDeath(LocalDate.of(2000, 1, 1));
+        authorDTO.setBirthDate(LocalDate.of(1980, 1, 1));
+        authorDTO.setDeathDate(LocalDate.of(2000, 1, 1));
         authorDTO.setFirstname("John");
         authorDTO.setLastname("Doe");
 

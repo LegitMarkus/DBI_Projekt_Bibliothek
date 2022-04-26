@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -24,6 +26,10 @@ public class Author {
     private String firstname;
     @Column(nullable = false, length = 50)
     private String lastname;
+    @Column
+    private LocalDate birthDate;
+    @Column
+    private LocalDate deathDate;
 
     @ManyToMany
     private Set<Media> medias = new HashSet<>();
