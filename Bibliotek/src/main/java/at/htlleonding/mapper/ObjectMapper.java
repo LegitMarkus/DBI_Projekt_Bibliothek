@@ -19,10 +19,10 @@ public interface ObjectMapper {
 
     //Custommer
     @Mapping(target = "id")
-    CustommerDto toDTO(Customer entity);
+    CustomerDto toDTO(Customer entity);
 
     @Mapping(target = "id")
-    Customer fromDto(CustommerDto entity);
+    Customer fromDto(CustomerDto entity);
 
     //Lending
     @Mapping(target = "id")

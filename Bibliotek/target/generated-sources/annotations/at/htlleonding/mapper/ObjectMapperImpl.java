@@ -16,7 +16,7 @@ import at.htlleonding.dto.SinglePhysicalMediaDto;
 import at.htlleonding.dto.SpeakerDto;
 import at.htlleonding.dto.TopicDto;
 import at.htlleonding.dto.shop.entities.BillDto;
-import at.htlleonding.dto.shop.entities.CustommerDto;
+import at.htlleonding.dto.shop.entities.CustomerDto;
 import at.htlleonding.dto.shop.entities.LendingDto;
 import at.htlleonding.dto.shop.entities.ReservationDto;
 import at.htlleonding.dto.shop.entities.StaffDto;
@@ -80,12 +80,12 @@ public class ObjectMapperImpl implements ObjectMapper {
     }
 
     @Override
-    public CustommerDto toDTO(Customer entity) {
+    public CustomerDto toDTO(Customer entity) {
         if ( entity == null ) {
             return null;
         }
 
-        CustommerDto custommerDto = new CustommerDto();
+        CustomerDto custommerDto = new CustomerDto();
 
         custommerDto.setId( entity.getId() );
         custommerDto.setCustomerNumber( entity.getCustomerNumber() );
@@ -96,7 +96,7 @@ public class ObjectMapperImpl implements ObjectMapper {
     }
 
     @Override
-    public Customer fromDto(CustommerDto entity) {
+    public Customer fromDto(CustomerDto entity) {
         if ( entity == null ) {
             return null;
         }

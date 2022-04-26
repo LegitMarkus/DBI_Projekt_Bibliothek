@@ -1,6 +1,5 @@
 package at.htlleonding.repository.model.shop.entities;
 
-import at.htlleonding.persistence.AudioBook;
 import at.htlleonding.persistence.shop.entities.Customer;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -10,7 +9,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @ApplicationScoped
-public class CustommerRepository {
+public class CustomerRepository {
     @Inject
     EntityManager em;
 

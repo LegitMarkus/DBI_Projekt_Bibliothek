@@ -1,12 +1,9 @@
 package at.htlleonding.mapper.model.shop.entities;
 
-import at.htlleonding.dto.shop.entities.BillDto;
-import at.htlleonding.dto.shop.entities.CustommerDto;
+import at.htlleonding.dto.shop.entities.CustomerDto;
 import at.htlleonding.mapper.MappingHelper;
 import at.htlleonding.persistence.shop.entities.*;
-import at.htlleonding.repository.model.SinglePhysicalMediaRepository;
 import at.htlleonding.repository.model.shop.entities.BillRepository;
-import at.htlleonding.repository.model.shop.entities.CustommerRepository;
 import at.htlleonding.repository.model.shop.entities.LendingRepository;
 import at.htlleonding.repository.model.shop.entities.ReservationRepository;
 
@@ -16,8 +13,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 @ApplicationScoped
-public class CustommerMappingHelper extends MappingHelper {
-    public CustommerDto toDto(Customer entity) {
+public class CustomerMappingHelper extends MappingHelper {
+    public CustomerDto toDto(Customer entity) {
         var dto = om.toDTO(entity);
 
         if (entity.getBills().size() > 0) {
@@ -57,7 +54,7 @@ public class CustommerMappingHelper extends MappingHelper {
     @Inject
     ReservationRepository reservationRepository;
 
-    public Customer fromDto(CustommerDto dto) {
+    public Customer fromDto(CustomerDto dto) {
         var entity = om.fromDto(dto);
 
         if (dto.getBillIds().size() > 0) {
@@ -82,15 +79,15 @@ public class CustommerMappingHelper extends MappingHelper {
         return entity;
     }
 
-    public List<CustommerDto> toDto(List<Customer> entities) {
-        var dtos = new LinkedList<CustommerDto>();
+    public List<CustomerDto> toDto(List<Customer> entities) {
+        var dtos = new LinkedList<CustomerDto>();
         for (var entity : entities) {
             dtos.add(toDto(entity));
         }
         return dtos;
     }
 
-    public List<Customer> fromDto(List<CustommerDto> dtos) {
+    public List<Customer> fromDto(List<CustomerDto> dtos) {
         var result = new LinkedList<Customer>();
         for (var dto : dtos) {
             result.add(fromDto(dto));

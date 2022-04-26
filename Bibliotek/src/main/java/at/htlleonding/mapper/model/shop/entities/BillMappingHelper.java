@@ -3,13 +3,11 @@ package at.htlleonding.mapper.model.shop.entities;
 import at.htlleonding.dto.shop.entities.BillDto;
 import at.htlleonding.mapper.MappingHelper;
 import at.htlleonding.persistence.shop.entities.Bill;
-import at.htlleonding.repository.model.MediaRepository;
 import at.htlleonding.repository.model.SinglePhysicalMediaRepository;
-import at.htlleonding.repository.model.shop.entities.CustommerRepository;
+import at.htlleonding.repository.model.shop.entities.CustomerRepository;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -29,14 +27,14 @@ public class BillMappingHelper extends MappingHelper {
     }
 
     @Inject
-    CustommerRepository custommerRepository;
+    CustomerRepository customerRepository;
     @Inject
     SinglePhysicalMediaRepository mediaRepository;
     public Bill fromDto(BillDto dto){
         var entity = om.fromDto(dto);
 
         if (dto.getCustommerId() != null){
-            entity.setCustommer(custommerRepository.findById(dto.getCustommerId()));
+            entity.setCustommer(customerRepository.findById(dto.getCustommerId()));
         }
         if (dto.getMediaId() != null){
             entity.setMedia((mediaRepository.findById(dto.getMediaId())));

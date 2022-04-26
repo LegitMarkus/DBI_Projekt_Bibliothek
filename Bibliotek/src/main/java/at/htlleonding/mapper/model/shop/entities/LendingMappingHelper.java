@@ -1,15 +1,10 @@
 package at.htlleonding.mapper.model.shop.entities;
 
-import at.htlleonding.dto.shop.entities.BillDto;
-import at.htlleonding.dto.shop.entities.CustommerDto;
 import at.htlleonding.dto.shop.entities.LendingDto;
 import at.htlleonding.mapper.MappingHelper;
 import at.htlleonding.persistence.shop.entities.*;
 import at.htlleonding.repository.model.SinglePhysicalMediaRepository;
-import at.htlleonding.repository.model.shop.entities.BillRepository;
-import at.htlleonding.repository.model.shop.entities.CustommerRepository;
-import at.htlleonding.repository.model.shop.entities.LendingRepository;
-import at.htlleonding.repository.model.shop.entities.ReservationRepository;
+import at.htlleonding.repository.model.shop.entities.CustomerRepository;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -32,14 +27,14 @@ public class LendingMappingHelper extends MappingHelper {
     }
 
     @Inject
-    CustommerRepository custommerRepository;
+    CustomerRepository customerRepository;
     @Inject
     SinglePhysicalMediaRepository mediaRepository;
     public Lending fromDto(LendingDto dto){
         var entity = om.fromDto(dto);
 
         if (dto.getCustommerId() != null){
-            entity.setCustommer(custommerRepository.findById(dto.getCustommerId()));
+            entity.setCustommer(customerRepository.findById(dto.getCustommerId()));
         }
         if (dto.getMediaId() != null){
             entity.setMedia((mediaRepository.findById(dto.getMediaId())));
