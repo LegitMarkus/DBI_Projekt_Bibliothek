@@ -45,7 +45,7 @@ import javax.enterprise.context.ApplicationScoped;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-04-22T15:17:09+0200",
+    date = "2022-05-03T12:08:37+0200",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 17.0.1 (Oracle Corporation)"
 )
 @ApplicationScoped
@@ -85,14 +85,14 @@ public class ObjectMapperImpl implements ObjectMapper {
             return null;
         }
 
-        CustomerDto custommerDto = new CustomerDto();
+        CustomerDto customerDto = new CustomerDto();
 
-        custommerDto.setId( entity.getId() );
-        custommerDto.setCustomerNumber( entity.getCustomerNumber() );
-        custommerDto.setFirstName( entity.getFirstName() );
-        custommerDto.setLastName( entity.getLastName() );
+        customerDto.setId( entity.getId() );
+        customerDto.setCustomerNumber( entity.getCustomerNumber() );
+        customerDto.setFirstName( entity.getFirstName() );
+        customerDto.setLastName( entity.getLastName() );
 
-        return custommerDto;
+        return customerDto;
     }
 
     @Override
@@ -248,6 +248,8 @@ public class ObjectMapperImpl implements ObjectMapper {
         authorDto.setId( entity.getId() );
         authorDto.setFirstname( entity.getFirstname() );
         authorDto.setLastname( entity.getLastname() );
+        authorDto.setBirthDate( entity.getBirthDate() );
+        authorDto.setDeathDate( entity.getDeathDate() );
 
         return authorDto;
     }
@@ -263,6 +265,8 @@ public class ObjectMapperImpl implements ObjectMapper {
         author.setId( entity.getId() );
         author.setFirstname( entity.getFirstname() );
         author.setLastname( entity.getLastname() );
+        author.setBirthDate( entity.getBirthDate() );
+        author.setDeathDate( entity.getDeathDate() );
 
         return author;
     }
