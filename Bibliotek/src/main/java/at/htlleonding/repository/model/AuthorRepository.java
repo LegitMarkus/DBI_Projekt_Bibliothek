@@ -22,4 +22,8 @@ public class AuthorRepository {
     public Author findById(Integer id){
         return em.createQuery("select x from Author x where x.id = :id", Author.class).setParameter("id", id).getSingleResult();
     }
+    public Author findByName(String firstname, String lastname){
+        return em.createQuery("select x from Author x where x.firstname = :firstname and x.lastname = :lastname", Author.class)
+                .setParameter("firstname", firstname).setParameter("lastname", lastname).getSingleResult();
+    }
 }

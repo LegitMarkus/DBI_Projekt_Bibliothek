@@ -1,7 +1,14 @@
 package at.htlleonding.persistence.logic;
 
+import at.htlleonding.dto.AudioBookDto;
 import at.htlleonding.dto.AuthorDto;
+import at.htlleonding.dto.BookDto;
 import at.htlleonding.logic.LibraryMgmtLogic;
+import at.htlleonding.logic.model.controller.*;
+import at.htlleonding.logic.model.controller.shop.logic.*;
+import at.htlleonding.persistence.Author;
+import at.htlleonding.persistence.Book;
+import at.htlleonding.persistence.SinglePhysicalMedia;
 import at.htlleonding.repository.CRUDOperations;
 import io.quarkus.test.TestTransaction;
 import io.quarkus.test.junit.QuarkusTest;
@@ -65,6 +72,7 @@ class LibraryLogicTest {
         //var authorDB = repository.getAuthor(result);
         //Assertions.assertNotNull(authorDB);
         //Assertions.assertEquals(authorDTO.getLastname(), authorDB.getLastName());
+        Assertions.fail("Not implemented yet");
     }
     //TODO Alle anderen ENTITIES in der Logic implementieren
 
@@ -77,18 +85,84 @@ class LibraryLogicTest {
     Add rentable items to the library, of each media type, with multiple authors and attributes.
     Verify that these items can be rented.
     */
+
+    @Inject
+    BillLogic billLogic;
+    @Inject
+    CustomerLogic customerLogic;
+    @Inject
+    LendingLogic lendingLogic;
+    @Inject
+    ReservationLogic reservationLogic;
+    @Inject
+    StaffLogic staffLogic;
+    @Inject
+    AudioBookDto audioBookDto;
+    @Inject
+    AuthorLogic authorLogic;
+    @Inject
+    BookLogic bookLogic;
+    @Inject
+    DigitalMediaLogic digitalMediaLogic;
+    @Inject
+    EBookLogic eBookLogic;
+    @Inject
+    GenreLogic genreLogic;
+    @Inject
+    LanguageLogic languageLogic;
+    @Inject
+    MagazineLogic magazineLogic;
+    @Inject
+    MediaLogic mediaLogic;
+    @Inject
+    NewspaperLogic newspaperLogic;
+    @Inject
+    PhysicalMediaLogic physicalMediaLogic;
+    @Inject
+    PublisherLogic publisherLogic;
+    @Inject
+    SinglePhysicalMediaLogic singlePhysicalMediaLogic;
+    @Inject
+    SpeakerLogic speakerLogic;
+    @Inject
+    TopicLogic topicLogic;
+
+
     @Test
     @TestTransaction
     public void addPaperBookWithOneAuthor_makeRentable_canBeRented()
     {
-        Assertions.fail("Not implemented yet");
+        String firstname = "Robert";
+        String lastname = "Lenz";
+
+        var authorDto = new AuthorDto();
+        authorDto.setFirstname(firstname);
+        authorDto.setLastname(lastname);
+        authorLogic.insert(authorDto);
+        authorLogic.flushAndClear();
+
+        var findAuthor = authorLogic.getByName(firstname, lastname);
+
+        var bookDto = new BookDto();
+        bookDto.getAuthorIds().add(findAuthor.getId());
+        bookDto.setTitle("Hallo");
+        bookDto.setBorrowing(5);
+        bookDto.setFreehandArea(5);
+        bookDto.setTranslation(false);
+        bookLogic.insert(bookDto);
+        bookLogic.flushAndClear();
+
+        var bookDatabase = bookLogic.getByName("Hallo");
+
+        Assertions.assertEquals(bookDatabase, bookDto);
+
     }
 
     @Test
     @TestTransaction
     public void addPaperBookWithThreeAuthors_makeRentable_canBeRented()
     {
-        Assertions.fail("Not implemented yet");
+
     }
 
     @Test

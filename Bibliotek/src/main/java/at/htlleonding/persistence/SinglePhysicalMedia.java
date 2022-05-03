@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -26,10 +27,16 @@ public class SinglePhysicalMedia
     private PhysicalMedia physicalMedia;
 
     @Column
-    private Date purchaseDate;
+    private LocalDate purchaseDate;
 
     @Column
     private Boolean forSale = false;
+
+    @Column
+    private Boolean reserveable = false;
+
+    @Column
+    private Boolean lendable = false;
 
     @OneToMany
     private Set<Bill> bills = new HashSet<>();
