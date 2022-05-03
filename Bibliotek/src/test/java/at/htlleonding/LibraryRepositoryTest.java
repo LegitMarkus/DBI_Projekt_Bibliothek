@@ -14,11 +14,7 @@ import javax.persistence.EntityManager;
 @QuarkusTest
 class LibraryRepositoryTest {
     @Inject
-<<<<<<< HEAD
-    LibraryRepository target;
-=======
     CRUDOperations target;
->>>>>>> main
     @Inject
     EntityManager em;
 

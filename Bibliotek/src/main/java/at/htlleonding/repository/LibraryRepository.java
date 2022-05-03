@@ -174,22 +174,22 @@ public class LibraryRepository {
         add(m, t);
     }
 
-    @Transactional
-    public void add(SinglePhysicalMedia singlePhysicalMedia, Customer customer, Date lendingDate, Date returnDate) {
-        if(singlePhysicalMedia.getId() == null) {
-            add(singlePhysicalMedia);
-        }
-        if(customer.getId() == null) {
-            add(customer);
-        }
-        var assoc = new Lendings(singlePhysicalMedia, customer, lendingDate, returnDate);
-        singlePhysicalMedia.getLendings().add(assoc);
-        customer.getLendings().add(assoc);
-
-        em.persist(assoc);
-        em.persist(singlePhysicalMedia);
-        em.persist(customer);
-    }
+    //@Transactional
+    //public void add(SinglePhysicalMedia singlePhysicalMedia, Customer customer, Date lendingDate, Date returnDate) {
+    //    if(singlePhysicalMedia.getId() == null) {
+    //        add(singlePhysicalMedia);
+    //    }
+    //    if(customer.getId() == null) {
+    //        add(customer);
+    //    }
+    //    var assoc = new Lendings(singlePhysicalMedia, customer, lendingDate, returnDate);
+    //    singlePhysicalMedia.getLendings().add(assoc);
+    //    customer.getLendings().add(assoc);
+//
+    //    em.persist(assoc);
+    //    em.persist(singlePhysicalMedia);
+    //    em.persist(customer);
+    //}
     @Transactional
     public void add(SinglePhysicalMedia singlePhysicalMedia, Customer customer, Date reservationDate) {
         if(singlePhysicalMedia.getId() == null) {
@@ -223,19 +223,19 @@ public class LibraryRepository {
         em.persist(customer);
     }
 
-    @Transactional
-    public void add(SinglePhysicalMedia singlePhysicalMedia, PhysicalMedia physicalMedia){
-        if (singlePhysicalMedia.getId() == null)
-            add(singlePhysicalMedia);
-        if (physicalMedia.getId() == null)
-            add(physicalMedia);
-
-        physicalMedia.getSinglePhysicalMediaSet().add(singlePhysicalMedia);
-        singlePhysicalMedia.setPhysicalMedia(physicalMedia);
-
-        em.persist(physicalMedia);
-        em.persist(singlePhysicalMedia);
-    }
+    //@Transactional
+    //public void add(SinglePhysicalMedia singlePhysicalMedia, PhysicalMedia physicalMedia){
+    //    if (singlePhysicalMedia.getId() == null)
+    //        add(singlePhysicalMedia);
+    //    if (physicalMedia.getId() == null)
+    //        add(physicalMedia);
+//
+    //    physicalMedia.getSinglePhysicalMediaSet().add(singlePhysicalMedia);
+    //    singlePhysicalMedia.setPhysicalMedia(physicalMedia);
+//
+    //    em.persist(physicalMedia);
+    //    em.persist(singlePhysicalMedia);
+    //}
 
 
 }
