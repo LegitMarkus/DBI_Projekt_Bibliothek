@@ -14,7 +14,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Lendings {
+public class Lending {
     @EmbeddedId
     LendingKey id;
 
@@ -34,7 +34,7 @@ public class Lendings {
     @Column
     private Integer extension = 0;
 
-    public Lendings(SinglePhysicalMedia media, Customer customer, Date lendingDate, Date returnDate) {
+    public Lending(SinglePhysicalMedia media, Customer customer, Date lendingDate, Date returnDate) {
         this.media = media;
         this.custommer = customer;
         this.lendingDate = lendingDate;

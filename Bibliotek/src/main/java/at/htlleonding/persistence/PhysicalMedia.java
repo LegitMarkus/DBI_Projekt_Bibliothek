@@ -26,5 +26,5 @@ public class PhysicalMedia extends Media {
     private Set<Author> authors = new HashSet<>();
 
     @OneToMany
-    private Set<SinglePhysicalMedia> singlePhysicalMediaSet;
+    private Set<SinglePhysicalMedia> singlePhysicalMedia = new HashSet<>();
 }

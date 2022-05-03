@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/DBI_Projekt_Bibliothek.iml" filepath="$PROJECT_DIR$/.idea/DBI_Projekt_Bibliothek.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bibliotek/jpa-SimpleLibrary-Queries.iml" filepath="$PROJECT_DIR$/Bibliotek/jpa-SimpleLibrary-Queries.iml" />
+    </modules>
+  </component>
+</project>

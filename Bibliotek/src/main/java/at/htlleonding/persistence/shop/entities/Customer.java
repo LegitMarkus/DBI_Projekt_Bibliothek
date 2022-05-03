@@ -32,7 +32,7 @@ public class Customer {
     private Set<Reservation> reservations = new HashSet<>();
 
     @OneToMany
-    private Set<Lendings> lendings = new HashSet<>();
+    private Set<Lending> lendings = new HashSet<>();
 
     @OneToMany
     private Set<Bill> bills = new HashSet<>();
