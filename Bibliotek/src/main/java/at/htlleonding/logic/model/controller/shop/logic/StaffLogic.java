@@ -6,8 +6,10 @@ import at.htlleonding.logic.LibraryMgmtLogic;
 import at.htlleonding.mapper.model.shop.entities.StaffMappingHelper;
 import at.htlleonding.repository.model.shop.entities.StaffRepository;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
+@ApplicationScoped
 public class StaffLogic extends LibraryMgmtLogic {
 
     @Inject

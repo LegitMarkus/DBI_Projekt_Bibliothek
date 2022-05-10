@@ -5,8 +5,10 @@ import at.htlleonding.logic.LibraryMgmtLogic;
 import at.htlleonding.mapper.model.LanguageMappingHelper;
 import at.htlleonding.repository.model.LanguageRepository;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
+@ApplicationScoped
 public class LanguageLogic extends LibraryMgmtLogic {
 
     @Inject

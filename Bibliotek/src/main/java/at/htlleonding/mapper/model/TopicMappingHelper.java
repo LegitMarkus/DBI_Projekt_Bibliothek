@@ -17,7 +17,7 @@ public class TopicMappingHelper extends MappingHelper {
     public TopicDto toDto(Topic entity) {
         var dto = om.toDTO(entity);
 
-        if (entity.getMedias().size() > 0) {
+        if (entity.getMedias() != null) {
             var Ids = new LinkedList<Integer>();
             entity.getMedias().forEach(e -> {
                 var id = e.getId();
@@ -34,7 +34,7 @@ public class TopicMappingHelper extends MappingHelper {
     public Topic fromDto(TopicDto dto) {
         var entity = om.fromDto(dto);
 
-        if (dto.getMediaIds().size() > 0) {
+        if (dto.getMediaIds() != null) {
             dto.getMediaIds().forEach(id -> {
                 var e = mediaRepository.findById(id);
                 entity.getMedias().add(e);

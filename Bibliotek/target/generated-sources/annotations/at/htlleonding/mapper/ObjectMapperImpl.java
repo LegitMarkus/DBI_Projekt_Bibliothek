@@ -45,7 +45,7 @@ import javax.enterprise.context.ApplicationScoped;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-05-10T08:26:32+0200",
+    date = "2022-05-10T09:07:43+0200",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 17.0.1 (Oracle Corporation)"
 )
 @ApplicationScoped
@@ -248,8 +248,6 @@ public class ObjectMapperImpl implements ObjectMapper {
         authorDto.setId( entity.getId() );
         authorDto.setFirstname( entity.getFirstname() );
         authorDto.setLastname( entity.getLastname() );
-        authorDto.setBirthDate( entity.getBirthDate() );
-        authorDto.setDeathDate( entity.getDeathDate() );
 
         return authorDto;
     }
@@ -265,8 +263,6 @@ public class ObjectMapperImpl implements ObjectMapper {
         author.setId( entity.getId() );
         author.setFirstname( entity.getFirstname() );
         author.setLastname( entity.getLastname() );
-        author.setBirthDate( entity.getBirthDate() );
-        author.setDeathDate( entity.getDeathDate() );
 
         return author;
     }

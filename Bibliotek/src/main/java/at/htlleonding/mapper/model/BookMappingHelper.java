@@ -26,7 +26,7 @@ public class BookMappingHelper extends MappingHelper {
         if (entity.getLanguage() != null){
             dto.setLanguageId(entity.getLanguage().getId());
         }
-        if (entity.getTopics().size() > 0) {
+        if (entity.getTopics() != null) {
             var Ids = new LinkedList<Integer>();
             entity.getTopics().forEach(e -> {
                 var id = e.getId();
@@ -35,7 +35,7 @@ public class BookMappingHelper extends MappingHelper {
             dto.setTopicIds(Ids);
 
         }
-        if (entity.getAuthors().size() > 0) {
+        if (entity.getAuthors() != null) {
             var Ids = new LinkedList<Integer>();
             entity.getAuthors().forEach(e -> {
                 var id = e.getId();
@@ -43,7 +43,7 @@ public class BookMappingHelper extends MappingHelper {
             });
             dto.setAuthorIds(Ids);
         }
-        if (entity.getSinglePhysicalMedia().size() > 0) {
+        if (entity.getSinglePhysicalMedia() != null) {
             var Ids = new LinkedList<Integer>();
             entity.getAuthors().forEach(e -> {
                 var id = e.getId();
@@ -80,19 +80,19 @@ public class BookMappingHelper extends MappingHelper {
         if (dto.getLanguageId() != null){
             entity.setLanguage(languageRepository.findById(dto.getLanguageId()));
         }
-        if (dto.getTopicIds().size() > 0) {
+        if (dto.getTopicIds() != null) {
             dto.getTopicIds().forEach(id -> {
                 var e = topicRepository.findById(id);
                 entity.getTopics().add(e);
             });
         }
-        if (dto.getAuthorIds().size() > 0) {
+        if (dto.getAuthorIds() != null) {
             dto.getAuthorIds().forEach(id -> {
                 var e = authorRepository.findById(id);
                 entity.getAuthors().add(e);
             });
         }
-        if (dto.getSinglePhysicalMediaIds().size() > 0) {
+        if (dto.getSinglePhysicalMediaIds() != null) {
             dto.getSinglePhysicalMediaIds().forEach(id -> {
                 var e = singlePhysicalMediaRepository.findById(id);
                 entity.getSinglePhysicalMedia().add(e);

@@ -5,8 +5,10 @@ import at.htlleonding.logic.LibraryMgmtLogic;
 import at.htlleonding.mapper.model.EBookMappingHelper;
 import at.htlleonding.repository.model.EBookRepository;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
+@ApplicationScoped
 public class EBookLogic extends LibraryMgmtLogic {
 
     @Inject

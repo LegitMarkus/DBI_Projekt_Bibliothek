@@ -7,8 +7,10 @@ import at.htlleonding.mapper.model.NewspaperMappingHelper;
 import at.htlleonding.mapper.model.SinglePhysicalMediaMappingHelper;
 import at.htlleonding.repository.model.SinglePhysicalMediaRepository;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
+@ApplicationScoped
 public class SinglePhysicalMediaLogic extends LibraryMgmtLogic {
 
     @Inject

@@ -5,8 +5,10 @@ import at.htlleonding.logic.LibraryMgmtLogic;
 import at.htlleonding.mapper.model.NewspaperMappingHelper;
 import at.htlleonding.repository.model.NewspaperRepository;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
+@ApplicationScoped
 public class NewspaperLogic extends LibraryMgmtLogic {
 
     @Inject

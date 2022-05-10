@@ -27,7 +27,7 @@ public class SinglePhysicalMediaMappingHelper extends MappingHelper {
         if (entity.getPhysicalMedia() != null){
             dto.setPhysicalMediaId(entity.getPhysicalMedia().getId());
         }
-        if (entity.getBills().size() > 0) {
+        if (entity.getBills() != null) {
             var Ids = new LinkedList<BillKey>();
             entity.getBills().forEach(e -> {
                 var id = e.getId();
@@ -35,7 +35,7 @@ public class SinglePhysicalMediaMappingHelper extends MappingHelper {
             });
             dto.setBillIds(Ids);
         }
-        if (entity.getLendings().size() > 0) {
+        if (entity.getLendings() != null) {
             var Ids = new LinkedList<LendingKey>();
             entity.getLendings().forEach(e -> {
                 var id = e.getId();
@@ -43,7 +43,7 @@ public class SinglePhysicalMediaMappingHelper extends MappingHelper {
             });
             dto.setLendingIds(Ids);
         }
-        if (entity.getReservations().size() > 0) {
+        if (entity.getReservations() != null) {
             var Ids = new LinkedList<ReservationKey>();
             entity.getReservations().forEach(e -> {
                 var id = e.getId();
@@ -68,19 +68,19 @@ public class SinglePhysicalMediaMappingHelper extends MappingHelper {
         if (dto.getPhysicalMediaId() != null){
             entity.setPhysicalMedia(mediaRepository.findById(dto.getPhysicalMediaId()));
         }
-        if (dto.getBillIds().size() > 0) {
+        if (dto.getBillIds() != null) {
             dto.getBillIds().forEach(id -> {
                 var e = billRepository.findById(id);
                 entity.getBills().add(e);
             });
         }
-        if (dto.getLendingIds().size() > 0) {
+        if (dto.getLendingIds() != null) {
             dto.getLendingIds().forEach(id -> {
                 var e = lendingRepository.findById(id);
                 entity.getLendings().add(e);
             });
         }
-        if (dto.getReservationIds().size() > 0) {
+        if (dto.getReservationIds() != null) {
             dto.getReservationIds().forEach(id -> {
                 var e = reservationRepository.findById(id);
                 entity.getReservations().add(e);

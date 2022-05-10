@@ -9,8 +9,10 @@ import at.htlleonding.persistence.shop.entities.ReservationKey;
 import at.htlleonding.repository.model.NewspaperRepository;
 import at.htlleonding.repository.model.shop.entities.ReservationRepository;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
+@ApplicationScoped
 public class ReservationLogic extends LibraryMgmtLogic {
 
     @Inject

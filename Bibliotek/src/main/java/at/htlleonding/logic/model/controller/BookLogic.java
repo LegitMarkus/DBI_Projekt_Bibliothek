@@ -8,9 +8,11 @@ import at.htlleonding.repository.model.BookRepository;
 import at.htlleonding.repository.model.SinglePhysicalMediaRepository;
 import net.bytebuddy.asm.Advice;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import java.time.LocalDate;
 
+@ApplicationScoped
 public class BookLogic extends LibraryMgmtLogic {
 
     @Inject

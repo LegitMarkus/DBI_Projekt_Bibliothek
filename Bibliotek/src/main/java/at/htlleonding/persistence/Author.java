@@ -26,10 +26,6 @@ public class Author {
     private String firstname;
     @Column(nullable = false, length = 50)
     private String lastname;
-    @Column
-    private LocalDate birthDate;
-    @Column
-    private LocalDate deathDate;
 
     @ManyToMany
     private Set<Media> medias = new HashSet<>();

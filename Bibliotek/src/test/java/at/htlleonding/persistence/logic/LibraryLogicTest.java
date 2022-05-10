@@ -24,68 +24,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @QuarkusTest
 class LibraryLogicTest {
-    /* VON MOODLE
-    @Inject
-    LibraryMgmtLogic target;
-
-    @Inject
-    LibraryMgmtRepository repository;
-
-    @TestTransaction
-    @Test
-    public void authorDTO_addUsingLogic_entityPersisted() {
-        var authorDTO = new AuthorDTO();
-        authorDTO.setDateBirth(LocalDate.of(1980, 1, 1));
-        authorDTO.setDateDeath(LocalDate.of(2000, 1, 1));
-        authorDTO.setFirstName("John");
-        authorDTO.setLastName("Doe");
-
-        var result = target.addAuthor(authorDTO);
-        Assertions.assertNotEquals(0, result);
-
-        target.flushAndClear();
-        var authorDB = repository.getAuthor(result);
-        Assertions.assertNotNull(authorDB);
-        Assertions.assertEquals(authorDTO.getLastName(), authorDB.getLastName());
-    }
-    */
-    @Inject
-    LibraryMgmtLogic target;
-
     @Inject
     CRUDOperations repository;
-
-    @TestTransaction
-    @Test
-    public void authorDTO_addUsingLogic_entityPersisted() {
-        var authorDTO = new AuthorDto();
-        authorDTO.setBirthDate(LocalDate.of(1980, 1, 1));
-        authorDTO.setDeathDate(LocalDate.of(2000, 1, 1));
-        authorDTO.setFirstname("John");
-        authorDTO.setLastname("Doe");
-
-        //TODO Noch ned implementiert in Logic Implementieren
-        //var result = target.add(authorDTO);
-        //Assertions.assertNotEquals(0, result);
-
-        //target.flushAndClear();
-        //var authorDB = repository.getAuthor(result);
-        //Assertions.assertNotNull(authorDB);
-        //Assertions.assertEquals(authorDTO.getLastname(), authorDB.getLastName());
-        Assertions.fail("Not implemented yet");
-    }
-    //TODO Alle anderen ENTITIES in der Logic implementieren
-
-    //#################################################################################################
-    //Abgabe A5: Entitäten, Businesslogic und Unit Tests für Verwaltung, Ausleihe und Verkauf.
-    //Geöffnet: Wednesday, 20. April 2022, 00:00
-    //Fällig: Thursday, 26. May 2022, 23:59
-
-    /*
-    Add rentable items to the library, of each media type, with multiple authors and attributes.
-    Verify that these items can be rented.
-    */
-
     @Inject
     BillLogic billLogic;
     @Inject

@@ -17,7 +17,7 @@ public class PublisherMappingHelper extends MappingHelper {
     public PublisherDto toDto(Publisher entity) {
         var dto = om.toDTO(entity);
 
-        if (entity.getMedias().size() > 0) {
+        if (entity.getMedias() != null) {
             var Ids = new LinkedList<Integer>();
             entity.getMedias().forEach(e -> {
                 var id = e.getId();
@@ -34,7 +34,7 @@ public class PublisherMappingHelper extends MappingHelper {
     public Publisher fromDto(PublisherDto dto) {
         var entity = om.fromDto(dto);
 
-        if (dto.getMediaIds().size() > 0) {
+        if (dto.getMediaIds() != null) {
             dto.getMediaIds().forEach(id -> {
                 var e = mediaRepository.findById(id);
                 entity.getMedias().add(e);

@@ -21,9 +21,5 @@ public class AuthorDto {
 
     private String lastname;
 
-    private LocalDate birthDate;
-
-    private LocalDate deathDate;
-
     private List<Integer> mediaIds;
 }

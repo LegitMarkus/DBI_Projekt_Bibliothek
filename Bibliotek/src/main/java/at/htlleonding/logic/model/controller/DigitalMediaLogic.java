@@ -5,8 +5,10 @@ import at.htlleonding.logic.LibraryMgmtLogic;
 import at.htlleonding.mapper.model.DigitalMediaMappingHelper;
 import at.htlleonding.repository.model.DigitalMediaRepository;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
+@ApplicationScoped
 public class DigitalMediaLogic extends LibraryMgmtLogic {
 
     @Inject

@@ -7,8 +7,10 @@ import at.htlleonding.mapper.model.NewspaperMappingHelper;
 import at.htlleonding.mapper.model.PublisherMappingHelper;
 import at.htlleonding.repository.model.PublisherRepository;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
+@ApplicationScoped
 public class PublisherLogic extends LibraryMgmtLogic {
 
     @Inject

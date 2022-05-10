@@ -40,7 +40,6 @@ public class Media {
     private Genre genre;
 
     @ManyToMany
-    @JoinColumn
     private Set<Author> authors = new HashSet<Author>();
 
 }

@@ -8,8 +8,10 @@ import at.htlleonding.mapper.model.shop.entities.BillMappingHelper;
 import at.htlleonding.persistence.shop.entities.BillKey;
 import at.htlleonding.repository.model.shop.entities.BillRepository;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
+@ApplicationScoped
 public class BillLogic extends LibraryMgmtLogic {
 
     @Inject

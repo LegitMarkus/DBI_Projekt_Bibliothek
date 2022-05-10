@@ -5,9 +5,11 @@ import at.htlleonding.logic.LibraryMgmtLogic;
 import at.htlleonding.mapper.model.AuthorMappingHelper;
 import at.htlleonding.repository.model.AuthorRepository;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.xml.crypto.dsig.spec.XSLTTransformParameterSpec;
 
+@ApplicationScoped
 public class AuthorLogic extends LibraryMgmtLogic {
 
     @Inject

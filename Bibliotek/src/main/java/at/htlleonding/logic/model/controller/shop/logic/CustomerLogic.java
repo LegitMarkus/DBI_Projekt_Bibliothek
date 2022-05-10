@@ -5,8 +5,10 @@ import at.htlleonding.logic.LibraryMgmtLogic;
 import at.htlleonding.mapper.model.shop.entities.CustomerMappingHelper;
 import at.htlleonding.repository.model.shop.entities.CustomerRepository;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
+@ApplicationScoped
 public class CustomerLogic extends LibraryMgmtLogic {
 
     @Inject

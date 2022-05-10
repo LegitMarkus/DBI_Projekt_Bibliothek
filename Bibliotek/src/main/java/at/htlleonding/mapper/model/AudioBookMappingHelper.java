@@ -28,7 +28,7 @@ public class AudioBookMappingHelper extends MappingHelper {
         if (entity.getLanguage() != null){
             dto.setLanguageId(entity.getLanguage().getId());
         }
-        if (entity.getTopics().size() > 0) {
+        if (entity.getTopics() != null) {
             var Ids = new LinkedList<Integer>();
             entity.getTopics().forEach(e -> {
                 var id = e.getId();
@@ -37,7 +37,7 @@ public class AudioBookMappingHelper extends MappingHelper {
             dto.setTopicIds(Ids);
 
         }
-        if (entity.getAuthors().size() > 0) {
+        if (entity.getAuthors() != null) {
             var Ids = new LinkedList<Integer>();
             entity.getAuthors().forEach(e -> {
                 var id = e.getId();
@@ -47,7 +47,7 @@ public class AudioBookMappingHelper extends MappingHelper {
 
         }
         //AudioBook
-        if (entity.getSpeakers().size() > 0) {
+        if (entity.getSpeakers() != null) {
             var Ids = new LinkedList<Integer>();
             entity.getSpeakers().forEach(e -> {
                 var id = e.getId();
@@ -83,20 +83,20 @@ public class AudioBookMappingHelper extends MappingHelper {
         if (dto.getLanguageId() != null){
             entity.setLanguage(languageRepository.findById(dto.getLanguageId()));
         }
-        if (dto.getTopicIds().size() > 0) {
+        if (dto.getTopicIds() != null) {
             dto.getTopicIds().forEach(id -> {
                 var e = topicRepository.findById(id);
                 entity.getTopics().add(e);
             });
         }
-        if (dto.getAuthorIds().size() > 0) {
+        if (dto.getAuthorIds() != null) {
             dto.getAuthorIds().forEach(id -> {
                 var e = authorRepository.findById(id);
                 entity.getAuthors().add(e);
             });
         }
         //AudioBook
-        if (dto.getSpeakerIds().size() > 0) {
+        if (dto.getSpeakerIds() != null) {
             dto.getSpeakerIds().forEach(id -> {
                 var e = speakerRepository.findById(id);
                 entity.getSpeakers().add(e);

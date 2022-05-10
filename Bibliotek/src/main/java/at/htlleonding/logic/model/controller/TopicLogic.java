@@ -7,8 +7,10 @@ import at.htlleonding.mapper.model.NewspaperMappingHelper;
 import at.htlleonding.mapper.model.TopicMappingHelper;
 import at.htlleonding.repository.model.TopicRepository;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
+@ApplicationScoped
 public class TopicLogic extends LibraryMgmtLogic {
 
     @Inject

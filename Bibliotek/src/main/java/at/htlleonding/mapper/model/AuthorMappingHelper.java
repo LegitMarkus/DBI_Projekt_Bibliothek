@@ -17,13 +17,15 @@ public class AuthorMappingHelper extends MappingHelper {
     public AuthorDto toDto(Author entity) {
         var dto = om.toDTO(entity);
 
-        if (entity.getMedias().size() > 0) {
-            var Ids = new LinkedList<Integer>();
-            entity.getMedias().forEach(e -> {
-                var id = e.getId();
-                Ids.add(id);
-            });
-            dto.setMediaIds(Ids);
+        if (entity.getMedias() != null) {
+            if(entity.getMedias().size() > 0){
+                var Ids = new LinkedList<Integer>();
+                entity.getMedias().forEach(e -> {
+                    var id = e.getId();
+                    Ids.add(id);
+                });
+                dto.setMediaIds(Ids);
+            }
         }
         return dto;
     }
@@ -34,7 +36,7 @@ public class AuthorMappingHelper extends MappingHelper {
     public Author fromDto(AuthorDto dto) {
         var entity = om.fromDto(dto);
 
-        if (dto.getMediaIds().size() > 0) {
+        if (dto.getMediaIds() != null) {
             dto.getMediaIds().forEach(id -> {
                 var e = mediaRepository.findById(id);
                 entity.getMedias().add(e);

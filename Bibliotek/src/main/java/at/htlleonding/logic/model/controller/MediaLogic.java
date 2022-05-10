@@ -6,8 +6,10 @@ import at.htlleonding.logic.LibraryMgmtLogic;
 import at.htlleonding.mapper.model.MediaMappingHelper;
 import at.htlleonding.repository.model.MediaRepository;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
+@ApplicationScoped
 public class MediaLogic extends LibraryMgmtLogic {
 
     @Inject

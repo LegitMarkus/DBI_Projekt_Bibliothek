@@ -5,8 +5,10 @@ import at.htlleonding.logic.LibraryMgmtLogic;
 import at.htlleonding.mapper.model.AudioBookMappingHelper;
 import at.htlleonding.repository.model.AudioBookRepository;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
+@ApplicationScoped
 public class AudioBookLogic extends LibraryMgmtLogic {
 
     @Inject

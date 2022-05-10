@@ -7,8 +7,10 @@ import at.htlleonding.mapper.model.NewspaperMappingHelper;
 import at.htlleonding.mapper.model.SpeakerMappingHelper;
 import at.htlleonding.repository.model.SpeakerRepository;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
+@ApplicationScoped
 public class SpeakerLogic extends LibraryMgmtLogic {
 
     @Inject

@@ -8,8 +8,10 @@ import at.htlleonding.mapper.model.shop.entities.LendingMappingHelper;
 import at.htlleonding.persistence.shop.entities.LendingKey;
 import at.htlleonding.repository.model.shop.entities.LendingRepository;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
+@ApplicationScoped
 public class LendingLogic extends LibraryMgmtLogic {
 
     @Inject

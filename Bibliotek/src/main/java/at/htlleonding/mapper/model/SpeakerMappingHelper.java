@@ -19,7 +19,7 @@ public class SpeakerMappingHelper extends MappingHelper {
     public SpeakerDto toDto(Speaker entity) {
         var dto = om.toDTO(entity);
 
-        if (entity.getAudioBooks().size() > 0) {
+        if (entity.getAudioBooks() != null) {
             var Ids = new LinkedList<Integer>();
             entity.getAudioBooks().forEach(e -> {
                 var id = e.getId();
@@ -36,7 +36,7 @@ public class SpeakerMappingHelper extends MappingHelper {
     public Speaker fromDto(SpeakerDto dto) {
         var entity = om.fromDto(dto);
 
-        if (dto.getAudioBookIds().size() > 0) {
+        if (dto.getAudioBookIds() != null) {
             dto.getAudioBookIds().forEach(id -> {
                 var e = audioBookRepository.findById(id);
                 entity.getAudioBooks().add(e);
