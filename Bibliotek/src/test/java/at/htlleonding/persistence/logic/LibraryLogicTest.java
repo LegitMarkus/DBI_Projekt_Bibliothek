@@ -1,7 +1,9 @@
 package at.htlleonding.persistence.logic;
 
 import at.htlleonding.dto.*;
+import at.htlleonding.dto.shop.entities.CustomerDto;
 import at.htlleonding.dto.shop.entities.LendingDto;
+import at.htlleonding.dto.shop.entities.StaffDto;
 import at.htlleonding.logic.LibraryMgmtLogic;
 import at.htlleonding.logic.model.controller.*;
 import at.htlleonding.logic.model.controller.shop.logic.*;
@@ -344,18 +346,18 @@ class LibraryLogicTest {
 
         var title = "Was will Putin?";
 
-        var newspaperDto = new MagazineDto();
-        newspaperDto.getAuthorIds().add(findAuthor.getId());
-        newspaperDto.setTitle(title);
-        newspaperDto.setBorrowing(5);
-        newspaperDto.setFreehandArea(5);
-        newspaperDto.setTranslation(false);
-        magazineLogic.insert(newspaperDto);
+        var magazineDto = new MagazineDto();
+        magazineDto.getAuthorIds().add(findAuthor.getId());
+        magazineDto.setTitle(title);
+        magazineDto.setBorrowing(5);
+        magazineDto.setFreehandArea(5);
+        magazineDto.setTranslation(false);
+        magazineLogic.insert(magazineDto);
         magazineLogic.flushAndClear();
 
-        var newspaperDatabase = magazineLogic.getByName(title);
+        var magazineDatabase = magazineLogic.getByName(title);
 
-        Assertions.assertEquals(newspaperDatabase.getTitle(), title);
+        Assertions.assertEquals(magazineDatabase.getTitle(), title);
     }
 
 
@@ -367,14 +369,30 @@ class LibraryLogicTest {
     @TestTransaction
     public void addLibraryCustomer_isAvailable()
     {
-        Assertions.fail("Not implemented yet");
+        var custommer = new StaffDto();
+        custommer.setFirstName("Markus");
+        custommer.setLastName("Schwarz");
+        custommer.setCustomerNumber("1A35");
+
+        customerLogic.insert(custommer);
+
+        var custommerDatabase = customerLogic.getByCustommerNumber("1A35");
+
+        Assertions.assertEquals("1A35", custommerDatabase.getCustomerNumber());
     }
 
     @Test
     @TestTransaction
     public void addLibraryEmployee_isAvailable()
     {
-        Assertions.fail("Not implemented yet");
+        var staff = new StaffDto();
+        staff.setFirstName("Markus");
+        staff.setLastName("Schwarz");
+        staff.setCustomerNumber("1A35");
+        staff.setEmail("test@gmail.com");
+        staff.setSalary(1500);
+
+        staffLogic.insert(staff);
     }
 
     /*

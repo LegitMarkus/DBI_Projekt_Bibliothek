@@ -24,4 +24,8 @@ public class CustomerLogic extends LibraryMgmtLogic {
         var entity = customerRepository.findById(id);
         return mappingHelper.toDto(entity);
     }
+    public CustomerDto getByCustommerNumber(String custommerNumber){
+        var entity = customerRepository.findByCustommerNumber(custommerNumber);
+        return mappingHelper.toDto(entity);
+    }
 }

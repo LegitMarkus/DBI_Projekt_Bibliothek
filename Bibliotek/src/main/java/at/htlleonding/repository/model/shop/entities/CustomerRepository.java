@@ -21,4 +21,9 @@ public class CustomerRepository {
     public Customer findById(Integer id){
         return em.createQuery("select x from Customer x where x.id = :id", Customer.class).setParameter("id", id).getSingleResult();
     }
+    @Transactional
+    public Customer findByCustommerNumber(String title){
+        return em.createQuery("select x from Customer x where x.customerNumber = :title", Customer.class)
+                .setParameter("title", title).getSingleResult();
+    }
 }

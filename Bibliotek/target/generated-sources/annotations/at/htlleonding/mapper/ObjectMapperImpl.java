@@ -45,7 +45,7 @@ import javax.enterprise.context.ApplicationScoped;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-05-10T11:24:34+0200",
+    date = "2022-05-10T12:08:09+0200",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 17.0.1 (Oracle Corporation)"
 )
 @ApplicationScoped
@@ -180,6 +180,9 @@ public class ObjectMapperImpl implements ObjectMapper {
         StaffDto staffDto = new StaffDto();
 
         staffDto.setId( entity.getId() );
+        staffDto.setCustomerNumber( entity.getCustomerNumber() );
+        staffDto.setFirstName( entity.getFirstName() );
+        staffDto.setLastName( entity.getLastName() );
         staffDto.setAge( entity.getAge() );
         staffDto.setEmail( entity.getEmail() );
         staffDto.setSalary( entity.getSalary() );
@@ -196,6 +199,9 @@ public class ObjectMapperImpl implements ObjectMapper {
         Staff staff = new Staff();
 
         staff.setId( entity.getId() );
+        staff.setCustomerNumber( entity.getCustomerNumber() );
+        staff.setFirstName( entity.getFirstName() );
+        staff.setLastName( entity.getLastName() );
         staff.setAge( entity.getAge() );
         staff.setEmail( entity.getEmail() );
         staff.setSalary( entity.getSalary() );

@@ -11,7 +11,7 @@ import javax.persistence.Column;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class StaffDto {
+public class StaffDto extends CustomerDto{
     private Integer id;
 
     private Integer age;
