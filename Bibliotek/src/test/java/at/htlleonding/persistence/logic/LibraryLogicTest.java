@@ -456,7 +456,7 @@ class LibraryLogicTest {
         customerLogic.insert(customer);
         customerLogic.flushAndClear();
 
-        customerLogic.rent(customerNumber, title);
+        customerLogic.rentBook(customerNumber, title);
         var bookDatabase = bookLogic.getByName(title);
 
         Assertions.assertEquals(2, bookDatabase.getBorrowing());
@@ -498,7 +498,59 @@ class LibraryLogicTest {
     @TestTransaction
     public void customerOneItemOfEachMediaType_ItemsAreRented()
     {
-        Assertions.fail("Not implemented yet");
+        var customerNumber = "1A35";
+
+        var customer = new CustomerDto();
+        customer.setFirstName("Markus");
+        customer.setLastName("Schwarz");
+        customer.setCustomerNumber(customerNumber);
+        customerLogic.insert(customer);
+        customerLogic.flushAndClear();
+
+        var title = "Was will Putin?";
+
+        var bookDto = new BookDto();
+        bookDto.setTitle(title);
+        bookDto.setBorrowing(3);
+        bookDto.setFreehandArea(0);
+        bookDto.setTranslation(false);
+        bookLogic.insert(bookDto);
+        bookLogic.flushAndClear();
+
+        var newspaperDto = new NewspaperDto();
+        newspaperDto.setTitle(title);
+        newspaperDto.setBorrowing(3);
+        newspaperDto.setFreehandArea(0);
+        newspaperDto.setTranslation(false);
+        newspaperLogic.insert(newspaperDto);
+        newspaperLogic.flushAndClear();
+
+        var magazineDto = new MagazineDto();
+        magazineDto.setTitle(title);
+        magazineDto.setBorrowing(3);
+        magazineDto.setFreehandArea(0);
+        magazineDto.setTranslation(false);
+        magazineLogic.insert(magazineDto);
+        magazineLogic.flushAndClear();
+
+        customerLogic.rentBook(customerNumber, title);
+        customerLogic.rentNewspaper(customerNumber, title);
+        customerLogic.rentMagazine(customerNumber, title);
+
+        var audioBookDto = new AudioBookDto();
+        audioBookDto.setTitle(title);
+        audioBookDto.setTranslation(false);
+        audioBookLogic.insert(audioBookDto);
+        audioBookLogic.flushAndClear();
+
+        var eBookDto = new EBookDto();
+        eBookDto.setTitle(title);
+        eBookDto.setTranslation(false);
+        eBookLogic.insert(eBookDto);
+        eBookLogic.flushAndClear();
+
+        customerLogic.rentAudioBook(customerNumber, title);
+        customerLogic.rentEBook(customerNumber, title);
     }
 
     @Test
