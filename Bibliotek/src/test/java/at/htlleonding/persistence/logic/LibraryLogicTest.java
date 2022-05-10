@@ -11,6 +11,7 @@ import at.htlleonding.persistence.Author;
 import at.htlleonding.persistence.Book;
 import at.htlleonding.persistence.EBook;
 import at.htlleonding.persistence.SinglePhysicalMedia;
+import at.htlleonding.persistence.shop.entities.Lending;
 import at.htlleonding.repository.CRUDOperations;
 import io.quarkus.test.TestTransaction;
 import io.quarkus.test.junit.QuarkusTest;
@@ -403,21 +404,94 @@ class LibraryLogicTest {
     @TestTransaction
     public void customerRentsRentableItem_ItemIsRented()
     {
-        Assertions.fail("Not implemented yet");
+        var title = "Was will Putin?";
+
+        var bookDto = new BookDto();
+        bookDto.setTitle(title);
+        bookDto.setBorrowing(3);
+        bookDto.setFreehandArea(0);
+        bookDto.setTranslation(false);
+        bookLogic.insert(bookDto);
+        bookLogic.flushAndClear();
+
+        var customerNumber = "1A35";
+
+        var customer = new CustomerDto();
+        customer.setFirstName("Markus");
+        customer.setLastName("Schwarz");
+        customer.setCustomerNumber(customerNumber);
+        customerLogic.insert(customer);
+        customerLogic.flushAndClear();
+
+        var customerDatabase = customerLogic.getByCustommerNumber(customerNumber);
+        var bookDatabase = bookLogic.getByName(title);
+
+        var lending = new LendingDto();
+        lending.setCustommerId(customerDatabase.getId());
+        lending.setMediaId(bookDatabase.getId());
+        bookDatabase.setBorrowing(bookDatabase.getBorrowing() - 1);
+
     }
 
     @Test
     @TestTransaction
     public void customerRentsOneOfThreeCopiesOfRentableItem_TwoRentableItemsRemain_CustomerHasRent()
     {
-        Assertions.fail("Not implemented yet");
+        var title = "Was will Putin?";
+
+        var bookDto = new BookDto();
+        bookDto.setTitle(title);
+        bookDto.setBorrowing(3);
+        bookDto.setFreehandArea(0);
+        bookDto.setTranslation(false);
+        bookLogic.insert(bookDto);
+        bookLogic.flushAndClear();
+
+        var customerNumber = "1A35";
+
+        var customer = new CustomerDto();
+        customer.setFirstName("Markus");
+        customer.setLastName("Schwarz");
+        customer.setCustomerNumber(customerNumber);
+        customerLogic.insert(customer);
+        customerLogic.flushAndClear();
+
+        customerLogic.rent(customerNumber, title);
+        var bookDatabase = bookLogic.getByName(title);
+
+        Assertions.assertEquals(2, bookDatabase.getBorrowing());
     }
 
     @Test
     @TestTransaction
     public void customerRentsThreeOfThreeCopiesOfRentableItem_TryRentAnother_RentNotPossible()
     {
-        Assertions.fail("Not implemented yet");
+        var title = "Was will Putin?";
+
+        var bookDto = new BookDto();
+        bookDto.setTitle(title);
+        bookDto.setBorrowing(3);
+        bookDto.setFreehandArea(0);
+        bookDto.setTranslation(false);
+        bookLogic.insert(bookDto);
+        bookLogic.flushAndClear();
+
+        var customerNumber = "1A35";
+
+        var customer = new CustomerDto();
+        customer.setFirstName("Markus");
+        customer.setLastName("Schwarz");
+        customer.setCustomerNumber(customerNumber);
+        customerLogic.insert(customer);
+        customerLogic.flushAndClear();
+
+        customerLogic.rentBook(customerNumber, title);
+        customerLogic.rentBook(customerNumber, title);
+        customerLogic.rentBook(customerNumber, title);
+
+        var bookDatabase = bookLogic.getByName(title);
+
+        Assertions.assertEquals(0, bookDatabase.getBorrowing());
     }
 
     @Test

@@ -1,5 +1,6 @@
 package at.htlleonding.logic.model.controller;
 
+import at.htlleonding.dto.BookDto;
 import at.htlleonding.dto.NewspaperDto;
 import at.htlleonding.dto.PhysicalMediaDto;
 import at.htlleonding.logic.LibraryMgmtLogic;
@@ -21,6 +22,10 @@ public class PhysicalMediaLogic extends LibraryMgmtLogic {
     public void insert(PhysicalMediaDto dto){
         var entity =  mappingHelper.fromDto(dto);
         crudOperations.add(entity);
+    }
+    public void update(PhysicalMediaDto dto){
+        var entity =  mappingHelper.fromDto(dto);
+        crudOperations.update(entity);
     }
     public PhysicalMediaDto getById(int id){
         var entity = physicalMediaRepository.findById(id);

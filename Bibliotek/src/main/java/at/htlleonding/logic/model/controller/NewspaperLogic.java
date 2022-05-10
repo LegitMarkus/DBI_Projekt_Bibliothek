@@ -41,6 +41,10 @@ public class NewspaperLogic extends LibraryMgmtLogic {
 
         crudOperations.add(entity);
     }
+    public void update(NewspaperDto dto){
+        var entity =  mappingHelper.fromDto(dto);
+        crudOperations.update(entity);
+    }
     public NewspaperDto getById(int id){
         var entity = newspaperRepository.findById(id);
         return mappingHelper.toDto(entity);

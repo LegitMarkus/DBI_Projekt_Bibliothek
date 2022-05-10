@@ -1,5 +1,6 @@
 package at.htlleonding.logic.model.controller;
 
+import at.htlleonding.dto.BookDto;
 import at.htlleonding.dto.MagazineDto;
 import at.htlleonding.dto.NewspaperDto;
 import at.htlleonding.logic.LibraryMgmtLogic;
@@ -40,6 +41,10 @@ public class MagazineLogic extends LibraryMgmtLogic {
         }
 
         crudOperations.add(entity);
+    }
+    public void update(MagazineDto dto){
+        var entity =  mappingHelper.fromDto(dto);
+        crudOperations.update(entity);
     }
     public MagazineDto getById(int id){
         var entity = magazineRepository.findById(id);

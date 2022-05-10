@@ -22,6 +22,10 @@ public class CRUDOperations {
     public<T> void delete(T entity){
         em.remove(entity);
     }
+    @Transactional
+    public<T> void update(T entity){
+        em.merge(entity);
+    }
 
     @Transactional
     public void add(Author a, Media m){

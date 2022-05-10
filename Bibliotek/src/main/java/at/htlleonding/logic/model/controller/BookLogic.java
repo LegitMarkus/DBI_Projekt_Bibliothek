@@ -45,6 +45,10 @@ public class BookLogic extends LibraryMgmtLogic {
         crudOperations.add(entity);
 
     }
+    public void update(BookDto dto){
+        var entity =  mappingHelper.fromDto(dto);
+        crudOperations.update(entity);
+    }
     public BookDto getById(int id){
         var entity = bookRepository.findById(id);
         return mappingHelper.toDto(entity);
