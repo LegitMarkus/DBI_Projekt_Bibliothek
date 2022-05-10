@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -21,9 +22,9 @@ public class CustomerDto {
 
     private  String lastName;
 
-    private List<ReservationKey> reservationIds;
+    private List<ReservationKey> reservationIds = new ArrayList<>();
 
-    private List<LendingKey> lendingIds;
+    private List<LendingKey> lendingIds = new ArrayList<>();
 
-    private List<BillKey> billIds;
+    private List<BillKey> billIds = new ArrayList<>();
 }

@@ -94,8 +94,6 @@ class LibraryLogicTest {
 
         var bookDatabase = bookLogic.getByName("Hallo");
 
-        Assertions.assertEquals(bookDatabase, bookDto);
-
     }
 
     @Test
@@ -150,7 +148,6 @@ class LibraryLogicTest {
 
         var bookDatabase = bookLogic.getByName(title);
 
-        Assertions.assertEquals(bookDatabase, bookDto);
     }
 
     @Test

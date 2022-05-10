@@ -8,6 +8,7 @@ import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.ManyToMany;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -21,5 +22,5 @@ public class SpeakerDto {
 
     private String name;
 
-    private List<Integer> audioBookIds;
+    private List<Integer> audioBookIds = new ArrayList<>();
 }

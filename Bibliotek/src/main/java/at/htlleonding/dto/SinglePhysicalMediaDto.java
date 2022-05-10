@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -25,9 +26,9 @@ public class SinglePhysicalMediaDto {
 
     private Boolean forSale = false;
 
-    private List<BillKey> billIds;
+    private List<BillKey> billIds = new ArrayList<>();
 
-    private List<ReservationKey> reservationIds;
+    private List<ReservationKey> reservationIds = new ArrayList<>();
 
-    private List<LendingKey> lendingIds;
+    private List<LendingKey> lendingIds = new ArrayList<>();
 }

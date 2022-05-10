@@ -10,6 +10,7 @@ import lombok.Setter;
 import javax.persistence.Column;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -28,5 +29,5 @@ public class PhysicalMediaDto extends MediaDto{
 
     private String Signature;
 
-    private List<Integer> singlePhysicalMediaIds;
+    private List<Integer> singlePhysicalMediaIds = new ArrayList<>();
 }

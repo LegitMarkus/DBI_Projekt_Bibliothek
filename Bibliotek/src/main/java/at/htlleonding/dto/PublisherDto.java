@@ -8,6 +8,7 @@ import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.OneToMany;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -21,5 +22,5 @@ public class PublisherDto {
 
     private String name;
 
-    private List<Integer> mediaIds;
+    private List<Integer> mediaIds = new ArrayList<>();
 }

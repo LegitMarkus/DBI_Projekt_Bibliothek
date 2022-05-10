@@ -11,10 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.criteria.CriteriaBuilder;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Getter
 @Setter
@@ -33,9 +30,9 @@ public class MediaDto {
 
     private Integer languageId;
 
-    private List<Integer> topicIds;
+    private List<Integer> topicIds = new ArrayList<>();
 
     private Integer genreId;
 
-    private List<Integer> authorIds;
+    private List<Integer> authorIds = new ArrayList<>();
 }

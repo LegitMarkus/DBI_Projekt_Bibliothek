@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -12,5 +13,5 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AudioBookDto extends DigitalMediaDto{
-    private List<Integer> speakerIds;
+    private List<Integer> speakerIds = new ArrayList<>();
 }
