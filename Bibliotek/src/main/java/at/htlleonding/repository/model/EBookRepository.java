@@ -22,4 +22,9 @@ public class EBookRepository {
     public EBook findById(Integer id){
         return em.createQuery("select x from EBook x where x.id = :id", EBook.class).setParameter("id", id).getSingleResult();
     }
+    @Transactional
+    public EBook findByName(String title){
+        return em.createQuery("select x from EBook x where x.title = :title", EBook.class)
+                .setParameter("title", title).getSingleResult();
+    }
 }

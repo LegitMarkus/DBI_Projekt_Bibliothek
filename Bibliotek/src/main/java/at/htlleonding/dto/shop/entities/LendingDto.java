@@ -23,6 +23,7 @@ public class LendingDto {
     private LendingKey id;
 
     private Integer mediaId;
+    private Integer digitalMediaId;
 
     private Integer custommerId;
 

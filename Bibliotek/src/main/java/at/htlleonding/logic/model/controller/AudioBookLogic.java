@@ -1,8 +1,10 @@
 package at.htlleonding.logic.model.controller;
 
 import at.htlleonding.dto.AudioBookDto;
+import at.htlleonding.dto.BookDto;
 import at.htlleonding.logic.LibraryMgmtLogic;
 import at.htlleonding.mapper.model.AudioBookMappingHelper;
+import at.htlleonding.persistence.AudioBook;
 import at.htlleonding.repository.model.AudioBookRepository;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -22,6 +24,10 @@ public class AudioBookLogic extends LibraryMgmtLogic {
     }
     public AudioBookDto getById(int id){
         var entity = audioBookRepository.findById(id);
+        return mappingHelper.toDto(entity);
+    }
+    public AudioBookDto getByName(String title){
+        var entity = audioBookRepository.findByName(title);
         return mappingHelper.toDto(entity);
     }
 }

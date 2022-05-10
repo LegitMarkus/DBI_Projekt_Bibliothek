@@ -33,13 +33,13 @@ public class BookLogic extends LibraryMgmtLogic {
 
             single.setPurchaseDate(LocalDate.now());
             crudOperations.add(single);
-            entity.getSingle().add(single);
+            entity.getSinglePhysicalMedia().add(single);
         }
         for (int i = 0; i < entity.getFreehandArea(); i++){
             var single = new SinglePhysicalMedia();
             single.setPhysicalMedia(entity);
             crudOperations.add(single);
-            entity.getSingle().add(single);
+            entity.getSinglePhysicalMedia().add(single);
         }
 
         crudOperations.add(entity);

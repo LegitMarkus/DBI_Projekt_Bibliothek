@@ -1,5 +1,6 @@
 package at.htlleonding.logic.model.controller;
 
+import at.htlleonding.dto.AudioBookDto;
 import at.htlleonding.dto.EBookDto;
 import at.htlleonding.logic.LibraryMgmtLogic;
 import at.htlleonding.mapper.model.EBookMappingHelper;
@@ -22,6 +23,10 @@ public class EBookLogic extends LibraryMgmtLogic {
     }
     public EBookDto getById(int id){
         var entity = eBookRepository.findById(id);
+        return mappingHelper.toDto(entity);
+    }
+    public EBookDto getByName(String title){
+        var entity = eBookRepository.findByName(title);
         return mappingHelper.toDto(entity);
     }
 }

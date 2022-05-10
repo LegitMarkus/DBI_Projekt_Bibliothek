@@ -5,7 +5,9 @@ import at.htlleonding.dto.MediaDto;
 import at.htlleonding.mapper.MappingHelper;
 import at.htlleonding.persistence.DigitalMedia;
 import at.htlleonding.persistence.Media;
+import at.htlleonding.persistence.shop.entities.LendingKey;
 import at.htlleonding.repository.model.*;
+import at.htlleonding.repository.model.shop.entities.LendingRepository;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -44,6 +46,15 @@ public class DigitalMediaMappingHelper extends MappingHelper {
             dto.setAuthorIds(Ids);
 
         }
+        if (entity.getLendings() != null) {
+            var Ids = new LinkedList<LendingKey>();
+            entity.getLendings().forEach(e -> {
+                var id = e.getId();
+                Ids.add(id);
+            });
+            dto.setLendingIds(Ids);
+        }
+
         return dto;
     }
 
@@ -57,6 +68,8 @@ public class DigitalMediaMappingHelper extends MappingHelper {
     TopicRepository topicRepository;
     @Inject
     AuthorRepository authorRepository;
+    @Inject
+    LendingRepository lendingRepository;
 
     public DigitalMedia fromDto(DigitalMediaDto dto) {
         var entity = om.fromDto(dto);
@@ -80,6 +93,12 @@ public class DigitalMediaMappingHelper extends MappingHelper {
             dto.getAuthorIds().forEach(id -> {
                 var e = authorRepository.findById(id);
                 entity.getAuthors().add(e);
+            });
+        }
+        if (dto.getLendingIds() != null) {
+            dto.getLendingIds().forEach(id -> {
+                var e = lendingRepository.findById(id);
+                entity.getLendings().add(e);
             });
         }
 

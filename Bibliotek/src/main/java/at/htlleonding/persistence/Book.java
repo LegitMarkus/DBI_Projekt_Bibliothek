@@ -14,6 +14,4 @@ import java.util.Set;
 @Setter
 @Entity
 public class Book extends PhysicalMedia {
-    @OneToMany
-    private Set<SinglePhysicalMedia> single = new HashSet<>();
 }

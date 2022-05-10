@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.Column;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
@@ -25,6 +26,10 @@ public class SinglePhysicalMediaDto {
     private LocalDate purchaseDate;
 
     private Boolean forSale = false;
+
+    private Boolean reserveable = false;
+
+    private Boolean lendable = false;
 
     private List<BillKey> billIds = new ArrayList<>();
 

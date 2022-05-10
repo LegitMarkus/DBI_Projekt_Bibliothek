@@ -1,5 +1,6 @@
 package at.htlleonding.persistence.shop.entities;
 
+import at.htlleonding.persistence.DigitalMedia;
 import at.htlleonding.persistence.SinglePhysicalMedia;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,8 +20,10 @@ public class Lending {
     LendingKey id;
 
     @ManyToOne
-    @MapsId("mediaId")
     private SinglePhysicalMedia media;
+    @ManyToOne
+    private DigitalMedia digitalMedia;
+
     @MapsId("custommerId")
     @ManyToOne
     private Customer custommer;

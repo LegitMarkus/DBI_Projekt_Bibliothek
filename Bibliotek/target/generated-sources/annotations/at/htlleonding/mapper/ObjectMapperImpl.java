@@ -45,7 +45,7 @@ import javax.enterprise.context.ApplicationScoped;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-05-10T09:26:23+0200",
+    date = "2022-05-10T11:24:34+0200",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 17.0.1 (Oracle Corporation)"
 )
 @ApplicationScoped
@@ -624,6 +624,8 @@ public class ObjectMapperImpl implements ObjectMapper {
         singlePhysicalMediaDto.setId( entity.getId() );
         singlePhysicalMediaDto.setPurchaseDate( entity.getPurchaseDate() );
         singlePhysicalMediaDto.setForSale( entity.getForSale() );
+        singlePhysicalMediaDto.setReserveable( entity.getReserveable() );
+        singlePhysicalMediaDto.setLendable( entity.getLendable() );
 
         return singlePhysicalMediaDto;
     }
@@ -639,6 +641,8 @@ public class ObjectMapperImpl implements ObjectMapper {
         singlePhysicalMedia.setId( entity.getId() );
         singlePhysicalMedia.setPurchaseDate( entity.getPurchaseDate() );
         singlePhysicalMedia.setForSale( entity.getForSale() );
+        singlePhysicalMedia.setReserveable( entity.getReserveable() );
+        singlePhysicalMedia.setLendable( entity.getLendable() );
 
         return singlePhysicalMedia;
     }

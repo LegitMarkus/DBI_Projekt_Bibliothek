@@ -2,6 +2,7 @@ package at.htlleonding.repository.model;
 
 import at.htlleonding.persistence.AudioBook;
 import at.htlleonding.persistence.Magazine;
+import at.htlleonding.persistence.Newspaper;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -21,5 +22,10 @@ public class MagazineRepository {
     @Transactional
     public Magazine findById(Integer id){
         return em.createQuery("select x from Magazine x where x.id = :id", Magazine.class).setParameter("id", id).getSingleResult();
+    }
+    @Transactional
+    public Magazine findByName(String title){
+        return em.createQuery("select x from Magazine x where x.title = :title", Magazine.class)
+                .setParameter("title", title).getSingleResult();
     }
 }

@@ -1,13 +1,13 @@
 package at.htlleonding.persistence.logic;
 
-import at.htlleonding.dto.AudioBookDto;
-import at.htlleonding.dto.AuthorDto;
-import at.htlleonding.dto.BookDto;
+import at.htlleonding.dto.*;
+import at.htlleonding.dto.shop.entities.LendingDto;
 import at.htlleonding.logic.LibraryMgmtLogic;
 import at.htlleonding.logic.model.controller.*;
 import at.htlleonding.logic.model.controller.shop.logic.*;
 import at.htlleonding.persistence.Author;
 import at.htlleonding.persistence.Book;
+import at.htlleonding.persistence.EBook;
 import at.htlleonding.persistence.SinglePhysicalMedia;
 import at.htlleonding.repository.CRUDOperations;
 import io.quarkus.test.TestTransaction;
@@ -80,20 +80,22 @@ class LibraryLogicTest {
         authorDto.setLastname(lastname);
         authorLogic.insert(authorDto);
         authorLogic.flushAndClear();
-
         var findAuthor = authorLogic.getByName(firstname, lastname);
+
+        var title = "Was will Putin?";
 
         var bookDto = new BookDto();
         bookDto.getAuthorIds().add(findAuthor.getId());
-        bookDto.setTitle("Hallo");
+        bookDto.setTitle(title);
         bookDto.setBorrowing(5);
         bookDto.setFreehandArea(5);
         bookDto.setTranslation(false);
         bookLogic.insert(bookDto);
         bookLogic.flushAndClear();
 
-        var bookDatabase = bookLogic.getByName("Hallo");
+        var bookDatabase = bookLogic.getByName(title);
 
+        Assertions.assertEquals(bookDatabase.getTitle(), title);
     }
 
     @Test
@@ -137,7 +139,7 @@ class LibraryLogicTest {
         bookDto.getAuthorIds().add(findAuthor2.getId());
         bookDto.getAuthorIds().add(findAuthor3.getId());
 
-        var title = "Hallo2";
+        var title = "Was will Putin?";
 
         bookDto.setTitle(title);
         bookDto.setBorrowing(5);
@@ -148,41 +150,212 @@ class LibraryLogicTest {
 
         var bookDatabase = bookLogic.getByName(title);
 
+        Assertions.assertEquals(bookDatabase.getTitle(), title);
     }
 
     @Test
     @TestTransaction
     public void addThreeCopiesOfPaperBookWithThreeAuthors_makeRentable_canBeRented()
     {
-        Assertions.fail("Not implemented yet!!");
+        String firstname = "Robert1";
+        String lastname = "Lenz1";
+
+        var authorDto = new AuthorDto();
+        authorDto.setFirstname(firstname);
+        authorDto.setLastname(lastname);
+        authorLogic.insert(authorDto);
+        authorLogic.flushAndClear();
+
+        String firstname2 = "Robert2";
+        String lastname2 = "Lenz2";
+
+        var authorDto2 = new AuthorDto();
+        authorDto2.setFirstname(firstname2);
+        authorDto2.setLastname(lastname2);
+        authorLogic.insert(authorDto2);
+        authorLogic.flushAndClear();
+
+        String firstname3 = "Robert3";
+        String lastname3 = "Lenz3";
+
+        var authorDto3 = new AuthorDto();
+        authorDto3.setFirstname(firstname3);
+        authorDto3.setLastname(lastname3);
+        authorLogic.insert(authorDto3);
+        authorLogic.flushAndClear();
+
+        var findAuthor = authorLogic.getByName(firstname, lastname);
+        var findAuthor2 = authorLogic.getByName(firstname2, lastname2);
+        var findAuthor3 = authorLogic.getByName(firstname3, lastname3);
+
+        var title1 = "Was will Putin?1";
+        var title2 = "Was will Putin?2";
+        var title3 = "Was will Putin?3";
+
+        var bookDto1 = new BookDto();
+        bookDto1.getAuthorIds().add(findAuthor.getId());
+        bookDto1.getAuthorIds().add(findAuthor2.getId());
+        bookDto1.getAuthorIds().add(findAuthor3.getId());
+
+        bookDto1.setTitle(title1);
+        bookDto1.setBorrowing(5);
+        bookDto1.setFreehandArea(5);
+        bookDto1.setTranslation(false);
+        bookLogic.insert(bookDto1);
+        bookLogic.flushAndClear();
+
+        var bookDto2 = new BookDto();
+        bookDto2.getAuthorIds().add(findAuthor.getId());
+        bookDto2.getAuthorIds().add(findAuthor2.getId());
+        bookDto2.getAuthorIds().add(findAuthor3.getId());
+
+        bookDto2.setTitle(title2);
+        bookDto2.setBorrowing(5);
+        bookDto2.setFreehandArea(5);
+        bookDto2.setTranslation(false);
+        bookLogic.insert(bookDto2);
+        bookLogic.flushAndClear();
+
+        var bookDto3 = new BookDto();
+        bookDto3.getAuthorIds().add(findAuthor.getId());
+        bookDto3.getAuthorIds().add(findAuthor2.getId());
+        bookDto3.getAuthorIds().add(findAuthor3.getId());
+
+        bookDto3.setTitle(title3);
+        bookDto3.setBorrowing(5);
+        bookDto3.setFreehandArea(5);
+        bookDto3.setTranslation(false);
+        bookLogic.insert(bookDto3);
+        bookLogic.flushAndClear();
+
+        var bookDatabase1 = bookLogic.getByName(title1);
+        var bookDatabase2 = bookLogic.getByName(title2);
+        var bookDatabase3 = bookLogic.getByName(title3);
+
+        Assertions.assertEquals(bookDatabase1.getTitle(), title1);
+        Assertions.assertEquals(bookDatabase2.getTitle(), title2);
+        Assertions.assertEquals(bookDatabase3.getTitle(), title3);
+
     }
 
     @Test
     @TestTransaction
     public void addNewspaperWithOneAuthor_makeRentable_canBeRented()
     {
-        Assertions.fail("Not implemented yet!!");
+        String firstname = "Robert";
+        String lastname = "Lenz";
+
+        var authorDto = new AuthorDto();
+        authorDto.setFirstname(firstname);
+        authorDto.setLastname(lastname);
+        authorLogic.insert(authorDto);
+        authorLogic.flushAndClear();
+
+        var findAuthor = authorLogic.getByName(firstname, lastname);
+
+        var title = "Was will Putin?";
+
+        var newspaperDto = new NewspaperDto();
+        newspaperDto.getAuthorIds().add(findAuthor.getId());
+        newspaperDto.setTitle(title);
+        newspaperDto.setBorrowing(5);
+        newspaperDto.setFreehandArea(5);
+        newspaperDto.setTranslation(false);
+        newspaperLogic.insert(newspaperDto);
+        newspaperLogic.flushAndClear();
+
+        var newspaperDatabase = newspaperLogic.getByName(title);
+
+        Assertions.assertEquals(newspaperDatabase.getTitle(), title);
     }
 
     @Test
     @TestTransaction
     public void addAudioBookWithOneAuthor_makeRentable_canBeRented()
     {
-        Assertions.fail("Not implemented yet");
+        String firstname = "Robert";
+        String lastname = "Lenz";
+
+        var authorDto = new AuthorDto();
+        authorDto.setFirstname(firstname);
+        authorDto.setLastname(lastname);
+        authorLogic.insert(authorDto);
+        authorLogic.flushAndClear();
+
+        var findAuthor = authorLogic.getByName(firstname, lastname);
+
+        var title = "Was will Putin?";
+
+        var audioBookDto = new AudioBookDto();
+        audioBookDto.getAuthorIds().add(findAuthor.getId());
+        audioBookDto.setTitle(title);
+        audioBookDto.setTranslation(false);
+        audioBookLogic.insert(audioBookDto);
+        audioBookLogic.flushAndClear();
+
+        var audioBookDatabase = audioBookLogic.getByName(title);
+
+        Assertions.assertEquals(audioBookDatabase.getTitle(), title);
     }
 
     @Test
     @TestTransaction
     public void addEBookWithOneAuthor_makeRentable_canBeRented()
     {
-        Assertions.fail("Not implemented yet");
+        String firstname = "Robert";
+        String lastname = "Lenz";
+
+        var authorDto = new AuthorDto();
+        authorDto.setFirstname(firstname);
+        authorDto.setLastname(lastname);
+        authorLogic.insert(authorDto);
+        authorLogic.flushAndClear();
+
+        var findAuthor = authorLogic.getByName(firstname, lastname);
+
+        var title = "Was will Putin?";
+
+        var eBookDto = new EBookDto();
+        eBookDto.getAuthorIds().add(findAuthor.getId());
+        eBookDto.setTitle(title);
+        eBookDto.setTranslation(false);
+        eBookLogic.insert(eBookDto);
+        eBookLogic.flushAndClear();
+
+        var eBookDatabase = eBookLogic.getByName(title);
+
+        Assertions.assertEquals(eBookDatabase.getTitle(), title);
     }
 
     @Test
     @TestTransaction
     public void addJournalWithOneAuthor_makeRentable_canBeRented()
     {
-        Assertions.fail("Not implemented yet");
+        String firstname = "Robert";
+        String lastname = "Lenz";
+
+        var authorDto = new AuthorDto();
+        authorDto.setFirstname(firstname);
+        authorDto.setLastname(lastname);
+        authorLogic.insert(authorDto);
+        authorLogic.flushAndClear();
+
+        var findAuthor = authorLogic.getByName(firstname, lastname);
+
+        var title = "Was will Putin?";
+
+        var newspaperDto = new MagazineDto();
+        newspaperDto.getAuthorIds().add(findAuthor.getId());
+        newspaperDto.setTitle(title);
+        newspaperDto.setBorrowing(5);
+        newspaperDto.setFreehandArea(5);
+        newspaperDto.setTranslation(false);
+        magazineLogic.insert(newspaperDto);
+        magazineLogic.flushAndClear();
+
+        var newspaperDatabase = magazineLogic.getByName(title);
+
+        Assertions.assertEquals(newspaperDatabase.getTitle(), title);
     }
 
 

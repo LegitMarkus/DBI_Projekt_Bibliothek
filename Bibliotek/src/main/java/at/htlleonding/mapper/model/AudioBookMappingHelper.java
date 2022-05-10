@@ -6,8 +6,10 @@ import at.htlleonding.dto.shop.entities.StaffDto;
 import at.htlleonding.mapper.MappingHelper;
 import at.htlleonding.persistence.AudioBook;
 import at.htlleonding.persistence.DigitalMedia;
+import at.htlleonding.persistence.shop.entities.LendingKey;
 import at.htlleonding.persistence.shop.entities.Staff;
 import at.htlleonding.repository.model.*;
+import at.htlleonding.repository.model.shop.entities.LendingRepository;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -55,6 +57,14 @@ public class AudioBookMappingHelper extends MappingHelper {
             });
             dto.setSpeakerIds(Ids);
         }
+        if (entity.getLendings() != null) {
+            var Ids = new LinkedList<LendingKey>();
+            entity.getLendings().forEach(e -> {
+                var id = e.getId();
+                Ids.add(id);
+            });
+            dto.setLendingIds(Ids);
+        }
         return dto;
     }
 
@@ -70,6 +80,8 @@ public class AudioBookMappingHelper extends MappingHelper {
     AuthorRepository authorRepository;
     @Inject
     SpeakerRepository speakerRepository;
+    @Inject
+    LendingRepository lendingRepository;
 
     public AudioBook fromDto(AudioBookDto dto) {
         var entity = om.fromDto(dto);
@@ -100,6 +112,12 @@ public class AudioBookMappingHelper extends MappingHelper {
             dto.getSpeakerIds().forEach(id -> {
                 var e = speakerRepository.findById(id);
                 entity.getSpeakers().add(e);
+            });
+        }
+        if (dto.getLendingIds() != null) {
+            dto.getLendingIds().forEach(id -> {
+                var e = lendingRepository.findById(id);
+                entity.getLendings().add(e);
             });
         }
         return entity;
