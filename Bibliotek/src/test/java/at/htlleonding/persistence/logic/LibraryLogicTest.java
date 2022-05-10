@@ -97,7 +97,7 @@ class LibraryLogicTest {
     @Inject
     StaffLogic staffLogic;
     @Inject
-    AudioBookDto audioBookDto;
+    AudioBookLogic audioBookLogic;
     @Inject
     AuthorLogic authorLogic;
     @Inject
@@ -162,21 +162,69 @@ class LibraryLogicTest {
     @TestTransaction
     public void addPaperBookWithThreeAuthors_makeRentable_canBeRented()
     {
+        String firstname = "Robert1";
+        String lastname = "Lenz1";
 
+        var authorDto = new AuthorDto();
+        authorDto.setFirstname(firstname);
+        authorDto.setLastname(lastname);
+        authorLogic.insert(authorDto);
+        authorLogic.flushAndClear();
+
+        String firstname2 = "Robert2";
+        String lastname2 = "Lenz2";
+
+        var authorDto2 = new AuthorDto();
+        authorDto2.setFirstname(firstname2);
+        authorDto2.setLastname(lastname2);
+        authorLogic.insert(authorDto2);
+        authorLogic.flushAndClear();
+
+        String firstname3 = "Robert3";
+        String lastname3 = "Lenz3";
+
+        var authorDto3 = new AuthorDto();
+        authorDto3.setFirstname(firstname3);
+        authorDto3.setLastname(lastname3);
+        authorLogic.insert(authorDto3);
+        authorLogic.flushAndClear();
+
+        var findAuthor = authorLogic.getByName(firstname, lastname);
+        var findAuthor2 = authorLogic.getByName(firstname2, lastname2);
+        var findAuthor3 = authorLogic.getByName(firstname3, lastname3);
+
+
+        var bookDto = new BookDto();
+        bookDto.getAuthorIds().add(findAuthor.getId());
+        bookDto.getAuthorIds().add(findAuthor2.getId());
+        bookDto.getAuthorIds().add(findAuthor3.getId());
+
+        var title = "Hallo2";
+
+        bookDto.setTitle(title);
+        bookDto.setBorrowing(5);
+        bookDto.setFreehandArea(5);
+        bookDto.setTranslation(false);
+        bookLogic.insert(bookDto);
+        bookLogic.flushAndClear();
+
+        var bookDatabase = bookLogic.getByName(title);
+
+        Assertions.assertEquals(bookDatabase, bookDto);
     }
 
     @Test
     @TestTransaction
     public void addThreeCopiesOfPaperBookWithThreeAuthors_makeRentable_canBeRented()
     {
-        Assertions.fail("Not implemented yet");
+        Assertions.fail("Not implemented yet!!");
     }
 
     @Test
     @TestTransaction
     public void addNewspaperWithOneAuthor_makeRentable_canBeRented()
     {
-        Assertions.fail("Not implemented yet");
+        Assertions.fail("Not implemented yet!!");
     }
 
     @Test
