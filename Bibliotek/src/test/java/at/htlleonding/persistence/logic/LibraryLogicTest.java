@@ -435,8 +435,7 @@ class LibraryLogicTest {
 
     @Test
     @TestTransaction
-    public void customerRentsOneOfThreeCopiesOfRentableItem_TwoRentableItemsRemain_CustomerHasRent()
-    {
+    public void customerRentsOneOfThreeCopiesOfRentableItem_TwoRentableItemsRemain_CustomerHasRent() throws BuisnessLogicException {
         var title = "Was will Putin?";
 
         var bookDto = new BookDto();
@@ -464,8 +463,7 @@ class LibraryLogicTest {
 
     @Test
     @TestTransaction
-    public void customerRentsThreeOfThreeCopiesOfRentableItem_TryRentAnother_RentNotPossible()
-    {
+    public void customerRentsThreeOfThreeCopiesOfRentableItem_TryRentAnother_RentNotPossible() throws BuisnessLogicException {
         var title = "Was will Putin?";
 
         var bookDto = new BookDto();
@@ -496,7 +494,7 @@ class LibraryLogicTest {
 
     @Test
     @TestTransaction
-    public void customerOneItemOfEachMediaType_ItemsAreRented()
+    public void customerOneItemOfEachMediaType_ItemsAreRented() throws BuisnessLogicException
     {
         var customerNumber = "1A35";
 
@@ -577,7 +575,10 @@ class LibraryLogicTest {
         bookLogic.flushAndClear();
 
         singlePhysicalMediaLogic.setBookForSale(title, 1);
-        customerLogic.rentBook(customerNumber, title);
+
+        Assertions.assertThrows(BuisnessLogicException.class, () -> {
+            customerLogic.rentBook(customerNumber, title);
+        });
     }
 
     @Test

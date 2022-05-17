@@ -25,15 +25,11 @@ public class CustomerLogic extends LibraryMgmtLogic {
     }
     @Inject
     BookLogic bookLogic;
-    public void rentBook(String customerNumber, String title){
+    public void rentBook(String customerNumber, String title) throws BuisnessLogicException {
         var customerDatabase = getByCustommerNumber(customerNumber);
         var book = bookLogic.getByName(title);
         if (book.getBorrowing() <= 0){
-            try {
-                throw new Exception("No books are available for rent!");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            throw new BuisnessLogicException("No books are available for rent!");
         }
         var lending = new LendingDto();
         lending.setCustommerId(customerDatabase.getId());
