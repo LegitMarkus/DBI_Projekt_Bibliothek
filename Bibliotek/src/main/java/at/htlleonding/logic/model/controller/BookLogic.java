@@ -1,6 +1,7 @@
 package at.htlleonding.logic.model.controller;
 
 import at.htlleonding.dto.BookDto;
+import at.htlleonding.dto.shop.entities.LendingDto;
 import at.htlleonding.logic.LibraryMgmtLogic;
 import at.htlleonding.mapper.model.BookMappingHelper;
 import at.htlleonding.persistence.SinglePhysicalMedia;

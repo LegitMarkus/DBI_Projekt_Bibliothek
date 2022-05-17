@@ -30,7 +30,7 @@ public class CustomerLogic extends LibraryMgmtLogic {
         var book = bookLogic.getByName(title);
         if (book.getBorrowing() <= 0){
             try {
-                throw new Exception("keine Bücher leihbar");
+                throw new Exception("No books are available for rent!");
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -50,7 +50,7 @@ public class CustomerLogic extends LibraryMgmtLogic {
         if (entity.getBorrowing() <= 0){
             try {
 
-                throw new Exception("keine Bücher leihbar");
+                throw new Exception("No newspapers are available for rent!");
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -70,7 +70,7 @@ public class CustomerLogic extends LibraryMgmtLogic {
         if (entity.getBorrowing() <= 0){
             try {
 
-                throw new Exception("keine Bücher leihbar");
+                throw new Exception("No magazines are available for rent!");
             } catch (Exception e) {
                 e.printStackTrace();
             }

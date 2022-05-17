@@ -557,7 +557,27 @@ class LibraryLogicTest {
     @TestTransaction
     public void setItemForSale_customerTriesToRent_RentNotPossible()
     {
-        Assertions.fail("Not implemented yet");
+        var customerNumber = "1A35";
+
+        var customer = new CustomerDto();
+        customer.setFirstName("Markus");
+        customer.setLastName("Schwarz");
+        customer.setCustomerNumber(customerNumber);
+        customerLogic.insert(customer);
+        customerLogic.flushAndClear();
+
+        var title = "Was will Putin?";
+
+        var bookDto = new BookDto();
+        bookDto.setTitle(title);
+        bookDto.setBorrowing(1);
+        bookDto.setFreehandArea(0);
+        bookDto.setTranslation(false);
+        bookLogic.insert(bookDto);
+        bookLogic.flushAndClear();
+
+        singlePhysicalMediaLogic.setBookForSale(title, 1);
+        customerLogic.rentBook(customerNumber, title);
     }
 
     @Test
@@ -616,7 +636,7 @@ class LibraryLogicTest {
 
     @Test
     @TestTransaction
-    public void setThreeDifferentItemsForSale_CustomerBuys2_InvoiceHasTwoItems_OnlyOneItemForRent()
+    public void setThreeDifferentItemsForSale_CustomerBuys2_InvoiceHasTwoItems_OnlyOneItemForSaleLeft()
     {
         Assertions.fail("Not implemented yet");
     }
