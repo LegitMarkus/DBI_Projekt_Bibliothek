@@ -59,13 +59,10 @@ public class SinglePhysicalMediaLogic extends LibraryMgmtLogic {
                 e.printStackTrace();
             }
         }
-        if (book.getBorrowing() == 0){
-            try {
-                throw new BuisnessLogicException("Not enough books are available for rent!");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
+
+        book.setBorrowing(book.getBorrowing() - amount);
+        book.setBorrowing(book.getBorrowing() + amount);
+
         var dto = bookMappingHelper.fromDto(book);
         var singleList = dto.getSinglePhysicalMedia();
         boolean handled = false;
@@ -84,28 +81,24 @@ public class SinglePhysicalMediaLogic extends LibraryMgmtLogic {
         bookLogic.update(book);
     }
 
-    @Inject NewspaperLogic newspaperLogic;
-    public void setNewpaperForSale(String title, Integer amount){
-        var newspaper = newspaperLogic.getByName(title);
-        if (newspaper.getBorrowing() <= 0){
+    public void SetOnDisplay(String title, Integer amount){
+        var book = bookLogic.getByName(title);
+        if (book.getBorrowing() <= 0){
             try {
-                throw new BuisnessLogicException("No newspapers are available for sale!");
+                throw new BuisnessLogicException("No books are available for sale!");
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
-        if (newspaper.getBorrowing() == 0){
-            try {
-                throw new BuisnessLogicException("Not enough newspapers are available for rent!");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-        var singleList = singlePhysicalMediaRepository.loadAllNewspaperForBorrowing(title);
+        var dto = bookMappingHelper.fromDto(book);
+        var singleList = dto.getSinglePhysicalMedia();
         boolean handled = false;
+
+        book.setBorrowing(book.getBorrowing() - amount);
+        book.setFreehandArea(book.getFreehandArea() + amount);
+
         for (var single: singleList) {
-            if (!handled){
-                single.setForSale(true);
+            if (!handled && single.getLendable()){
                 single.setLendable(false);
                 amount--;
             }
@@ -113,42 +106,7 @@ public class SinglePhysicalMediaLogic extends LibraryMgmtLogic {
                 handled = true;
             }
         }
-        newspaper.setBorrowing(newspaper.getBorrowing() - 1);
 
-        newspaperLogic.update(newspaper);
-    }
-
-    @Inject MagazineLogic magazineLogic;
-    public void setMagazineForSale(String title, Integer amount){
-        var magazine = magazineLogic.getByName(title);
-        if (magazine.getBorrowing() <= 0){
-            try {
-                throw new BuisnessLogicException("No magazines are available for sale!");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-        if (magazine.getBorrowing() == 0){
-            try {
-                throw new BuisnessLogicException("Not enough magazines are available for rent!");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-        var singleList = singlePhysicalMediaRepository.loadAllMagazineForBorrowing(title);
-        boolean handled = false;
-        for (var single: singleList) {
-            if (!handled){
-                single.setForSale(true);
-                single.setLendable(false);
-                amount--;
-            }
-            if (amount == 0){
-                handled = true;
-            }
-        }
-        magazine.setBorrowing(magazine.getBorrowing() - 1);
-
-        magazineLogic.update(magazine);
+        bookLogic.update(book);
     }
 }
