@@ -2,6 +2,7 @@ package at.htlleonding.dto;
 
 import at.htlleonding.persistence.Author;
 import at.htlleonding.persistence.SinglePhysicalMedia;
+import at.htlleonding.persistence.shop.entities.ReservationKey;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -30,4 +31,6 @@ public class PhysicalMediaDto extends MediaDto{
     private String Signature;
 
     private List<Integer> singlePhysicalMediaIds = new ArrayList<>();
+
+    private List<Integer> reservationIds = new ArrayList<>();
 }

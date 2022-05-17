@@ -1,5 +1,6 @@
 package at.htlleonding.persistence;
 
+import at.htlleonding.persistence.shop.entities.Reservation;
 import lombok.*;
 
 import javax.persistence.*;
@@ -27,4 +28,7 @@ public class PhysicalMedia extends Media {
 
     @OneToMany
     private Set<SinglePhysicalMedia> singlePhysicalMedia = new HashSet<>();
+
+    @OneToMany
+    private Set<Reservation> reservations = new HashSet<>();
 }

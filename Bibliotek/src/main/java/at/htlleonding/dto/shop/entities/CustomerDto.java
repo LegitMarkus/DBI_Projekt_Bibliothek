@@ -22,7 +22,7 @@ public class CustomerDto {
 
     private  String lastName;
 
-    private List<ReservationKey> reservationIds = new ArrayList<>();
+    private List<Integer> reservationIds = new ArrayList<>();
 
     private List<Integer> lendingIds = new ArrayList<>();
 

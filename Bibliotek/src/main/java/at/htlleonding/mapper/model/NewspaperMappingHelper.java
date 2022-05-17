@@ -5,7 +5,9 @@ import at.htlleonding.dto.PhysicalMediaDto;
 import at.htlleonding.mapper.MappingHelper;
 import at.htlleonding.persistence.Newspaper;
 import at.htlleonding.persistence.PhysicalMedia;
+import at.htlleonding.persistence.shop.entities.ReservationKey;
 import at.htlleonding.repository.model.*;
+import at.htlleonding.repository.model.shop.entities.ReservationRepository;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -51,6 +53,14 @@ public class NewspaperMappingHelper extends MappingHelper {
             });
             dto.setSinglePhysicalMediaIds(Ids);
         }
+        if (entity.getReservations() != null) {
+            var Ids = new LinkedList<Integer>();
+            entity.getReservations().forEach(e -> {
+                var id = e.getId();
+                Ids.add(id);
+            });
+            dto.setReservationIds(Ids);
+        }
 
         return dto;
     }
@@ -67,7 +77,8 @@ public class NewspaperMappingHelper extends MappingHelper {
     AuthorRepository authorRepository;
     @Inject
     SinglePhysicalMediaRepository singlePhysicalMediaRepository;
-
+    @Inject
+    ReservationRepository reservationRepository;
     public Newspaper fromDto(NewspaperDto dto) {
         var entity = om.fromDto(dto);
 
@@ -96,6 +107,12 @@ public class NewspaperMappingHelper extends MappingHelper {
             dto.getSinglePhysicalMediaIds().forEach(id -> {
                 var e = singlePhysicalMediaRepository.findById(id);
                 entity.getSinglePhysicalMedia().add(e);
+            });
+        }
+        if (dto.getReservationIds() != null) {
+            dto.getReservationIds().forEach(id -> {
+                var e = reservationRepository.findById(id);
+                entity.getReservations().add(e);
             });
         }
 

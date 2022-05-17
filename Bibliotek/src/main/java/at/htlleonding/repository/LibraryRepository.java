@@ -190,22 +190,22 @@ public class LibraryRepository {
     //    em.persist(singlePhysicalMedia);
     //    em.persist(customer);
     //}
-    @Transactional
-    public void add(SinglePhysicalMedia singlePhysicalMedia, Customer customer, Date reservationDate) {
-        if(singlePhysicalMedia.getId() == null) {
-            add(singlePhysicalMedia);
-        }
-        if(customer.getId() == null) {
-            add(customer);
-        }
-        var assoc = new Reservation(singlePhysicalMedia, customer, reservationDate);
-        singlePhysicalMedia.getReservations().add(assoc);
-        customer.getReservations().add(assoc);
-
-        em.persist(assoc);
-        em.persist(singlePhysicalMedia);
-        em.persist(customer);
-    }
+    //@Transactional
+    //public void add(SinglePhysicalMedia singlePhysicalMedia, Customer customer, Date reservationDate) {
+    //    if(singlePhysicalMedia.getId() == null) {
+    //        add(singlePhysicalMedia);
+    //    }
+    //    if(customer.getId() == null) {
+    //        add(customer);
+    //    }
+    //    var assoc = new Reservation(singlePhysicalMedia, customer, reservationDate);
+    //    singlePhysicalMedia.getReservations().add(assoc);
+    //    customer.getReservations().add(assoc);
+//
+    //    em.persist(assoc);
+    //    em.persist(singlePhysicalMedia);
+    //    em.persist(customer);
+    //}
     @Transactional
     public void add(SinglePhysicalMedia singlePhysicalMedia, Customer customer, Integer price) {
         if(singlePhysicalMedia.getId() == null) {

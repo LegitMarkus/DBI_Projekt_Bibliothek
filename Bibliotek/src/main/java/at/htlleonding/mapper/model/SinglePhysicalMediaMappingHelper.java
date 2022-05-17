@@ -43,14 +43,6 @@ public class SinglePhysicalMediaMappingHelper extends MappingHelper {
             });
             dto.setLendingIds(Ids);
         }
-        if (entity.getReservations() != null) {
-            var Ids = new LinkedList<ReservationKey>();
-            entity.getReservations().forEach(e -> {
-                var id = e.getId();
-                Ids.add(id);
-            });
-            dto.setReservationIds(Ids);
-        }
         return dto;
     }
     @Inject
@@ -80,12 +72,7 @@ public class SinglePhysicalMediaMappingHelper extends MappingHelper {
                 entity.getLendings().add(e);
             });
         }
-        if (dto.getReservationIds() != null) {
-            dto.getReservationIds().forEach(id -> {
-                var e = reservationRepository.findById(id);
-                entity.getReservations().add(e);
-            });
-        }
+
         return entity;
     }
 

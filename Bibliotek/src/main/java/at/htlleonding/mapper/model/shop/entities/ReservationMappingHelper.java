@@ -3,6 +3,7 @@ package at.htlleonding.mapper.model.shop.entities;
 import at.htlleonding.dto.shop.entities.ReservationDto;
 import at.htlleonding.mapper.MappingHelper;
 import at.htlleonding.persistence.shop.entities.*;
+import at.htlleonding.repository.model.PhysicalMediaRepository;
 import at.htlleonding.repository.model.SinglePhysicalMediaRepository;
 import at.htlleonding.repository.model.shop.entities.CustomerRepository;
 
@@ -29,7 +30,7 @@ public class ReservationMappingHelper extends MappingHelper {
     @Inject
     CustomerRepository customerRepository;
     @Inject
-    SinglePhysicalMediaRepository mediaRepository;
+    PhysicalMediaRepository mediaRepository;
     public Reservation fromDto(ReservationDto dto){
         var entity = om.fromDto(dto);
 

@@ -1,15 +1,13 @@
 package at.htlleonding.persistence.shop.entities;
 
+import at.htlleonding.persistence.PhysicalMedia;
 import at.htlleonding.persistence.SinglePhysicalMedia;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.MapsId;
+import javax.persistence.*;
 import java.util.Date;
 
 @Getter
@@ -18,19 +16,23 @@ import java.util.Date;
 @NoArgsConstructor
 @Entity
 public class Reservation {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
     @ManyToOne
-    @MapsId("mediaId")
-    private SinglePhysicalMedia media;
-    @MapsId("customerId")
+    //@MapsId("mediaId")
+    private PhysicalMedia media;
+    //@MapsId("customerId")
     @ManyToOne
     private Customer customer;
 
     private Date reservationDate;
 
-    @EmbeddedId
-    ReservationKey id;
+    //@EmbeddedId
+    //ReservationKey id;
 
-    public Reservation(SinglePhysicalMedia spm, Customer customer, Date reservationDate) {
+    public Reservation(PhysicalMedia spm, Customer customer, Date reservationDate) {
         this.media = spm;
         this.customer = customer;
         this.reservationDate = reservationDate;

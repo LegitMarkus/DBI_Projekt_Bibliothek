@@ -645,9 +645,51 @@ class LibraryLogicTest {
 
     @Test
     @TestTransaction
-    public void rentOutItemToCustomerA_customerBmakesReservation_CustomerAreturnsItem_RentPossibleOnlyForCustomerB()
-    {
-        Assertions.fail("Not implemented yet");
+    public void rentOutItemToCustomerA_customerBmakesReservation_CustomerAreturnsItem_RentPossibleOnlyForCustomerB() throws BuisnessLogicException {
+        var customerNumber = "1A35";
+
+        var customer = new CustomerDto();
+        customer.setFirstName("Markus");
+        customer.setLastName("Schwarz");
+        customer.setCustomerNumber(customerNumber);
+        customerLogic.insert(customer);
+        customerLogic.flushAndClear();
+
+        var title = "Was will Putin?";
+
+        var bookDto = new BookDto();
+        bookDto.setTitle(title);
+        bookDto.setBorrowing(1);
+        bookDto.setFreehandArea(0);
+        bookDto.setTranslation(false);
+        bookLogic.insert(bookDto);
+        bookLogic.flushAndClear();
+
+        var lending = customerLogic.rentBook(customerNumber, title);
+
+        var customerB = new CustomerDto();
+        var customerNumberB = "1B35";
+        customerB.setFirstName("Markus");
+        customerB.setLastName("Schwarz");
+        customerB.setCustomerNumber(customerNumberB);
+        customerLogic.insert(customerB);
+        customerLogic.flushAndClear();
+
+        reservationLogic.reserveBook(customerNumberB, title);
+        lendingLogic.returnBook(lending);
+
+        var customerC = new CustomerDto();
+        var customerNumberC = "1C35";
+        customerC.setFirstName("Markus");
+        customerC.setLastName("Schwarz");
+        customerC.setCustomerNumber(customerNumberC);
+        customerLogic.insert(customerC);
+        customerLogic.flushAndClear();
+
+        Assertions.assertThrows(BuisnessLogicException.class, () -> {
+            customerLogic.rentBook(customerNumberC, title);
+        });
+        customerLogic.rentBook(customerNumberB, title);
     }
 
     @Test

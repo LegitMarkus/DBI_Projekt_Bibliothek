@@ -41,9 +41,6 @@ public class SinglePhysicalMedia
     @OneToMany
     private Set<Bill> bills = new HashSet<>();
 
-    @OneToMany
-    private Set<Reservation> reservations = new HashSet<>();
-
     @OneToMany(mappedBy = "media")
     private Set<Lending> lendings = new HashSet<>();
 }

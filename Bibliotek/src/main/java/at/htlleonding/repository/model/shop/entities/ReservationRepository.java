@@ -20,7 +20,7 @@ public class ReservationRepository {
         return em.createQuery("select x from Reservation x", Reservation.class).getResultList();
     }
     @Transactional
-    public Reservation findById(ReservationKey id){
+    public Reservation findById(Integer id){
         return em.createQuery("select x from Reservation x where x.id = :id", Reservation.class).setParameter("id", id).getSingleResult();
     }
 }

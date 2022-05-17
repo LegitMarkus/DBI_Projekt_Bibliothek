@@ -36,7 +36,7 @@ public class CustomerMappingHelper extends MappingHelper {
 
         }
         if (entity.getReservations() != null) {
-            var Ids = new LinkedList<ReservationKey>();
+            var Ids = new LinkedList<Integer>();
             entity.getReservations().forEach(e -> {
                 var id = e.getId();
                 Ids.add(id);

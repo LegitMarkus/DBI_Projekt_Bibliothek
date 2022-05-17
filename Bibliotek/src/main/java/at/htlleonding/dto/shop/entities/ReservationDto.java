@@ -18,11 +18,12 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ReservationDto {
+    private Integer id;
     private Integer mediaId;
 
     private Integer customerId;
 
     private Date reservationDate;
 
-    private ReservationKey id;
+    //private ReservationKey id;
 }

@@ -4,9 +4,12 @@ import at.htlleonding.dto.shop.entities.CustomerDto;
 import at.htlleonding.dto.shop.entities.LendingDto;
 import at.htlleonding.logic.LibraryMgmtLogic;
 import at.htlleonding.logic.model.controller.*;
+import at.htlleonding.mapper.model.BookMappingHelper;
 import at.htlleonding.mapper.model.shop.entities.CustomerMappingHelper;
+import at.htlleonding.mapper.model.shop.entities.ReservationMappingHelper;
 import at.htlleonding.persistence.shop.entities.Lending;
 import at.htlleonding.repository.model.shop.entities.CustomerRepository;
+import at.htlleonding.repository.model.shop.entities.ReservationRepository;
 import net.bytebuddy.implementation.bytecode.Throw;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -29,12 +32,42 @@ public class CustomerLogic extends LibraryMgmtLogic {
     BookLogic bookLogic;
     @Inject
     LendingLogic lendingLogic;
+    @Inject
+    BookMappingHelper bookMappingHelper;
+    @Inject ReservationLogic reservationLogic;
     public LendingDto rentBook(String customerNumber, String title) throws BuisnessLogicException {
         var customerDatabase = getByCustommerNumber(customerNumber);
         var book = bookLogic.getByName(title);
         if (book.getBorrowing() <= 0){
             throw new BuisnessLogicException("No books are available for rent!");
         }
+        var b = bookMappingHelper.fromDto(book);
+        var reservation = reservationLogic.loadAll();
+        reservation.removeIf(r -> r.getMedia().getTitle() != book.getTitle());
+        boolean handled = false;
+        for (var r : reservation){
+            if (r.getCustomer().getCustomerNumber().equals(customerNumber)) {
+                handled = true;
+            }
+        }
+        if (reservation.isEmpty()){
+            handled = true;
+        }
+        if (!handled){
+            throw new BuisnessLogicException("This book has a reservation!");
+        }
+        //if (!b.getReservations().isEmpty()){
+        //    boolean handled = false;
+        //    for(var res : b.getReservations()){
+        //        if (res.getCustomer().getCustomerNumber() == customerNumber) {
+        //            handled = true;
+        //            break;
+        //        }
+        //    }
+        //    if (!handled){
+        //        throw new BuisnessLogicException("This book has a reservation!");
+        //    }
+        //}
         var lending = new LendingDto();
         lending.setCustommerId(customerDatabase.getId());
         lending.setExtension(0);
