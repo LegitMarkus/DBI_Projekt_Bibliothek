@@ -27,7 +27,7 @@ public class CustomerMappingHelper extends MappingHelper {
         }
 
         if (entity.getLendings() != null) {
-            var Ids = new LinkedList<LendingKey>();
+            var Ids = new LinkedList<Integer>();
             entity.getLendings().forEach(e -> {
                 var id = e.getId();
                 Ids.add(id);

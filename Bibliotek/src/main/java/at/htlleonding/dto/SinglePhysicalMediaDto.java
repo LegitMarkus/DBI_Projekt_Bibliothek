@@ -35,5 +35,5 @@ public class SinglePhysicalMediaDto {
 
     private List<ReservationKey> reservationIds = new ArrayList<>();
 
-    private List<LendingKey> lendingIds = new ArrayList<>();
+    private List<Integer> lendingIds = new ArrayList<>();
 }

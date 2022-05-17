@@ -1,6 +1,7 @@
 package at.htlleonding.persistence.shop.entities;
 
 import at.htlleonding.persistence.DigitalMedia;
+import at.htlleonding.persistence.PhysicalMedia;
 import at.htlleonding.persistence.SinglePhysicalMedia;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,15 +17,17 @@ import java.util.Date;
 @NoArgsConstructor
 @Entity
 public class Lending {
-    @EmbeddedId
-    LendingKey id;
+    //@EmbeddedId
+    //LendingKey id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     @ManyToOne
+    //@MapsId("mediaId")
     private SinglePhysicalMedia media;
-    @ManyToOne
-    private DigitalMedia digitalMedia;
 
-    @MapsId("custommerId")
+    //@MapsId("custommerId")
     @ManyToOne
     private Customer custommer;
 
@@ -33,6 +36,9 @@ public class Lending {
 
     @Column(nullable = false)
     private Date returnDate;
+
+    @Column(nullable = false)
+    private Boolean returned = false;
 
     @Column
     private Integer extension = 0;

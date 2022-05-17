@@ -24,7 +24,7 @@ public class CustomerDto {
 
     private List<ReservationKey> reservationIds = new ArrayList<>();
 
-    private List<LendingKey> lendingIds = new ArrayList<>();
+    private List<Integer> lendingIds = new ArrayList<>();
 
     private List<BillKey> billIds = new ArrayList<>();
 }

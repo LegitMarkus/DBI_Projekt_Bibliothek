@@ -45,7 +45,7 @@ import javax.enterprise.context.ApplicationScoped;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-05-17T09:43:33+0200",
+    date = "2022-05-17T16:38:09+0200",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 17.0.1 (Oracle Corporation)"
 )
 @ApplicationScoped
@@ -123,6 +123,7 @@ public class ObjectMapperImpl implements ObjectMapper {
         lendingDto.setLendingDate( entity.getLendingDate() );
         lendingDto.setReturnDate( entity.getReturnDate() );
         lendingDto.setExtension( entity.getExtension() );
+        lendingDto.setReturned( entity.getReturned() );
 
         return lendingDto;
     }
@@ -138,6 +139,7 @@ public class ObjectMapperImpl implements ObjectMapper {
         lending.setId( entity.getId() );
         lending.setLendingDate( entity.getLendingDate() );
         lending.setReturnDate( entity.getReturnDate() );
+        lending.setReturned( entity.getReturned() );
         lending.setExtension( entity.getExtension() );
 
         return lending;

@@ -5,11 +5,13 @@ import at.htlleonding.dto.shop.entities.LendingDto;
 import at.htlleonding.logic.LibraryMgmtLogic;
 import at.htlleonding.logic.model.controller.*;
 import at.htlleonding.mapper.model.shop.entities.CustomerMappingHelper;
+import at.htlleonding.persistence.shop.entities.Lending;
 import at.htlleonding.repository.model.shop.entities.CustomerRepository;
 import net.bytebuddy.implementation.bytecode.Throw;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
+import java.util.Date;
 
 @ApplicationScoped
 public class CustomerLogic extends LibraryMgmtLogic {
@@ -25,7 +27,9 @@ public class CustomerLogic extends LibraryMgmtLogic {
     }
     @Inject
     BookLogic bookLogic;
-    public void rentBook(String customerNumber, String title) throws BuisnessLogicException {
+    @Inject
+    LendingLogic lendingLogic;
+    public LendingDto rentBook(String customerNumber, String title) throws BuisnessLogicException {
         var customerDatabase = getByCustommerNumber(customerNumber);
         var book = bookLogic.getByName(title);
         if (book.getBorrowing() <= 0){
@@ -33,10 +37,21 @@ public class CustomerLogic extends LibraryMgmtLogic {
         }
         var lending = new LendingDto();
         lending.setCustommerId(customerDatabase.getId());
+        lending.setExtension(0);
+        lending.setReturned(false);
+        Date date = new Date();
+        lending.setLendingDate(date);
+        date.setTime(date.getTime() + 1209600000);
+        lending.setReturnDate(date);
+
         lending.setMediaId(book.getId());
         book.setBorrowing(book.getBorrowing() - 1);
 
+        lendingLogic.insert(lending);
+
         bookLogic.update(book);
+
+        return lending;
     }
     @Inject
     NewspaperLogic newspaperLogic;
@@ -98,7 +113,6 @@ public class CustomerLogic extends LibraryMgmtLogic {
         lending.setCustommerId(customerDatabase.getId());
         lending.setMediaId(entity.getId());
     }
-
 
     public CustomerDto getById(int id){
         var entity = customerRepository.findById(id);

@@ -20,7 +20,7 @@ public class LendingRepository {
         return em.createQuery("select x from Lending x", Lending.class).getResultList();
     }
     @Transactional
-    public Lending findById(LendingKey id){
+    public Lending findById(Integer id){
         return em.createQuery("select x from Lending x where x.id = :id", Lending.class).setParameter("id", id).getSingleResult();
     }
 }

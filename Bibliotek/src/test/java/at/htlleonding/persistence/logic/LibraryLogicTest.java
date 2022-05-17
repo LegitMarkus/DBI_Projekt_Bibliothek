@@ -613,9 +613,34 @@ class LibraryLogicTest {
 
     @Test
     @TestTransaction
-    public void customerRentsSingleAvailableItem_RentNotPossible_BringsBackItem_RentPossible()
-    {
-        Assertions.fail("Not implemented yet");
+    public void customerRentsSingleAvailableItem_RentNotPossible_BringsBackItem_RentPossible() throws BuisnessLogicException {
+        var customerNumber = "1A35";
+
+        var customer = new CustomerDto();
+        customer.setFirstName("Markus");
+        customer.setLastName("Schwarz");
+        customer.setCustomerNumber(customerNumber);
+        customerLogic.insert(customer);
+        customerLogic.flushAndClear();
+
+        var title = "Was will Putin?";
+
+        var bookDto = new BookDto();
+        bookDto.setTitle(title);
+        bookDto.setBorrowing(1);
+        bookDto.setFreehandArea(0);
+        bookDto.setTranslation(false);
+        bookLogic.insert(bookDto);
+        bookLogic.flushAndClear();
+
+        var lending = customerLogic.rentBook(customerNumber, title);
+        //var findBook = bookLogic.getByName(title);
+
+        Assertions.assertThrows(BuisnessLogicException.class, () -> {
+            customerLogic.rentBook(customerNumber, title);
+        });
+        lendingLogic.returnBook(lending);
+        customerLogic.rentBook(customerNumber, title);
     }
 
     @Test

@@ -16,5 +16,5 @@ import java.util.List;
 public class DigitalMediaDto extends MediaDto{
     private String url;
 
-    private List<LendingKey> lendingIds = new LinkedList<>();
+    private List<Integer> lendingIds = new LinkedList<>();
 }

@@ -32,7 +32,7 @@ public class Customer {
     @OneToMany
     private Set<Reservation> reservations = new HashSet<>();
 
-    @OneToMany
+    @OneToMany(mappedBy = "custommer")
     private Set<Lending> lendings = new HashSet<>();
 
     @OneToMany

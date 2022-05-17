@@ -20,7 +20,7 @@ import java.util.Date;
 @NoArgsConstructor
 public class LendingDto {
 
-    private LendingKey id;
+    private Integer id;
 
     private Integer mediaId;
     private Integer digitalMediaId;
@@ -32,4 +32,6 @@ public class LendingDto {
     private Date returnDate;
 
     private Integer extension;
+
+    private Boolean returned;
 }
