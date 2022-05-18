@@ -4,24 +4,15 @@ import at.htlleonding.dto.*;
 import at.htlleonding.dto.shop.entities.CustomerDto;
 import at.htlleonding.dto.shop.entities.LendingDto;
 import at.htlleonding.dto.shop.entities.StaffDto;
-import at.htlleonding.logic.LibraryMgmtLogic;
 import at.htlleonding.logic.model.controller.*;
 import at.htlleonding.logic.model.controller.shop.logic.*;
-import at.htlleonding.persistence.Author;
-import at.htlleonding.persistence.Book;
-import at.htlleonding.persistence.EBook;
-import at.htlleonding.persistence.SinglePhysicalMedia;
-import at.htlleonding.persistence.shop.entities.Lending;
 import at.htlleonding.repository.CRUDOperations;
 import io.quarkus.test.TestTransaction;
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import javax.inject.Inject;
-
-import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -694,16 +685,60 @@ class LibraryLogicTest {
 
     @Test
     @TestTransaction
-    public void customerRentsItem_prolongsRentThreeTimes_customerCanOnlyProlongTwoTimes_rentalEndDate6weeksAhead()
-    {
-        Assertions.fail("Not implemented yet");
+    public void customerRentsItem_prolongsRentThreeTimes_customerCanOnlyProlongTwoTimes_rentalEndDate6weeksAhead() throws BuisnessLogicException {
+        var customerNumber = "1A35";
+
+        var customer = new CustomerDto();
+        customer.setFirstName("Markus");
+        customer.setLastName("Schwarz");
+        customer.setCustomerNumber(customerNumber);
+        customerLogic.insert(customer);
+        customerLogic.flushAndClear();
+
+        var title = "Was will Putin?";
+
+        var bookDto = new BookDto();
+        bookDto.setTitle(title);
+        bookDto.setBorrowing(1);
+        bookDto.setFreehandArea(0);
+        bookDto.setTranslation(false);
+        bookLogic.insert(bookDto);
+        bookLogic.flushAndClear();
+
+        var lending = customerLogic.rentBook(customerNumber, title);
+        lendingLogic.prolongRentedItemCustomer(lending);
+        lendingLogic.prolongRentedItemCustomer(lending);
+        Assertions.assertThrows(BuisnessLogicException.class, () -> {
+            lendingLogic.prolongRentedItemCustomer(lending);
+        });
     }
 
     @Test
     @TestTransaction
-    public void customerRentsItem_prolongsRentTwoTimes_EmployeeProlongsOneTime_rentalEndDate8weeksAhead()
-    {
-        Assertions.fail("Not implemented yet");
+    public void customerRentsItem_prolongsRentTwoTimes_EmployeeProlongsOneTime_rentalEndDate8weeksAhead() throws BuisnessLogicException {
+        var customerNumber = "1A35";
+
+        var customer = new CustomerDto();
+        customer.setFirstName("Markus");
+        customer.setLastName("Schwarz");
+        customer.setCustomerNumber(customerNumber);
+        customerLogic.insert(customer);
+        customerLogic.flushAndClear();
+
+        var title = "Was will Putin?";
+
+        var bookDto = new BookDto();
+        bookDto.setTitle(title);
+        bookDto.setBorrowing(1);
+        bookDto.setFreehandArea(0);
+        bookDto.setTranslation(false);
+        bookLogic.insert(bookDto);
+        bookLogic.flushAndClear();
+
+        var lending = customerLogic.rentBook(customerNumber, title);
+        lendingLogic.prolongRentedItemCustomer(lending);
+        lendingLogic.prolongRentedItemCustomer(lending);
+        lendingLogic.prolongRentedItemEmpl(lending);
     }
 
     /*

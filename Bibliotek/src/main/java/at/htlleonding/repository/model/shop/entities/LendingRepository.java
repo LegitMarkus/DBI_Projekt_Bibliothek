@@ -1,6 +1,9 @@
 package at.htlleonding.repository.model.shop.entities;
 
+import at.htlleonding.logic.model.controller.BuisnessLogicException;
+import at.htlleonding.logic.model.controller.shop.logic.CustomerLogic;
 import at.htlleonding.persistence.AudioBook;
+import at.htlleonding.persistence.shop.entities.Customer;
 import at.htlleonding.persistence.shop.entities.Lending;
 import at.htlleonding.persistence.shop.entities.LendingKey;
 

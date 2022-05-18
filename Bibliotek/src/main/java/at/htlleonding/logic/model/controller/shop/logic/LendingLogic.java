@@ -1,17 +1,12 @@
 package at.htlleonding.logic.model.controller.shop.logic;
 
-import at.htlleonding.dto.NewspaperDto;
 import at.htlleonding.dto.shop.entities.LendingDto;
 import at.htlleonding.logic.LibraryMgmtLogic;
 import at.htlleonding.logic.model.controller.BookLogic;
 import at.htlleonding.logic.model.controller.BuisnessLogicException;
 import at.htlleonding.logic.model.controller.PhysicalMediaLogic;
-import at.htlleonding.mapper.model.NewspaperMappingHelper;
 import at.htlleonding.mapper.model.PhysicalMediaMappingHelper;
 import at.htlleonding.mapper.model.shop.entities.LendingMappingHelper;
-import at.htlleonding.persistence.shop.entities.Lending;
-import at.htlleonding.persistence.shop.entities.LendingKey;
-import at.htlleonding.repository.model.shop.entities.CustomerRepository;
 import at.htlleonding.repository.model.shop.entities.LendingRepository;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -28,6 +23,10 @@ public class LendingLogic extends LibraryMgmtLogic {
     public void insert(LendingDto dto){
         var entity =  mappingHelper.fromDto(dto);
         crudOperations.add(entity);
+    }
+    public void update(LendingDto dto){
+        var entity =  mappingHelper.fromDto(dto);
+        crudOperations.update(entity);
     }
     public LendingDto getById(Integer id){
         var entity = lendingRepository.findById(id);
@@ -51,5 +50,21 @@ public class LendingLogic extends LibraryMgmtLogic {
         //var media = physicalMediaMappingHelper.fromDto(mediaDto);
         bookLogic.update(mediaDto);
         //crudOperations.update(media);
+    }
+    @Inject
+    CustomerLogic customerLogic;
+    public void prolongRentedItemCustomer(LendingDto lending) throws BuisnessLogicException {
+        if(lending.getExtension()>=2){
+            throw new BuisnessLogicException("customer can only prolong 2 timens");
+        }
+        prolongRentedItemEmpl(lending);
+    }
+    public void prolongRentedItemEmpl(LendingDto lending) throws BuisnessLogicException {
+        if(lending.getExtension()>=3){
+            throw new BuisnessLogicException("customer can only prolong 2 timens");
+        }
+        lending.setExtension(lending.getExtension() + 1);
+        lending.setReturnDate(add2Weeks(lending.getReturnDate()));
+        update(lending);
     }
 }

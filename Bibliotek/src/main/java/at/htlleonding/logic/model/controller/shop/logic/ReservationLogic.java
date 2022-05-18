@@ -48,7 +48,6 @@ public class ReservationLogic extends LibraryMgmtLogic {
     BookLogic bookLogic;
     @Inject
     ReservationLogic reservationLogic;
-    @Inject BookMappingHelper bookMappingHelper;
     public void reserveBook(String customerNumber, String title) {
         var customerDatabase = customerLogic.getByCustommerNumber(customerNumber);
         var bookDto = bookLogic.getByName(title);
@@ -64,16 +63,4 @@ public class ReservationLogic extends LibraryMgmtLogic {
         reservationLogic.insert(reservation);
     }
 
-    //public Lending getOldest(Set<Lending> lendings){
-    //        var tmp = new Lending();
-    //        for (var lending : lendings) {
-    //            if (!lending.getReturned()){
-    //                if (tmp.getReturnDate() == null || lending.getReturnDate().before(tmp.getReturnDate())){
-    //                    tmp = lending;
-    //                }
-    //            }
-    //        }
-//
-    //    return tmp;
-    //}
 }
