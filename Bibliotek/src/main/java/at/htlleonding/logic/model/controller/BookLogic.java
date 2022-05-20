@@ -33,17 +33,17 @@ public class BookLogic extends LibraryMgmtLogic {
             single.setLendable(true);
 
             single.setPurchaseDate(LocalDate.now());
-            crudOperations.add(single);
+            crudOperations.add(single, entity);
             entity.getSinglePhysicalMedia().add(single);
         }
         for (int i = 0; i < entity.getFreehandArea(); i++){
             var single = new SinglePhysicalMedia();
-            single.setPhysicalMedia(entity);
-            crudOperations.add(single);
-            entity.getSinglePhysicalMedia().add(single);
+            //single.setPhysicalMedia(entity);
+            crudOperations.add(single, entity);
+            //entity.getSinglePhysicalMedia().add(single);
         }
 
-        crudOperations.add(entity);
+        //crudOperations.add(entity);
 
     }
     public void update(BookDto dto){

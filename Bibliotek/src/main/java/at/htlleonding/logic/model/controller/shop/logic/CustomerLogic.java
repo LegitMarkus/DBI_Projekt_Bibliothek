@@ -7,7 +7,9 @@ import at.htlleonding.logic.model.controller.*;
 import at.htlleonding.mapper.model.BookMappingHelper;
 import at.htlleonding.mapper.model.shop.entities.CustomerMappingHelper;
 import at.htlleonding.mapper.model.shop.entities.ReservationMappingHelper;
+import at.htlleonding.persistence.SinglePhysicalMedia;
 import at.htlleonding.persistence.shop.entities.Lending;
+import at.htlleonding.repository.model.SinglePhysicalMediaRepository;
 import at.htlleonding.repository.model.shop.entities.CustomerRepository;
 import at.htlleonding.repository.model.shop.entities.ReservationRepository;
 import net.bytebuddy.implementation.bytecode.Throw;
@@ -35,7 +37,10 @@ public class CustomerLogic extends LibraryMgmtLogic {
     @Inject
     BookMappingHelper bookMappingHelper;
     @Inject ReservationLogic reservationLogic;
+    @Inject
+    SinglePhysicalMediaRepository singlePhysicalMediaRepository;
     public LendingDto rentBook(String customerNumber, String title) throws BuisnessLogicException {
+        var lending = new LendingDto();
         var customerDatabase = getByCustommerNumber(customerNumber);
         var book = bookLogic.getByName(title);
         if (book.getBorrowing() <= 0){
@@ -68,21 +73,31 @@ public class CustomerLogic extends LibraryMgmtLogic {
         //        throw new BuisnessLogicException("This book has a reservation!");
         //    }
         //}
-        var lending = new LendingDto();
-        lending.setCustommerId(customerDatabase.getId());
-        lending.setExtension(0);
-        lending.setReturned(false);
-        Date date = new Date();
-        lending.setLendingDate(date);
-        date.setTime(date.getTime() + 1209600000);
-        lending.setReturnDate(date);
+        var handledRentable = false;
+        var singleList = singlePhysicalMediaRepository.loadAll();
+        //var singleList = b.getSinglePhysicalMedia();
+        singleList.removeIf(single -> single.getPhysicalMedia().getTitle() != title);
+        //var singleList = book.getSinglePhysicalMediaIds();
+        for (var single : singleList){
+            if (single.getLendable() && !single.getForSale()){
+                lending.setCustommerId(customerDatabase.getId());
+                lending.setExtension(0);
+                lending.setReturned(false);
+                Date date = new Date();
+                lending.setLendingDate(date);
+                date.setTime(date.getTime() + 1209600000);
+                lending.setReturnDate(date);
 
-        lending.setMediaId(book.getId());
-        book.setBorrowing(book.getBorrowing() - 1);
+                lending.setMediaId(single.getId());
+                book.setBorrowing(book.getBorrowing() - 1);
 
-        lendingLogic.insert(lending);
+                lendingLogic.insert(lending);
 
-        bookLogic.update(book);
+                bookLogic.update(book);
+
+                handledRentable = true;
+            }
+        }
 
         return lending;
     }

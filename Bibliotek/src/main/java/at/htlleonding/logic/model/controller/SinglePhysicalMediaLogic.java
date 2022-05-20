@@ -109,4 +109,26 @@ public class SinglePhysicalMediaLogic extends LibraryMgmtLogic {
 
         bookLogic.update(book);
     }
+    @Inject SinglePhysicalMediaLogic singlePhysicalMediaLogic;
+    public void setForSale(String title, int amount) {
+        var book = bookLogic.getByName(title);
+
+        var singleList = singlePhysicalMediaRepository.loadAll();
+        singleList.removeIf(single -> single.getPhysicalMedia().getTitle() != title);
+        //var singleList = bookMappingHelper.fromDto(book).getSinglePhysicalMedia();
+        for (var single : singleList){
+            if (amount != 0){
+                if (single.getLendable() && !single.getForSale()){
+                    single.setLendable(false);
+                    single.setForSale(true);
+                    amount--;
+                    book.setBorrowing(book.getBorrowing() - 1);
+                    crudOperations.update(single);
+                    bookLogic.update(book);
+                }
+            }else{
+                break;
+            }
+        }
+    }
 }

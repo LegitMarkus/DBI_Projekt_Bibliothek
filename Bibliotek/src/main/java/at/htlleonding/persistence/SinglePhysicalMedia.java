@@ -24,6 +24,7 @@ public class SinglePhysicalMedia
     private Integer id;
 
     @ManyToOne
+    @JoinColumn(name = "physicalMedia_id")
     private PhysicalMedia physicalMedia;
 
     @Column

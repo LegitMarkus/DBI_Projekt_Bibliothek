@@ -6,6 +6,7 @@ import at.htlleonding.dto.shop.entities.LendingDto;
 import at.htlleonding.dto.shop.entities.StaffDto;
 import at.htlleonding.logic.model.controller.*;
 import at.htlleonding.logic.model.controller.shop.logic.*;
+import at.htlleonding.persistence.SinglePhysicalMedia;
 import at.htlleonding.repository.CRUDOperations;
 import io.quarkus.test.TestTransaction;
 import io.quarkus.test.junit.QuarkusTest;
@@ -435,7 +436,6 @@ class LibraryLogicTest {
         bookDto.setFreehandArea(0);
         bookDto.setTranslation(false);
         bookLogic.insert(bookDto);
-        bookLogic.flushAndClear();
 
         var customerNumber = "1A35";
 
@@ -444,7 +444,6 @@ class LibraryLogicTest {
         customer.setLastName("Schwarz");
         customer.setCustomerNumber(customerNumber);
         customerLogic.insert(customer);
-        customerLogic.flushAndClear();
 
         customerLogic.rentBook(customerNumber, title);
         var bookDatabase = bookLogic.getByName(title);
@@ -463,7 +462,6 @@ class LibraryLogicTest {
         bookDto.setFreehandArea(0);
         bookDto.setTranslation(false);
         bookLogic.insert(bookDto);
-        bookLogic.flushAndClear();
 
         var customerNumber = "1A35";
 
@@ -472,7 +470,6 @@ class LibraryLogicTest {
         customer.setLastName("Schwarz");
         customer.setCustomerNumber(customerNumber);
         customerLogic.insert(customer);
-        customerLogic.flushAndClear();
 
         customerLogic.rentBook(customerNumber, title);
         customerLogic.rentBook(customerNumber, title);
@@ -612,7 +609,6 @@ class LibraryLogicTest {
         customer.setLastName("Schwarz");
         customer.setCustomerNumber(customerNumber);
         customerLogic.insert(customer);
-        customerLogic.flushAndClear();
 
         var title = "Was will Putin?";
 
@@ -622,7 +618,6 @@ class LibraryLogicTest {
         bookDto.setFreehandArea(0);
         bookDto.setTranslation(false);
         bookLogic.insert(bookDto);
-        bookLogic.flushAndClear();
 
         var lending = customerLogic.rentBook(customerNumber, title);
         //var findBook = bookLogic.getByName(title);
@@ -644,7 +639,6 @@ class LibraryLogicTest {
         customer.setLastName("Schwarz");
         customer.setCustomerNumber(customerNumber);
         customerLogic.insert(customer);
-        customerLogic.flushAndClear();
 
         var title = "Was will Putin?";
 
@@ -654,7 +648,6 @@ class LibraryLogicTest {
         bookDto.setFreehandArea(0);
         bookDto.setTranslation(false);
         bookLogic.insert(bookDto);
-        bookLogic.flushAndClear();
 
         var lending = customerLogic.rentBook(customerNumber, title);
 
@@ -664,7 +657,6 @@ class LibraryLogicTest {
         customerB.setLastName("Schwarz");
         customerB.setCustomerNumber(customerNumberB);
         customerLogic.insert(customerB);
-        customerLogic.flushAndClear();
 
         reservationLogic.reserveBook(customerNumberB, title);
         lendingLogic.returnBook(lending);
@@ -675,7 +667,6 @@ class LibraryLogicTest {
         customerC.setLastName("Schwarz");
         customerC.setCustomerNumber(customerNumberC);
         customerLogic.insert(customerC);
-        customerLogic.flushAndClear();
 
         Assertions.assertThrows(BuisnessLogicException.class, () -> {
             customerLogic.rentBook(customerNumberC, title);
@@ -693,7 +684,6 @@ class LibraryLogicTest {
         customer.setLastName("Schwarz");
         customer.setCustomerNumber(customerNumber);
         customerLogic.insert(customer);
-        customerLogic.flushAndClear();
 
         var title = "Was will Putin?";
 
@@ -703,7 +693,6 @@ class LibraryLogicTest {
         bookDto.setFreehandArea(0);
         bookDto.setTranslation(false);
         bookLogic.insert(bookDto);
-        bookLogic.flushAndClear();
 
         var lending = customerLogic.rentBook(customerNumber, title);
         lendingLogic.prolongRentedItemCustomer(lending);
@@ -723,7 +712,6 @@ class LibraryLogicTest {
         customer.setLastName("Schwarz");
         customer.setCustomerNumber(customerNumber);
         customerLogic.insert(customer);
-        customerLogic.flushAndClear();
 
         var title = "Was will Putin?";
 
@@ -733,7 +721,6 @@ class LibraryLogicTest {
         bookDto.setFreehandArea(0);
         bookDto.setTranslation(false);
         bookLogic.insert(bookDto);
-        bookLogic.flushAndClear();
 
         var lending = customerLogic.rentBook(customerNumber, title);
         lendingLogic.prolongRentedItemCustomer(lending);
@@ -748,22 +735,81 @@ class LibraryLogicTest {
      */
     @Test
     @TestTransaction
-    public void setItemForSale_cannotBeRented()
-    {
-        Assertions.fail("Not implemented yet");
+    public void setItemForSale_cannotBeRented() throws BuisnessLogicException {
+        var customerNumber = "1A35";
+
+        var customer = new CustomerDto();
+        customer.setFirstName("Markus");
+        customer.setLastName("Schwarz");
+        customer.setCustomerNumber(customerNumber);
+        customerLogic.insert(customer);
+
+        var title = "Was will Putin?";
+
+        var bookDto = new BookDto();
+        bookDto.setTitle(title);
+        bookDto.setBorrowing(1);
+        bookDto.setFreehandArea(0);
+        bookDto.setTranslation(false);
+        bookLogic.insert(bookDto);
+
+        singlePhysicalMediaLogic.setForSale(title, 1);
+        Assertions.assertThrows(BuisnessLogicException.class, () -> {
+            customerLogic.rentBook(customerNumber, title);
+        });
     }
 
     @Test
     @TestTransaction
-    public void setOneOfTwoItemsForSale_onlyOneCanBeRented()
-    {
-        Assertions.fail("Not implemented yet");
+    public void setOneOfTwoItemsForSale_onlyOneCanBeRented() throws BuisnessLogicException {
+        var customerNumber = "1A35";
+
+        var customer = new CustomerDto();
+        customer.setFirstName("Markus");
+        customer.setLastName("Schwarz");
+        customer.setCustomerNumber(customerNumber);
+        customerLogic.insert(customer);
+
+        var title = "Was will Putin?";
+
+        var bookDto = new BookDto();
+        bookDto.setTitle(title);
+        bookDto.setBorrowing(2);
+        bookDto.setFreehandArea(0);
+        bookDto.setTranslation(false);
+        bookLogic.insert(bookDto);
+
+        singlePhysicalMediaLogic.setForSale(title, 1);
+        customerLogic.rentBook(customerNumber, title);
+        Assertions.assertThrows(BuisnessLogicException.class, () -> {
+            customerLogic.rentBook(customerNumber, title);
+        });
     }
 
     @Test
     @TestTransaction
-    public void setThreeDifferentItemsForSale_CustomerBuys2_InvoiceHasTwoItems_OnlyOneItemForSaleLeft()
-    {
-        Assertions.fail("Not implemented yet");
+    public void setThreeDifferentItemsForSale_CustomerBuys2_InvoiceHasTwoItems_OnlyOneItemForSaleLeft() throws BuisnessLogicException {
+        var customerNumber = "1A35";
+
+        var customer = new CustomerDto();
+        customer.setFirstName("Markus");
+        customer.setLastName("Schwarz");
+        customer.setCustomerNumber(customerNumber);
+        customerLogic.insert(customer);
+
+        var title = "Was will Putin?";
+
+        var bookDto = new BookDto();
+        bookDto.setTitle(title);
+        bookDto.setBorrowing(3);
+        bookDto.setFreehandArea(0);
+        bookDto.setTranslation(false);
+        bookLogic.insert(bookDto);
+
+        singlePhysicalMediaLogic.setForSale(title, 2);
+        customerLogic.rentBook(customerNumber, title);
+        Assertions.assertThrows(BuisnessLogicException.class, () -> {
+            customerLogic.rentBook(customerNumber, title);
+        });
     }
 }

@@ -43,6 +43,7 @@ public class LendingLogic extends LibraryMgmtLogic {
 
         lendingDto.setReturned(true);
 
+
         var lending = mappingHelper.fromDto(lendingDto);
         crudOperations.update(lending);
 
