@@ -79,6 +79,9 @@ public class CustomerLogic extends LibraryMgmtLogic {
         singleList.removeIf(single -> single.getPhysicalMedia().getTitle() != title);
         //var singleList = book.getSinglePhysicalMediaIds();
         for (var single : singleList){
+            if (handledRentable){
+                break;
+            }
             if (single.getLendable() && !single.getForSale()){
                 lending.setCustommerId(customerDatabase.getId());
                 lending.setExtension(0);
