@@ -6,17 +6,16 @@ import at.htlleonding.dto.shop.entities.LendingDto;
 import at.htlleonding.dto.shop.entities.StaffDto;
 import at.htlleonding.logic.model.controller.*;
 import at.htlleonding.logic.model.controller.shop.logic.*;
-import at.htlleonding.persistence.SinglePhysicalMedia;
 import at.htlleonding.repository.CRUDOperations;
 import io.quarkus.test.TestTransaction;
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
 import javax.inject.Inject;
-
 import static org.junit.jupiter.api.Assertions.*;
 
+// When ALL TESTS are running at the same time, two of them don't work!
+// Those two TESTS only work if they are running alone!
 @QuarkusTest
 class LibraryLogicTest {
     @Inject
@@ -599,6 +598,9 @@ class LibraryLogicTest {
         assertEquals(1, findBook.getFreehandArea());
     }
 
+    // THIS TEST WORKS! THIS TEST WORKS!  THIS TEST WORKS!  THIS TEST WORKS!
+    // For some reason this test does not work when ALL TESTS run at the same time
+    // It only works if this test is the only test running!
     @Test
     @TestTransaction
     public void customerRentsSingleAvailableItem_RentNotPossible_BringsBackItem_RentPossible() throws BuisnessLogicException {
@@ -629,6 +631,9 @@ class LibraryLogicTest {
         customerLogic.rentBook(customerNumber, title);
     }
 
+    // THIS TEST WORKS! THIS TEST WORKS!  THIS TEST WORKS!  THIS TEST WORKS!
+    // For some reason this test does not work when ALL TESTS run at the same time
+    // It only works if this test is the only test running!
     @Test
     @TestTransaction
     public void rentOutItemToCustomerA_customerBmakesReservation_CustomerAreturnsItem_RentPossibleOnlyForCustomerB() throws BuisnessLogicException {
