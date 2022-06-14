@@ -47,6 +47,7 @@ public class CustomerLogic extends LibraryMgmtLogic {
             throw new BuisnessLogicException("No books are available for rent!");
         }
         var b = bookMappingHelper.fromDto(book);
+        //reservierungen werden gecheckt
         var reservation = reservationLogic.loadAll();
         reservation.removeIf(r -> r.getMedia().getTitle() != book.getTitle());
         boolean handled = false;
@@ -61,18 +62,8 @@ public class CustomerLogic extends LibraryMgmtLogic {
         if (!handled){
             throw new BuisnessLogicException("This book has a reservation!");
         }
-        //if (!b.getReservations().isEmpty()){
-        //    boolean handled = false;
-        //    for(var res : b.getReservations()){
-        //        if (res.getCustomer().getCustomerNumber() == customerNumber) {
-        //            handled = true;
-        //            break;
-        //        }
-        //    }
-        //    if (!handled){
-        //        throw new BuisnessLogicException("This book has a reservation!");
-        //    }
-        //}
+
+        //überprüfen ob ein einzelnes verfügbar ist
         var handledRentable = false;
         var singleList = singlePhysicalMediaRepository.loadAll();
         //var singleList = b.getSinglePhysicalMedia();

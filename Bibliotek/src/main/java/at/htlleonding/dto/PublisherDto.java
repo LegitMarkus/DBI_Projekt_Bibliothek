@@ -1,6 +1,7 @@
 package at.htlleonding.dto;
 
 import at.htlleonding.persistence.Media;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,8 +19,10 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PublisherDto {
+    @JacksonXmlProperty(isAttribute = true)
     private Integer id;
 
+    @JacksonXmlProperty(isAttribute = true)
     private String name;
 
     private List<Integer> mediaIds = new ArrayList<>();
