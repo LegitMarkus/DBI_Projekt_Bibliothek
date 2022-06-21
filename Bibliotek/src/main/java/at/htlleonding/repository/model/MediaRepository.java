@@ -1,6 +1,7 @@
 package at.htlleonding.repository.model;
 
 import at.htlleonding.persistence.AudioBook;
+import at.htlleonding.persistence.Book;
 import at.htlleonding.persistence.Media;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -21,5 +22,9 @@ public class MediaRepository {
     @Transactional
     public Media findById(Integer id){
         return em.createQuery("select x from Media x where x.id = :id", Media.class).setParameter("id", id).getSingleResult();
+    }
+    public Media findByName(String title){
+        return em.createQuery("select x from Media x where x.title = :title", Media.class)
+                .setParameter("title", title).getSingleResult();
     }
 }

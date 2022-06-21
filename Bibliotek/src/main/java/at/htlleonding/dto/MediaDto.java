@@ -1,6 +1,8 @@
 package at.htlleonding.dto;
 
 import at.htlleonding.persistence.*;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,15 +19,16 @@ import java.util.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonRootName("Work")
 public class MediaDto {
     private Integer id;
-
+    @JsonProperty("Title")
     private String title;
-
+    @JsonProperty("PublisherDate")
     private Date publisherDate;
 
     private Integer publisherId;
-
+    @JsonProperty("Translation")
     private boolean translation;
 
     private Integer languageId;

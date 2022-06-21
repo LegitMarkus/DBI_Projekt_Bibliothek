@@ -1,0 +1,23 @@
+<WorksOfAuthor>
+  <Author id="1" firstname="Robert" lastname="Lenz">
+    <mediaIds/>
+  </Author>
+  <Works>
+    <Work>
+      <id>1</id>
+      <publisherId/>
+      <languageId/>
+      <topicIds/>
+      <genreId/>
+      <authorIds/>
+      <Title>Was will Putin?</Title>
+      <PublisherDate/>
+      <Translation>false</Translation>
+    </Work>
+  </Works>
+  <Publications>
+    <Publication name="MEINS">
+      <mediaIds/>
+    </Publication>
+  </Publications>
+</WorksOfAuthor>

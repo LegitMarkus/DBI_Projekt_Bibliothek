@@ -2,6 +2,7 @@ package at.htlleonding.logic.model.controller;
 
 import at.htlleonding.dto.AudioBookDto;
 import at.htlleonding.dto.MediaDto;
+import at.htlleonding.dto.NewspaperDto;
 import at.htlleonding.logic.LibraryMgmtLogic;
 import at.htlleonding.mapper.model.MediaMappingHelper;
 import at.htlleonding.repository.model.MediaRepository;
@@ -23,6 +24,10 @@ public class MediaLogic extends LibraryMgmtLogic {
     }
     public MediaDto getById(int id){
         var entity = mediaRepository.findById(id);
+        return mappingHelper.toDto(entity);
+    }
+    public MediaDto getByName(String title){
+        var entity = mediaRepository.findByName(title);
         return mappingHelper.toDto(entity);
     }
 }

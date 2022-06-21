@@ -4,14 +4,27 @@ import at.htlleonding.dto.*;
 import at.htlleonding.dto.shop.entities.CustomerDto;
 import at.htlleonding.dto.shop.entities.LendingDto;
 import at.htlleonding.dto.shop.entities.StaffDto;
+import at.htlleonding.dto.xml.WorksOfAuthorDto;
 import at.htlleonding.logic.model.controller.*;
 import at.htlleonding.logic.model.controller.shop.logic.*;
 import at.htlleonding.repository.CRUDOperations;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import io.quarkus.test.TestTransaction;
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import javax.inject.Inject;
+<<<<<<< HEAD
+=======
+import javax.transaction.Transactional;
+
+import java.io.Reader;
+import java.io.StringReader;
+
+>>>>>>> main
 import static org.junit.jupiter.api.Assertions.*;
 
 // When ALL TESTS are running at the same time, two of them don't work!
@@ -816,5 +829,122 @@ class LibraryLogicTest {
         Assertions.assertThrows(BuisnessLogicException.class, () -> {
             customerLogic.rentBook(customerNumber, title);
         });
+    }
+
+    @Test
+    @Transactional
+    public void count()
+    {
+        String firstname = "Robert1";
+        String lastname = "Lenz1";
+
+        var authorDto = new AuthorDto();
+        authorDto.setFirstname(firstname);
+        authorDto.setLastname(lastname);
+        authorLogic.insert(authorDto);
+        authorLogic.flushAndClear();
+
+        String firstname2 = "Robert2";
+        String lastname2 = "Lenz2";
+
+        var authorDto2 = new AuthorDto();
+        authorDto2.setFirstname(firstname2);
+        authorDto2.setLastname(lastname2);
+        authorLogic.insert(authorDto2);
+        authorLogic.flushAndClear();
+
+        String firstname3 = "Robert3";
+        String lastname3 = "Lenz3";
+
+        var authorDto3 = new AuthorDto();
+        authorDto3.setFirstname(firstname3);
+        authorDto3.setLastname(lastname3);
+        authorLogic.insert(authorDto3);
+        authorLogic.flushAndClear();
+
+        var findAuthor = authorLogic.getByName(firstname, lastname);
+        var findAuthor2 = authorLogic.getByName(firstname2, lastname2);
+        var findAuthor3 = authorLogic.getByName(firstname3, lastname3);
+
+        var title1 = "Was will Putin?1";
+        var title2 = "Was will Putin?2";
+        var title3 = "Was will Putin?3";
+
+        var bookDto1 = new BookDto();
+        bookDto1.getAuthorIds().add(findAuthor.getId());
+        bookDto1.getAuthorIds().add(findAuthor2.getId());
+        bookDto1.getAuthorIds().add(findAuthor3.getId());
+
+        bookDto1.setTitle(title1);
+        bookDto1.setBorrowing(5);
+        bookDto1.setFreehandArea(5);
+        bookDto1.setTranslation(false);
+        bookLogic.insert(bookDto1);
+        bookLogic.flushAndClear();
+
+        var bookDto2 = new BookDto();
+        bookDto2.getAuthorIds().add(findAuthor.getId());
+        bookDto2.getAuthorIds().add(findAuthor2.getId());
+        bookDto2.getAuthorIds().add(findAuthor3.getId());
+
+        bookDto2.setTitle(title2);
+        bookDto2.setBorrowing(5);
+        bookDto2.setFreehandArea(5);
+        bookDto2.setTranslation(false);
+        bookLogic.insert(bookDto2);
+        bookLogic.flushAndClear();
+
+        var bookDto3 = new BookDto();
+        bookDto3.getAuthorIds().add(findAuthor.getId());
+        bookDto3.getAuthorIds().add(findAuthor2.getId());
+        bookDto3.getAuthorIds().add(findAuthor3.getId());
+
+        bookDto3.setTitle(title3);
+        bookDto3.setBorrowing(5);
+        bookDto3.setFreehandArea(5);
+        bookDto3.setTranslation(false);
+        bookLogic.insert(bookDto3);
+        bookLogic.flushAndClear();
+
+
+    }
+    public AuthorDto createAuthor(){
+        String firstname = "Robert";
+        String lastname = "Lenz";
+
+        var authorDto = new AuthorDto();
+        authorDto.setFirstname(firstname);
+        authorDto.setLastname(lastname);
+        authorLogic.insert(authorDto);
+        authorLogic.flushAndClear();
+        return authorLogic.getByName(firstname, lastname);
+    }
+    public MediaDto createBook(){
+        var title = "Was will Putin?";
+        var bookDto = new MediaDto();
+        bookDto.setTitle(title);
+        bookDto.setTranslation(false);
+        mediaLogic.insert(bookDto);
+        mediaLogic.flushAndClear();
+
+        return mediaLogic.getByName(title);
+    }
+    public PublisherDto createPublication(){
+        var bookDto = new PublisherDto();
+        bookDto.setName("MEINS");
+        return bookDto;
+    }
+
+    //XML ERZEUGEN
+    @Test
+    public void createWorksOfAuthorDTO_serializeToXml_deserialize_checkObjects() throws BuisnessLogicException {
+        var author = createAuthor();
+        var target = new WorksOfAuthorDto();
+        target.setAuthor(author);
+        var media = createBook();
+        target.getWork().add(media);
+        target.getPublication().add(createPublication());
+
+        authorLogic.createXML(target);
     }
 }

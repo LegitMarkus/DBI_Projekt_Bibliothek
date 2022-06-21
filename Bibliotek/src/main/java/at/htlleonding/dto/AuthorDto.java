@@ -1,5 +1,8 @@
 package at.htlleonding.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,10 +19,11 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AuthorDto {
+    @JacksonXmlProperty(isAttribute = true)
     private Integer id;
-
+    @JacksonXmlProperty(isAttribute = true)
     private String firstname;
-
+    @JacksonXmlProperty(isAttribute = true)
     private String lastname;
 
     private List<Integer> mediaIds = new ArrayList<>();
