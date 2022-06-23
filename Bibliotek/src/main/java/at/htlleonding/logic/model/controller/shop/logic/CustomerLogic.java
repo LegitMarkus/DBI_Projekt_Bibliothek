@@ -41,29 +41,33 @@ public class CustomerLogic extends LibraryMgmtLogic {
     SinglePhysicalMediaRepository singlePhysicalMediaRepository;
     public LendingDto rentBook(String customerNumber, String title) throws BuisnessLogicException {
         var lending = new LendingDto();
+        // queries aufrufen (CustomerNumber & Title)
         var customerDatabase = getByCustommerNumber(customerNumber);
         var book = bookLogic.getByName(title);
+        // Überfrüfung ob es genug bücher zum ausleihen gibt
         if (book.getBorrowing() <= 0){
             throw new BuisnessLogicException("No books are available for rent!");
         }
         var b = bookMappingHelper.fromDto(book);
-        //reservierungen werden gecheckt
-        var reservation = reservationLogic.loadAll();
-        reservation.removeIf(r -> r.getMedia().getTitle() != book.getTitle());
-        boolean handled = false;
+
+        // Checken ob Reservierungen existieren
+        var reservation = reservationLogic.loadAll(); // Alle Books aus der DB abholen
+        reservation.removeIf(r -> r.getMedia().getTitle() != book.getTitle()); // Books filtern
+        boolean handled = false; // Handled-Boolean ist false
         for (var r : reservation){
             if (r.getCustomer().getCustomerNumber().equals(customerNumber)) {
-                handled = true;
+                handled = true; // Handled ist true, wenn eine Reservierung existiert!
             }
         }
         if (reservation.isEmpty()){
-            handled = true;
+            handled = true; // Handled ist true, wenn keine Reservierung existiert!
         }
-        if (!handled){
+        if (!handled){ // BuisnessLogicException
             throw new BuisnessLogicException("This book has a reservation!");
         }
 
-        //überprüfen ob ein einzelnes verfügbar ist
+        // Überprüfen ob ein einzelnes book verfügbar ist
+        long twoWeeks = 1209600000;
         var handledRentable = false;
         var singleList = singlePhysicalMediaRepository.loadAll();
         //var singleList = b.getSinglePhysicalMedia();
@@ -79,22 +83,20 @@ public class CustomerLogic extends LibraryMgmtLogic {
                 lending.setReturned(false);
                 Date date = new Date();
                 lending.setLendingDate(date);
-                date.setTime(date.getTime() + 1209600000);
+                date.setTime(date.getTime() + twoWeeks); // frist setzen
                 lending.setReturnDate(date);
-
                 lending.setMediaId(single.getId());
                 book.setBorrowing(book.getBorrowing() - 1);
-
+                // Lending in der DB einfügen
                 lendingLogic.insert(lending);
-
+                // Book daten updaten
                 bookLogic.update(book);
-
                 handledRentable = true;
             }
         }
-
         return lending;
     }
+
     @Inject
     NewspaperLogic newspaperLogic;
     public void rentNewspaper(String customerNumber, String title){

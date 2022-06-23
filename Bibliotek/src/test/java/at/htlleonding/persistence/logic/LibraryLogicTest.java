@@ -17,14 +17,13 @@ import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import javax.inject.Inject;
-<<<<<<< HEAD
-=======
+
 import javax.transaction.Transactional;
 
 import java.io.Reader;
 import java.io.StringReader;
 
->>>>>>> main
+
 import static org.junit.jupiter.api.Assertions.*;
 
 // When ALL TESTS are running at the same time, two of them don't work!
@@ -441,7 +440,7 @@ class LibraryLogicTest {
     @TestTransaction
     public void customerRentsOneOfThreeCopiesOfRentableItem_TwoRentableItemsRemain_CustomerHasRent() throws BuisnessLogicException {
         var title = "Was will Putin?";
-
+        // Einfügen in der DB
         var bookDto = new BookDto();
         bookDto.setTitle(title);
         bookDto.setBorrowing(3);
@@ -452,8 +451,8 @@ class LibraryLogicTest {
         var customerNumber = "1A35";
 
         var customer = new CustomerDto();
-        customer.setFirstName("Markus");
-        customer.setLastName("Schwarz");
+        customer.setFirstName("Arsham");
+        customer.setLastName("Edalatkhah");
         customer.setCustomerNumber(customerNumber);
         customerLogic.insert(customer);
 

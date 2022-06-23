@@ -49,17 +49,17 @@ public class ReservationLogic extends LibraryMgmtLogic {
     @Inject
     ReservationLogic reservationLogic;
     public void reserveBook(String customerNumber, String title) {
+        // die Daten mit queries abholen
         var customerDatabase = customerLogic.getByCustommerNumber(customerNumber);
         var bookDto = bookLogic.getByName(title);
 
+        // Neue Reservierung erstellen!
         var reservation = new ReservationDto();
         reservation.setReservationDate(new Date());
         reservation.setMediaId(bookDto.getId());
         reservation.setCustomerId(customerDatabase.getId());
 
-        //var book = bookMappingHelper.fromDto(bookDto);
-        //book.getReservations().add(reservation)
-
+        // Reservierung in der DB inserten
         reservationLogic.insert(reservation);
     }
 

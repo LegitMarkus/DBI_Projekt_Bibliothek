@@ -39,18 +39,20 @@ public class LendingLogic extends LibraryMgmtLogic {
     @Inject
     BookLogic bookLogic;
     public void returnBook(LendingDto lendingDto) {
+        // Media (Book) wird aus der DB abgeholt
         var mediaDto = bookLogic.getById(lendingDto.getMediaId());
-
+        // ist zurückgebracht! (Wir speichern alle LendingDTOs)
         lendingDto.setReturned(true);
 
-
+        // zu faul um in der lendingDTO update() zu implementieren
         var lending = mappingHelper.fromDto(lendingDto);
         crudOperations.update(lending);
+        //lendingDto.update(lendingDto);
 
+        // anzahl Bücher zum ausleihen um 1 erhöhen!
         mediaDto.setBorrowing(mediaDto.getBorrowing() + 1);
-        //var media = physicalMediaMappingHelper.fromDto(mediaDto);
+        // MediaDTO (BOOK) wird aktualisiert
         bookLogic.update(mediaDto);
-        //crudOperations.update(media);
     }
     @Inject
     CustomerLogic customerLogic;
@@ -59,10 +61,13 @@ public class LendingLogic extends LibraryMgmtLogic {
             throw new BuisnessLogicException("customer can only prolong 2 timens");
         }
         prolongRentedItemEmpl(lending);
+        lending.setExtension(lending.getExtension() + 1);
+        lending.setReturnDate(add2Weeks(lending.getReturnDate()));
+        update(lending);
     }
     public void prolongRentedItemEmpl(LendingDto lending) throws BuisnessLogicException {
         if(lending.getExtension()>=3){
-            throw new BuisnessLogicException("customer can only prolong 2 timens");
+            throw new BuisnessLogicException("employee can only prolong 3 timens");
         }
         lending.setExtension(lending.getExtension() + 1);
         lending.setReturnDate(add2Weeks(lending.getReturnDate()));
